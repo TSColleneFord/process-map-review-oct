@@ -1,0 +1,1632 @@
+window.FEEDBACK_FORM_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=955QnF6dc0GADBkEmuwlJuMj359ZoPNAsda7Mdp9kmpUNzgxSzYwOFlMVkxKTkJMWU02QjVRMDJVMy4u&re39db6504d074f88bfa7382129bbd76b=MAPNAME&r9813ab6f9ed2432da250c18a6f0245e5=STEPNAME";<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow">
+<script>
+/* =====================================================================
+   FEEDBACK FORM LINK  (the only line you need to edit)
+   Paste the Microsoft Forms pre-filled link between the quotes below.
+   Make that link by typing MAPNAME as the answer to "Map" and STEPNAME
+   as the answer to "Step", then choosing "Get pre-filled link".
+   Until a link is pasted here, the Comment buttons show a notice.
+   ===================================================================== */
+window.FEEDBACK_FORM_URL = "";
+</script></head><body>
+<title>SNAP E&amp;T Client Journey Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;padding:0}
+img{max-width:100%}
+[hidden]:not([hidden=until-found i]){display:none!important}
+</style>
+<style>
+
+/* Layout: wide swimlane map with fixed lane labels and horizontal scroll, then a step detail panel and stacked findings sections. Third Sector palette, single light theme by design. */
+:root {
+  color-scheme: light;
+  --canvas: #FDFBF5;
+  --paper: #FFFFFF;
+  --ink: #1C1717;
+  --grey: #5A5A5C;
+  --gray: #EFEFF2;
+  --blue: #0086AE;
+  --blue2: #006E8F;
+  --blue40: #93C9D9;
+  --blue20: #C4DFE7;
+  --green: #00A76F;
+  --green40: #93D6BF;
+  --green20: #C4E5DA;
+  --purple: #862E88;
+  --purple40: #C9A5C9;
+  --purple20: #DFCDDF;
+  --yellow: #FFC500;
+  --yellow20: #F7EBC4;
+  --font: "Barlow", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--canvas); color: var(--ink);
+  font-family: var(--font); font-size: 16px; line-height: 1.55;
+  padding-inline: 16px; padding-block: 0 48px;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { color: var(--ink); line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+button { font-family: inherit; }
+.wrap { max-width: 1180px; margin-inline: auto; }
+.wide { max-width: 1440px; margin-inline: auto; }
+
+/* header */
+.top { padding-block: 40px 22px; display: grid; gap: 14px; position: relative; }
+.eyebrow { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--blue2); }
+.lede { max-width: 68ch; color: var(--ink); font-size: 1.06rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: .95rem; color: var(--grey); }
+.status { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--ink); border: 1.5px solid var(--ink); padding: 3px 12px; }
+.status::before { content: ""; width: 10px; height: 10px; background: var(--yellow); display: inline-block; }
+.frame { position: absolute; top: 0; right: 0; width: 200px; height: 120px; pointer-events: none; overflow: hidden; }
+.frame::before, .frame::after { content: ""; position: absolute; top: 0; right: 0; }
+.frame::before { border-top: 112px solid var(--green40); border-left: 180px solid transparent; }
+.frame::after { border-top: 64px solid var(--green); border-left: 104px solid transparent; }
+@media (max-width: 720px) { .frame { width: 110px; height: 66px; } .frame::before { border-top-width: 62px; border-left-width: 100px; } .frame::after { border-top-width: 36px; border-left-width: 58px; } }
+
+.scope { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1.5px solid var(--blue); border-bottom: 1px solid var(--blue20); margin-top: 6px; }
+.scope > div { padding: 12px 18px 12px 0; min-width: 0; }
+.scope b { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); font-weight: 600; }
+
+/* toolbar */
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding-block: 18px 12px; }
+.legend { display: grid; gap: 8px; font-size: .92rem; color: var(--ink); min-width: 0; }
+.legend .grp { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+.legend .gl { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--grey); min-width: 96px; }
+.tagsw { font-size: .72rem; letter-spacing: .08em; font-weight: 600; color: var(--grey); border: 1.25px solid #B4B4BA; background: #F7F7F9; padding: 1px 7px; border-radius: 2px; }
+.legend .k { display: inline-flex; align-items: center; gap: 7px; }
+.legend svg { flex: none; }
+.layers { display: flex; flex-wrap: wrap; gap: 8px; }
+.layer { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--blue20); background: var(--paper); padding: 5px 12px 5px 8px; cursor: pointer; font-size: .92rem; user-select: none; }
+.layer input { position: absolute; opacity: 0; pointer-events: none; }
+.layer:has(input:not(:checked)) { opacity: .5; border-style: dashed; }
+.layer:has(input:focus-visible) { outline: 2px solid var(--blue2); outline-offset: 2px; }
+.layer .n { color: var(--grey); font-variant-numeric: tabular-nums; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 1.5px solid var(--blue2); background: var(--paper); color: var(--blue2); font-weight: 600; font-size: .92rem; padding: 5px 12px; cursor: pointer; min-width: 36px; }
+.btn:hover { background: var(--blue20); }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.btn.stage { border-color: var(--blue20); color: var(--ink); font-weight: 500; }
+.btn.stage b { color: var(--blue2); font-weight: 700; margin-right: 4px; }
+.zoomval { font-variant-numeric: tabular-nums; min-width: 48px; text-align: center; font-size: .92rem; color: var(--grey); }
+.hint { font-size: .9rem; color: var(--grey); padding-bottom: 8px; }
+
+/* map */
+.map { border: 1.5px solid var(--blue); background: var(--paper); position: relative; }
+/* stage header row stays pinned to the top of the window while you read down the lanes */
+.stagebar { display: flex; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 3; background: var(--paper); border-bottom: 1.5px solid var(--blue); box-shadow: 0 3px 8px rgba(28, 23, 23, .10); }
+.stagebar .corner { flex: none; border-right: 1.5px solid var(--blue); background: var(--paper); }
+.stagewin { flex: 1 1 auto; min-width: 0; overflow: hidden; }
+#stageSvg { display: block; will-change: transform; }
+.stagehd { cursor: pointer; }
+.stagehd:focus { outline: none; }
+.stagehd:focus-visible .hdbox { stroke: var(--ink); stroke-width: 3; }
+.mapbody { display: flex; }
+.lanecol { flex: none; border-right: 1.5px solid var(--blue); background: var(--paper); }
+.scroller { flex: 1 1 auto; min-width: 0; overflow: auto; cursor: grab; overscroll-behavior-x: contain; }
+.scroller.drag { cursor: grabbing; user-select: none; }
+#mapSvg, #laneSvg, #cornerSvg { display: block; }
+.btn.stage[aria-current="true"] { background: var(--blue2); border-color: var(--blue2); color: #FFFFFF; }
+.btn.stage[aria-current="true"] b { color: #FFFFFF; }
+.node { cursor: pointer; }
+.node:focus { outline: none; }
+.node:focus-visible .shape { stroke: var(--ink); stroke-width: 3; }
+.node.sel .shape { stroke: var(--ink); stroke-width: 4.5; }
+.node:hover .shape { stroke-width: 4; }
+.hide-pain .b-pain, .hide-works .b-works, .hide-plan .b-plan, .hide-ask .b-ask { display: none; }
+
+/* detail */
+.detail { margin-top: 0; background: var(--paper); border: 1.5px solid var(--blue); border-top: 0; padding: 22px 24px 24px; }
+.dhead { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-start; justify-content: space-between; }
+.dhead > div { min-width: 0; }
+.dkicker { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); font-weight: 600; margin-bottom: 4px; }
+.dnav { display: flex; gap: 8px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 24px; margin: 14px 0 6px; padding: 12px 0; border-top: 1px solid var(--blue20); border-bottom: 1px solid var(--blue20); }
+.facts div { min-width: 0; }
+.facts dt { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); font-weight: 600; }
+.facts dd { margin: 0; }
+.dlists { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px 28px; margin-top: 14px; }
+.dlists section { min-width: 0; }
+.dlists h4 { margin: 0 0 6px; font-size: .95rem; display: flex; align-items: center; gap: 8px; }
+.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.items li { padding-left: 14px; border-left: 3px solid var(--blue20); }
+.items .by { display: block; font-size: .85rem; color: var(--grey); }
+.t-pain li { border-left-color: var(--purple); }
+.t-works li { border-left-color: var(--green); }
+.t-plan li { border-left-color: var(--blue2); }
+.t-ask li { border-left-color: var(--yellow); }
+
+/* findings */
+.block { padding-block: 44px 0; }
+.block > h2 { margin-bottom: 6px; }
+.block > .sub { color: var(--grey); max-width: 70ch; margin-bottom: 18px; }
+.cols3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.card { background: var(--paper); border: 1px solid var(--blue40); padding: 20px 22px; min-width: 0; }
+.card h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.card.works { border-color: var(--green40); }
+.card.pain { border-color: var(--purple40); }
+.card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.card li { min-width: 0; }
+.card li p + p { margin-top: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.chip { border: 1px solid var(--blue40); background: var(--canvas); color: var(--blue2); font-size: .85rem; font-weight: 600; padding: 2px 9px; cursor: pointer; text-align: left; }
+.chip:hover { background: var(--blue20); }
+.chip:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.muted { color: var(--grey); font-size: .9rem; }
+
+.timegrid { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .timegrid { grid-template-columns: 1fr; } }
+.tablewrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .97rem; font-variant-numeric: tabular-nums; min-width: 560px; }
+th { text-align: left; font-weight: 600; color: var(--blue2); border-bottom: 1.5px solid var(--blue); padding: 9px 12px 9px 0; }
+td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--blue20); vertical-align: top; }
+td:first-child { font-weight: 600; }
+td .tag { display: inline-block; font-size: .8rem; color: var(--grey); font-weight: 500; }
+.figs { display: grid; gap: 18px; }
+.fig { border-left: 1.5px solid var(--blue); padding-left: 18px; }
+.fig .num { font-size: 2.6rem; font-weight: 700; line-height: 1; color: var(--blue2); font-variant-numeric: tabular-nums; }
+.fig p { margin-top: 6px; }
+
+.qlist { margin: 0; padding: 0; list-style: none; counter-reset: q; display: grid; gap: 0; border-top: 1px solid var(--blue20); }
+.qlist li { counter-increment: q; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--blue20); }
+.qlist li::before { content: "Q" counter(q); font-weight: 700; color: var(--blue2); font-variant-numeric: tabular-nums; }
+.qlist .chips { grid-column: 2; margin-top: 0; }
+
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.two ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.dates { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 0; }
+.dates li { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--blue20); }
+.dates b { color: var(--blue2); font-variant-numeric: tabular-nums; }
+footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20); font-size: .8rem; letter-spacing: .04em; color: var(--grey); text-transform: uppercase; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
+@media (max-width: 600px) { .btn.stage { font-size: .85rem; padding: 4px 8px; } .legend, .layer { font-size: .86rem; } }
+
+.fbgen { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+
+/* ---- client journey additions: participant-first ---- */
+
+.scope > div.words { grid-column: span 1; }
+.words .w { display: inline-block; font-weight: 600; margin: 2px 8px 0 0; padding: 1px 10px; border: 2px solid var(--yellow); background: var(--paper); }
+.words .w.alt { border-color: var(--green); background: var(--green20); }
+/* comment chips: shown on hover, focus or selection once commenting is available in this view */
+.cchip { opacity: 0; transition: opacity .12s; display: none; cursor: pointer; }
+.canflag .cchip { display: block; }
+.canflag .node:hover .cchip, .canflag .node:focus-visible .cchip, .canflag .node.sel .cchip, .canflag .linkchip { opacity: 1; }
+.fp .node.other { opacity: .14; }
+.fp .link.other, .fp .dbullet.other { opacity: .07; }
+.dim .node.dimmed { opacity: .16; }
+.dim .link.dimmed, .dim .dbullet.dimmed { opacity: .08; }
+.dbullet { pointer-events: none; }
+/* connectors are selectable: a wide invisible hit line, with a soft halo on hover and a yellow one when selected */
+.link { cursor: pointer; }
+.link:focus { outline: none; }
+.link .hit { stroke: transparent; }
+.link:hover .hit, .link:focus-visible .hit { stroke: rgba(0, 110, 143, .16); }
+.link.sel .hit { stroke: rgba(255, 197, 0, .5); }
+.flagbox { margin-top: 18px; padding: 16px 18px; border: 2px solid var(--yellow); border-left-width: 8px; background: var(--paper); }
+.flagbox h4 { margin: 0 0 4px; font-size: 1.05rem; }
+.flagbox p.note { color: var(--grey); font-size: .92rem; margin: 0 0 10px; max-width: 70ch; }
+.flagbox .row { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.ends { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.btn.door .dsw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 7px; vertical-align: -1px; border: 1.5px solid #FFFFFF; box-shadow: 0 0 0 1px rgba(28, 23, 23, .25); }
+.btn.primary { background: var(--blue2); color: #fff; }
+.btn.primary:hover { background: var(--blue); }
+.btn[disabled] { opacity: .45; cursor: default; }
+.flagmsg { font-size: .95rem; font-weight: 600; }
+.mini { margin-top: 10px; font-size: .9rem; color: var(--grey); }
+.check { display: inline-flex; align-items: center; gap: 8px; font-size: .92rem; cursor: pointer; border: 1.5px solid var(--blue20); background: var(--paper); padding: 5px 12px; }
+.check input { width: 16px; height: 16px; accent-color: var(--blue2); }
+.btn.door { border-color: var(--blue20); color: var(--ink); font-weight: 500; }
+.btn.door[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+.dkicker .pp { color: var(--purple); }
+.qhead { font-size: 1.1rem; font-weight: 700; color: var(--blue2); margin: 22px 0 8px; }
+.banner { justify-self: start; max-width: 68ch; background: var(--purple); color: #FFFFFF; font-weight: 600; font-size: 1.05rem; line-height: 1.4; padding: 10px 18px; }
+.tbox { cursor: pointer; }
+.tbox:hover rect, .tbox:focus-visible rect { stroke: var(--blue2); }
+.tbox:focus { outline: none; }
+.fp .tbox { opacity: .35; }
+</style>
+
+<header class="wrap top">
+  <div class="frame" aria-hidden="true"></div>
+  <div class="banner">Draft based on the October 6 working session. Please flag anything we captured incorrectly, omitted, or need to confirm.</div>
+  <div class="eyebrow">LDH &amp; Louisiana Works · SNAP E&amp;T Operational Assessment</div>
+  <h1>Client Journey Map</h1>
+  <p class="lede">How a SNAP recipient moves from being found eligible, or being identified by a provider, to starting and finishing SNAP E&amp;T services. The participant is at the center: their steps run along the top lane with a heavier border, and every other role is shown only as far as it shapes what the participant experiences. This reflects state staff descriptions from the October 6 working session. Participant experiences and provider steps have not yet been validated directly with participants or providers.</p>
+  <div class="meta">
+    <span class="status">Draft for validation</span>
+    <span>Working session: Tuesday, October 6, 2026</span>
+    <span>Prepared by Third Sector Capital Partners</span>
+  </div>
+  <div class="fbgen"><button class="btn primary" type="button" id="fbGeneral">Give feedback on this map</button><span class="flagmsg" id="fbGenMsg" role="status"></span><span class="muted">Or select any step and use the <b>Comment</b> button.</span></div>
+  <div class="scope">
+    <div><b>Starts</b>A person is confirmed SNAP-eligible, or a provider identifies someone who may be eligible.</div>
+    <div><b>Ends</b>The participant completes services, finds work, or exits. Staff described job retention support lasting 30–90 days; access and uptake remain to be confirmed.</div>
+    <div class="words"><b>Staff’s one word for the participant’s experience</b><span class="w">Tedious</span><span class="w">Difficult</span><span class="w">Difficult</span><span class="w">Uncertain</span><span class="w">Confusing</span><span class="w alt">Easier</span></div>
+  </div>
+</header>
+
+<section class="wide" aria-label="Journey map">
+  <div class="toolbar">
+    <div class="legend" aria-label="Map key">
+      <div class="grp"><span class="gl">Participant</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="2" y="2" width="26" height="16" rx="2" fill="#FFFFFF" stroke="#006E8F" stroke-width="3.5"/></svg>Participant step</span>
+      <span class="k"><svg width="26" height="22" aria-hidden="true"><path d="M13 2 L24 11 L13 20 L2 11 Z" fill="#FFFFFF" stroke="#006E8F" stroke-width="3"/></svg>Participant decision</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#006E8F" stroke-width="4.5"/></svg>Participant’s path</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#006E8F" stroke-width="3" stroke-dasharray="8 5"/></svg>Another path the participant can take</span>
+      <span class="k"><svg width="74" height="22" aria-hidden="true"><line x1="0" y1="5" x2="22" y2="5" stroke="#006E8F" stroke-width="6"/><line x1="0" y1="5" x2="22" y2="5" stroke="#0086AE" stroke-width="4"/><line x1="26" y1="11" x2="48" y2="11" stroke="#00744D" stroke-width="6"/><line x1="26" y1="11" x2="48" y2="11" stroke="#00A76F" stroke-width="4"/><line x1="52" y1="17" x2="74" y2="17" stroke="#8C6900" stroke-width="6"/><line x1="52" y1="17" x2="74" y2="17" stroke="#FFC500" stroke-width="4"/></svg>Door 1, 2, 3 routes, until they join</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#862E88" stroke-width="3" stroke-dasharray="7 4"/></svg>Participant declines</span>
+      <span class="k"><svg width="56" height="20" aria-hidden="true"><rect x="0" y="2" width="26" height="16" rx="2" fill="#00A76F"/><text x="13" y="14.5" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">Yes</text><rect x="30" y="2" width="26" height="16" rx="2" fill="#862E88"/><text x="43" y="14.5" text-anchor="middle" font-size="12" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">No</text></svg>Participant’s answer</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" rx="2" fill="#DFCDDF" stroke="#862E88" stroke-width="2"/></svg>Participant leaves</span>
+      <span class="k"><svg width="40" height="22" aria-hidden="true"><line x1="2" y1="1" x2="2" y2="22" stroke="#862E88" stroke-width="2.5"/><path d="M2 1 H38 L32 7 L38 13 H2 Z" fill="#862E88"/></svg>Drop-off staff described</span>
+      <span class="k"><svg width="40" height="16" aria-hidden="true"><path d="M2 14 V5 H38 V14" fill="none" stroke="#862E88" stroke-width="2.5"/></svg>Staff estimate spanning several steps</span>
+      <span class="k"><svg width="34" height="20" aria-hidden="true"><rect x="1" y="3" width="32" height="14" rx="2" fill="#C4DFE7"/><text x="17" y="14" text-anchor="middle" font-size="9" font-weight="700" fill="#006E8F" font-family="Barlow, Arial">TIME</text></svg>Time, as reported</span>
+      </div>
+      <div class="grp"><span class="gl">Other roles</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" rx="2" fill="#F7F7F9" stroke="#B4B4BA" stroke-width="1.25"/></svg>Other role’s step</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" rx="2" fill="#F7F7F9" stroke="#5A5A5C" stroke-width="1.25" stroke-dasharray="4 3"/></svg>Step in a system</span>
+      <span class="k"><svg width="26" height="22" aria-hidden="true"><path d="M13 2 L24 11 L13 20 L2 11 Z" fill="#F7F7F9" stroke="#5A5A5C" stroke-width="1.25"/></svg>Other decision</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" rx="2" fill="#F7F7F9" stroke="#5A5A5C" stroke-width="1.25" stroke-dasharray="2 3"/></svg>Clarity needed</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="1.5"/></svg>Handoff</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="1.5" stroke-dasharray="6 4"/></svg>Re-referral loop</span>
+      <span class="k"><svg width="46" height="22" aria-hidden="true"><line x1="0" y1="11" x2="30" y2="11" stroke="#5A5A5C" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="36" cy="11" r="8.5" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="36" y="15.5" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>Next handoff not yet known</span>
+      <span class="k"><span class="tagsw">RUNS ALONGSIDE</span>Ongoing work in that stage, outside the step-by-step handoffs</span>
+      </div>
+    </div>
+    <div class="layers" role="group" aria-label="Show on map">
+      <label class="layer"><input type="checkbox" id="lay-pain" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#862E88"/><text x="10" y="14.5" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points <span class="n" id="cnt-pain"></span></label>
+      <label class="layer"><input type="checkbox" id="lay-works" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#00A76F"/><text x="10" y="14.5" text-anchor="middle" font-size="14" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well <span class="n" id="cnt-works"></span></label>
+      <label class="layer"><input type="checkbox" id="lay-plan" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#006E8F"/><path d="M6 10 H13 M10 6.5 L13.5 10 L10 13.5" stroke="#FFFFFF" stroke-width="1.8" fill="none"/></svg>Planned changes <span class="n" id="cnt-plan"></span></label>
+      <label class="layer"><input type="checkbox" id="lay-ask" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.25" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="10" y="14.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>To confirm <span class="n" id="cnt-ask"></span></label>
+    </div>
+  </div>
+  <div class="toolbar" style="padding-top:0">
+    <div class="controls" role="group" aria-label="Jump to stage" id="stageNav"></div>
+    <div class="controls" role="group" aria-label="Ways in">
+      <span class="muted" style="font-size:.9rem">Three ways in:</span>
+      <button class="btn door" type="button" data-door="1" aria-pressed="false"><span class="dsw" style="background:#0086AE"></span>1 · SNAP application</button>
+      <button class="btn door" type="button" data-door="2" aria-pressed="false"><span class="dsw" style="background:#00A76F"></span>2 · Provider reverse referral</button>
+      <button class="btn door" type="button" data-door="3" aria-pressed="false"><span class="dsw" style="background:#FFC500"></span>3 · Asks on their own</button>
+    </div>
+  </div>
+  <div class="toolbar" style="padding-top:0">
+    <label class="check"><input type="checkbox" id="pOnly"> Participant view: fade the other roles</label>
+    <div class="controls" role="group" aria-label="Zoom">
+      <button class="btn" id="zOut" aria-label="Zoom out">−</button>
+      <span class="zoomval" id="zVal">100%</span>
+      <button class="btn" id="zIn" aria-label="Zoom in">+</button>
+      <button class="btn" id="zFit">Fit</button>
+    </div>
+  </div>
+  <p class="hint">Scroll or drag sideways to follow the journey. The lettered stages are columns that run down through every role, and their headers stay pinned at the top as you read down. Participant steps are numbered in order; the three doors are all step 1, because a person uses one of them, and each door’s route keeps its own color until it joins the main path. Icons on a step show what we heard there; select any step or connector for the full detail. To give feedback, select a step or connector and choose <b>Comment</b>; a short form opens with that spot already filled in.</p>
+  <div class="map" id="mapBox">
+    <div class="stagebar" id="stageBar">
+      <div class="corner"><svg id="cornerSvg" aria-hidden="true"></svg></div>
+      <div class="stagewin"><svg id="stageSvg" role="group" aria-label="Journey stages"></svg></div>
+    </div>
+    <div class="mapbody">
+      <div class="lanecol"><svg id="laneSvg" role="img" aria-label="Swimlanes"></svg></div>
+      <div class="scroller" id="scroller"><svg id="mapSvg" role="group" aria-label="Client journey steps"></svg></div>
+    </div>
+  </div>
+  <div class="detail" id="detail" aria-live="polite"></div>
+</section>
+
+<section class="wrap block" aria-labelledby="h-across">
+  <h2 id="h-across">Across the journey</h2>
+  <p class="sub">The themes that came up at more than one step. Select a step name to find it on the map.</p>
+  <div class="cols3">
+    <div class="card works">
+      <h3><svg width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#00A76F"/><text x="11" y="16" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well</h3>
+      <ul id="acrossWorks"></ul>
+    </div>
+    <div class="card pain">
+      <h3><svg width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#862E88"/><text x="11" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points heard most</h3>
+      <ul id="acrossPain"></ul>
+    </div>
+    <div class="card">
+      <h3><svg width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#006E8F"/><path d="M6.5 11 H14.5 M11 7 L15 11 L11 15" stroke="#FFFFFF" stroke-width="2" fill="none"/></svg>Planned changes</h3>
+      <ul id="acrossPlan"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap block" aria-labelledby="h-time">
+  <h2 id="h-time">Timing and numbers, as reported</h2>
+  <p class="sub">Staff estimates and figures from the session. None of the counts have been checked against data yet.</p>
+  <div class="timegrid">
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Step</th><th scope="col">As reported</th><th scope="col">Reported by</th></tr></thead>
+        <tbody id="timeBody"></tbody>
+      </table>
+    </div>
+    <div class="figs">
+      <div class="fig"><div class="num">52,000</div><p>direct referrals last year: people who expressed interest in E&amp;T at the eligibility interview.</p><p class="muted">SNAP E&amp;T manager</p></div>
+      <div class="fig"><div class="num">2–3%</div><p>estimated share of those referrals that reach assessment. A smaller share enroll, and that count isn’t tracked yet.</p><p class="muted">SNAP E&amp;T manager. Staff estimate; pending data validation.</p></div>
+      <div class="fig"><div class="num">60–70%</div><p>rough guess at the share of participants who finish training. The figure wasn’t at hand.</p><p class="muted">SNAP E&amp;T manager, guess</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap block" aria-labelledby="h-q">
+  <h2 id="h-q">Questions to confirm</h2>
+  <p class="sub">Three kinds of follow-up: numbers we need to size each drop-off, places where the map doesn’t yet show how the process works, and questions that apply across the whole journey. Corrections to anything else on the map are welcome.</p>
+  <h3 class="qhead">Data needed</h3>
+  <ol class="qlist" id="qData"></ol>
+  <h3 class="qhead">Map clarity: how the process works</h3>
+  <ol class="qlist" id="qMap"></ol>
+  <h3 class="qhead">Across the journey</h3>
+  <ol class="qlist" id="qGen"></ol>
+</section>
+
+<section class="wrap block two" aria-labelledby="h-next">
+  <div>
+    <h2 id="h-next">Next steps</h2>
+    <ul class="dates">
+      <li><b>Ongoing</b><span>Third Sector follows up one-on-one on the points to confirm.</span></li>
+      <li><b>Oct 15</b><span>Draft map shared with the working group for reactions.</span></li>
+      <li><b>Oct 30</b><span>Refined map delivered.</span></li>
+    </ul>
+    <p class="muted" style="margin-top:10px">No participants or providers took part in the session, so the participant lane and the provider lane reflect staff views. Roles are inferred from introductions; comments are attributed by role, not by name.</p>
+  </div>
+  <div>
+    <h2>Outside this map</h2>
+    <ul>
+      <li>Provider invoicing and payment</li>
+      <li>SNAP eligibility policy and error-rate work</li>
+      <li>Design of the new integrated SNAP and Medicaid eligibility system</li>
+      <li>Provider procurement and onboarding</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="wrap"><span>Third Sector Capital Partners</span><span>Draft · not for distribution beyond the working group</span></footer>
+
+<script>
+(function () {
+  "use strict";
+  var MAP_NAME = "Client Journey Map";
+
+  /* ---------- content ---------- */
+  var LANES = [
+    { id: "part", title: "Participant", sub: "What they do and feel, as staff described it", org: "part" },
+    { id: "elig", title: "LDH · SNAP eligibility", sub: "Interviews, authorization, SNAP E&T unit", org: "ldh" },
+    { id: "law",  title: "LA Works · E&T", sub: "Managers and consultants", org: "law" },
+    { id: "ajc",  title: "AJC staff", sub: "Workforce centers", org: "law" },
+    { id: "prov", title: "Provider", sub: "Includes SNAP community partners", org: "prov" },
+    { id: "time", title: "Est. timing", sub: "As staff reported it", org: "time" }
+  ];
+  var STAGES = [
+    { k: "A", name: "Ways in: three doors", from: 0, to: 2 },
+    { k: "B", name: "Interview: picks training options", from: 3, to: 5 },
+    { k: "C", name: "Referral and first provider contact: where most people are lost", from: 6, to: 10 },
+    { k: "D", name: "Orientation: program and expectations", from: 11, to: 12 },
+    { k: "E", name: "Needs assessment and fit; training and supports start", from: 13, to: 16 },
+    { k: "F", name: "Participation and completion", from: 17, to: 19 },
+    { k: "G", name: "Finding work and job retention", from: 20, to: 22 }
+  ];
+  var R = { dir: "SNAP E&T director", mgr: "SNAP E&T manager", con: "E&T consultant", elig: "LDH eligibility supervisor", ldh: "LDH SNAP staff" };
+  function it(t, by) { return { t: t, by: by }; }
+
+  var NODES = [
+    /* ===== participant lane ===== */
+    { id: "p_d1", lane: 0, col: 0, row: 0, type: "start", doors: [1], label: "Applies for SNAP online, by phone, or on paper, usually thinking about food benefits, not E&T",
+      who: "Participant",
+      notes: [it("Applies online through the LDH website (CAFE-SSP), by phone, or on paper.", R.ldh),
+              it("Most people are focused on getting food benefits. Unless they already know about E&T, it first comes up at the eligibility interview.", "Working-session board"),
+              it("SNAP community partners and outreach agencies can help with the application.", R.ldh)],
+      pain: [it("Many people engage late. They know the work requirement, but often wait until the second or third month, when their case is about to close, then rush to enroll.", R.dir + "; " + R.mgr)],
+      askmap: [it("Door 1: when community partners help someone apply, do they screen for E&T? The draft map says no screening; the October 6 board says screening is built into that help.")] },
+    { id: "p_d2", lane: 0, col: 1, row: 1, type: "start", doors: [2], label: "Goes to a provider for a specific program, such as CDL, and hears about E&T there",
+      who: "Participant", feel: ["😥"],
+      notes: [it("People come in for a specific program. The provider or partner introduces SNAP E&T while delivering its existing services: what it is and how it helps.", R.dir + "; working-session board"),
+              it("The person may or may not be on SNAP yet. The provider can check in SNAP Works.", R.mgr + "; working-session board")] },
+    { id: "p_d3", lane: 0, col: 2, row: 2, type: "start", doors: [3], label: "Asks about E&T through the LA Help Line, a local LDH office, the E&T email, or an AJC",
+      who: "Participant", feel: ["😀 🤔"],
+      notes: [it("Asks about E&T on their own: the LA Help Line, a local LDH office, the LA Works or SNAP E&T email, or by walking into an AJC or partner agency.", R.ldh + "; " + R.dir),
+              it("These people already want to take part, so the next steps are checking eligibility and connecting them to a provider.", R.dir)],
+      works: [it("Staff reported stronger engagement and enrollment among people who reach out on their own and get a warm handoff than among people on direct referral.", R.dir)],
+      ask: [it("How many people come in through each of the three doors?")] },
+    { id: "p_interview", lane: 0, col: 3, type: "step", label: "Answers the worker’s questions and sends any proof requested",
+      who: "Participant", time: "About 30 to 45 minutes or more. At least 10 days to send proof, accepted through day 30.",
+      notes: [it("E&T is discussed during the same interview, as part of the interviewer’s screen flow.", R.elig),
+              it("When verification is needed, a notice confirms a deadline of at least 10 days, and people can still submit through day 30.", R.ldh)],
+      pain: [it("Some people are dealing with other things and don’t take E&T in. They don’t recall it when a provider calls later.", R.ldh + "; " + R.dir)],
+      works: [it("There is no extra paperwork at the interview. E&T is part of the same conversation.", R.elig)] },
+    { id: "p_pick", lane: 0, col: 4, type: "step", doors: [1, 2, 3], label: "Hears what E&T offers and picks one or two training options in their region; doesn’t yet know which provider",
+      who: "Participant", feel: ["😀 Excited it’s free", "🤔 Wary of a catch", "😵‍💫 Too distracted to take it in"],
+      notes: [it("The worker explains E&T and its benefits: it’s free, and it can help with costs like uniforms.", R.ldh),
+              it("Options depend on the person’s region: the online option, available statewide, plus the education programs offered in their parish. Each lists its services, such as HVAC (virtual), CNA, phlebotomy, or electrical.", R.mgr),
+              it("People must pick at least one option and are encouraged to pick a second.", R.mgr),
+              it("Door 2: the provider introduces E&T alongside the program the person came in for, and checks SNAP status.", R.dir + "; " + R.mgr),
+              it("Door 3: an eligibility worker explains E&T and records the 1st and 2nd choices through a change report, or an LA Works or AJC consultant shares the providers in the person’s parish and the person chooses.", R.ldh + "; " + R.dir + "; " + R.con),
+              it("They don’t learn which provider they’ll be referred to. Several providers can offer the same service, so referrals are assigned round-robin once the case is authorized.", R.mgr),
+              it("No needs assessment happens here. The script doesn’t ask about barriers, supports such as transportation or child care, or prerequisites such as a clear driver’s license.", R.elig + "; " + R.ldh)],
+      pain: [it("No needs assessment at the interview, so people can pick programs they can’t get to or can’t enter.", R.elig + "; " + R.ldh),
+             it("Mailed notices still show a mix of agency names, so people aren’t sure whom to contact after an interview with LDH.", R.mgr)] },
+    { id: "d_yes", lane: 0, col: 5, type: "decision", label: "Says yes to E&T?",
+      who: "Participant",
+      notes: [it("E&T is voluntary in Louisiana. The module records whether the person is interested and which options they pick.", R.ldh),
+              it("If they say yes, the referral waits until the case is authorized.", R.ldh)],
+      pain: [it("Most people are focused on getting food benefits, and E&T is new to many of them.", R.ldh + "; working-session board"),
+             it("Some are overwhelmed or dealing with other things during a 45-minute interview and don’t take E&T in.", R.ldh)],
+      ask: [it("How many people say no to E&T at the interview?")] },
+    { id: "x_noref", lane: 0, col: 5, row: 1, type: "exit", label: "Leaves without a referral; some come back later through the help line, an office, or the E&T email",
+      who: "Participant",
+      notes: [it("Some people hear about E&T later, or know someone who went through it, and come back asking about it.", R.ldh),
+              it("Many ABAWDs come back in the second or third month, when their case is about to close.", R.dir)] },
+    { id: "p_wait", time: "About a week for the case to be authorized, then up to 10 days for the provider’s call.", lane: 0, col: 6, type: "step", label: "Hears nothing while the referral is processed",
+      who: "Participant", feel: ["😕 Left waiting with no contact for 2+ weeks"],
+      notes: [it("Authorization can take about a week after the interview. The provider then has 10 days to make first contact.", R.mgr),
+              it("When verification is in at the interview, the case can be authorized the same day and a provider can call that week.", R.ldh)],
+      pain: [it("Two weeks or more can pass between the interview and the first call. People may have stopped thinking about E&T by then.", R.mgr)] },
+    { id: "p_call", lane: 0, col: 8, type: "step", label: "Gets a call from the provider",
+      who: "Participant", feel: ["😕 Confused about why they’re being called", "😥 Worried about losing their benefits"],
+      notes: [it("The provider calls to follow up on the referral, within 10 days of receiving it. They explain that the person told LDH they were interested in E&T and check whether the person still wants to take part.", R.dir + "; " + R.mgr),
+              it("Providers must try at least twice, once by phone, and log each attempt. Some also email or text.", R.dir + "; " + R.mgr)],
+      pain: [it("Many don’t remember telling LDH they were interested in E&T, or never linked the interview to the call.", R.dir),
+             it("Confused about why the provider is calling.", R.dir + "; " + R.elig + "; " + R.con),
+             it("Worried their SNAP benefits are at risk if they don’t take part.", R.dir)] },
+    { id: "d_still", lane: 0, col: 9, type: "decision", label: "Still interested when the provider calls?",
+      who: "Participant",
+      notes: [it("If not, the provider delinks the referral and SNAP Works sends it to the person’s second choice. If that provider is declined too, a re-referral task goes to the SNAP E&T unit.", R.dir),
+              it("Last year about 52,000 direct referrals expressed interest at the interview. An estimated 2 to 3% reached assessment.", R.mgr)],
+      pain: [it("Doesn’t connect the call to the interview, so doesn’t know why the provider is calling.", R.dir + "; " + R.elig + "; " + R.con),
+             it("Worries their SNAP benefits are at risk if they don’t take part.", R.dir),
+             it("Said yes only to get through the interview.", R.mgr),
+             it("Has found a job since the interview.", R.mgr),
+             it("Two weeks or more have passed since the interview.", R.mgr),
+             it("Loses interest once they are screened.", R.con)],
+      ask: [it("Of the people providers reach, how many say they’re no longer interested?")] },
+    { id: "p_needs", lane: 0, col: 13, type: "step", label: "Talks with the provider about their barriers, needs, and skills",
+      who: "Participant",
+      notes: [it("Usually comes after orientation. The provider uses the assessment to identify barriers and see whether the person is a good fit.", R.con),
+              it("This is the first time anyone asks about the person’s barriers and needs. The eligibility interview doesn’t.", R.con + "; " + R.mgr),
+              it("It is often where people learn that the supports they need aren’t available, or that the program isn’t a fit. Example: of 100 people interested in CDL, only about 50 have a driver’s license.", R.mgr + "; " + R.dir),
+              it("For programs at a physical site, transportation often decides it. Rural parishes have few sites and little rideshare.", R.mgr)],
+      pain: [it("If the person moves to a second provider, they may repeat the assessment, because the second provider can’t see the first provider’s.", R.mgr)] },
+    { id: "d_fit", lane: 0, col: 14, type: "decision", label: "Good fit, with the supports they need?",
+      who: "Participant",
+      notes: [it("If not, the provider records a provider determination and delinks the referral, which goes to the person’s second choice. Some providers help with a prerequisite, such as a license, or steer the person to another program.", R.dir + "; " + R.mgr)],
+      pain: [it("Doesn’t meet a prerequisite, such as a clear driver’s license for CDL. In one example, only about 50 of 100 people interested in CDL had a license.", R.mgr + "; " + R.dir),
+             it("Can’t get to a physical site. Rural parishes have few sites and little rideshare.", R.mgr),
+             it("Needs help E&T can’t cover, such as paying fines to clear a license.", R.mgr)],
+      ask: [it("How many people are found not to be a fit at the needs assessment, and for which reasons?")] },
+    { id: "p_orient", lane: 0, col: 11, type: "step", label: "Learns the program’s requirements, what’s expected, and what success looks like",
+      who: "Participant",
+      notes: [it("Providers usually hold orientation first, before the needs assessment.", R.con),
+              it("Most providers hold an orientation. They go over the program, the expectations, and what the person needs to do to be successful.", R.con),
+              it("Orientation covers what the provider offers directly, such as education, work experience, and job retention, and the supportive services it tracks in SNAP Works.", "Working-session board"),
+              it("Orientation format depends on the provider.", R.mgr)] },
+    { id: "d_commit", lane: 0, col: 12, type: "decision", label: "Commits after orientation?",
+      who: "Participant",
+      notes: [it("Orientation is where the person learns the program’s requirements and what success looks like, so it is a point where some decide not to start.", "Draft hypothesis")],
+      pain: [it("Expectations weren’t made clear before orientation, so the program’s requirements come as a surprise.", "Draft hypothesis; to confirm"),
+             it("The training doesn’t line up with what they’re interested in. Some realize it isn’t what they want to do.", "Draft hypothesis, with input from " + R.con),
+             it("No remote option is offered for what they need, and they can’t get to an in-person site. Virtual providers get the most enrollment because they are easy to reach.", "Draft hypothesis, with input from " + R.mgr)],
+      ask: [it("How many people don’t start the training after orientation, and why?")] },
+    { id: "x_orient", lane: 0, col: 12, row: 1, type: "exit", label: "Doesn’t start the training after orientation",
+      who: "Participant" },
+    { id: "p_begin", time: "Next day with a virtual provider; the next cohort at most colleges.", lane: 0, col: 15, type: "step", label: "Begins classes or work experience in the program they chose",
+      who: "Participant",
+      notes: [it("Virtual providers can almost always start someone the next day. Most educational providers start cohorts at set times.", R.mgr),
+              it("Some providers build job search into their other components. A few offer it on its own.", R.mgr)] },
+    { id: "p_support", lane: 0, col: 16, type: "step", label: "Uses supports like bus passes, gas money, or rideshare",
+      who: "Participant",
+      askmap: [it("When can supports begin: during assessment, at orientation, or after enrollment?")],
+      notes: [it("Providers must offer all the supportive services they have. People aren’t expected to ask.", R.mgr),
+              it("Transportation help varies by provider: bus passes around New Orleans, gas and buses in Southwest Louisiana, a gas-station arrangement near Baton Rouge, and rideshare. Car repairs aren’t covered.", R.mgr)],
+      pain: [it("In rural parishes physical access is limited and rideshare is hard to find. Virtual providers get the largest share of enrollment because they are easy to reach.", R.mgr)] },
+    { id: "p_attend", lane: 0, col: 17, type: "step", label: "Goes to the training regularly",
+      who: "Participant",
+      notes: [it("To regain lost benefits, people must participate for 30 days.", R.mgr)] },
+    { id: "d_attend", lane: 0, col: 18, type: "decision", label: "Keeps attending?",
+      who: "Participant",
+      notes: [it("Consultants check the monthly component report and ask providers about months with no hours.", R.dir + "; " + R.mgr)],
+      pain: [it("Finds a job and stops showing up. The provider may only learn of it when they lose the job and call back.", R.mgr + "; " + R.con),
+             it("Loses interest, or realizes the training isn’t what they want.", R.con),
+             it("Loses SNAP eligibility or is no longer an ABAWD. More people than usual left for this reason last year.", R.mgr)],
+      ask: [it("How many people stop attending the training, and why?")],
+      askmap: [it("When someone leaves SNAP (by choice or because they lose benefits) or finds work while they still have E&T services to complete, who is notified in each case, and what happens to their E&T services?")] },
+    { id: "x_stop", lane: 0, col: 18, row: 1, type: "exit", label: "Stops going to the training",
+      who: "Participant",
+      notes: [it("LA Works encourages providers to keep contacting someone for a full calendar month before closing them out, in case benefits or issues at home are the cause.", R.mgr)] },
+    { id: "p_end", lane: 0, col: 19, type: "step", label: "Finishes the program they chose",
+      who: "Participant",
+      notes: [it("A rough guess is that 60 to 70% finish training. The manager didn’t have the figure offhand.", R.mgr)],
+      ask: [it("What share of people who start a training complete it?")],
+      askmap: [it("What happens when someone completes training without a job, or finds work before completing?")] },
+    { id: "p_findjob", lane: 0, col: 20, type: "step", label: "Gets a job, during or after the training",
+      who: "Participant",
+      notes: [it("Some people find work while still in training. Others find it after they finish.", R.mgr + "; " + R.con)],
+      pain: [it("People who find work during training often just stop showing up, so the provider may not know they’re employed.", R.mgr)] },
+    { id: "p_retain", time: "At least 30 days, up to 90.", lane: 0, col: 21, type: "step", label: "If they take it up, checks in with the provider about how the new job is going",
+      who: "Participant",
+      notes: [it("Every provider must offer job retention this year: at least 30 days, up to 90.", R.mgr),
+              it("What retention looks like varies. A few providers are very thorough; others check in weekly or monthly.", R.mgr)],
+      ask: [it("Providers must offer retention support, but does everyone who finds a job receive it, and how many do?")] },
+    { id: "p_close", lane: 0, col: 22, type: "end", label: "If the job ends, may come back to the provider for help",
+      who: "Participant",
+      notes: [it("Providers often learn someone found work only when that person loses the job and calls back for help.", R.mgr)] },
+    { id: "e_online", lane: 1, col: 0, row: 0, type: "system", sys: "CAFE-SSP", doors: [1], label: "Online applications go round-robin to an eligibility worker, who schedules the interview",
+      who: "LDH eligibility worker",
+      notes: [it("Online applications go round-robin to a worker, who registers the application, schedules and holds the interview, requests verification, and determines eligibility.", R.ldh)] },
+    { id: "e_change", lane: 1, col: 2, row: 1, type: "step", doors: [3], label: "Help-line call or office visit: the worker adds E&T screening through a change report",
+      who: "LDH eligibility worker",
+      notes: [it("A caller to the help line, or someone at a local office, can ask about E&T. The worker gets a notice and adds E&T screening to the case through a change report.", R.ldh),
+              it("The sequence staff described: change report, then E&T screening, then authorization, then the referral goes to SNAP Works.", "Staff, October 6 session")] },
+    { id: "e_rights", lane: 1, col: 3, type: "step", label: "Reads rights and responsibilities, including ABAWD and work registration",
+      who: "LDH eligibility worker",
+      works: [it("ABAWD rules are repeated: when rights and responsibilities are read, on the interview screen, in work-requirement notices, and by providers. Staff say people know the rule.", R.ldh + "; " + R.elig + "; " + R.dir)] },
+    { id: "e_script", lane: 1, col: 4, type: "system", sys: "LIGHT", label: "E&T script and module explain E&T and record interest and choices",
+      who: "LDH eligibility worker",
+      notes: [it("Louisiana’s program is voluntary. The worker explains E&T and the module records whether the person is interested and which options they pick.", R.ldh)],
+      works: [it("E&T is built into the interview flow, so workers have a script and a module to check off interests, with no extra paperwork.", R.elig + "; " + R.ldh)],
+      pain: [it("The script doesn’t ask about prerequisites, such as a clear driver’s license for CDL. People can pick programs they can’t enter and bounce to re-referral.", R.elig + "; " + R.ldh + "; " + R.mgr),
+             it("System fixes are slow. A change requested in 2024 is still pending.", R.mgr)],
+      plan: [it("Near term: train workers to ask screening questions, and add a prerequisite column to the provider and service list for quick reference. Later: build it into provider selection, possibly for the next fiscal year. Building it into the system would be about a $250,000 change.", R.ldh + "; " + R.mgr)] },
+    { id: "e_auth", lane: 1, col: 6, type: "system", sys: "SNAP Works", label: "Authorizes the case; the E&T referral goes to SNAP Works",
+      who: "LDH eligibility worker", time: "Same day as the interview when verification is in; often about a week.",
+      notes: [it("“Authorized” means the SNAP case is complete and eligible. The E&T referral is submitted to SNAP Works at authorization.", R.dir + "; " + R.ldh),
+              it("LDH and LA Works meet regularly and communicate constantly about referrals.", R.elig + "; " + R.con)] },
+    { id: "e_unit", lane: 1, col: 10, type: "step", label: "SNAP E&T unit gets a re-referral task and calls to check interest",
+      who: "LDH SNAP E&T unit",
+      notes: [it("The unit gets a re-referral task when both of the person’s provider choices decline.", R.dir)],
+      works: [it("The state built this unit to catch people who fall through the cracks.", R.elig)] },
+    { id: "e_abawd", lane: 1, col: 17, type: "step", label: "Alerts the caseworker when an ABAWD logs under 80 hours in a month",
+      who: "LDH caseworker",
+      notes: [it("Providers report ABAWD status and tell people when the program’s hours (about 20 a week) fall short, so they can add other activities.", R.dir)],
+      plan: [it("New this fiscal year: an automatic task goes to the caseworker when an ABAWD in E&T hasn’t logged 80 hours in the previous month.", R.mgr)] },
+    { id: "e_update", lane: 1, col: 18, type: "system", sys: "LIGHT", label: "Updates the case when eligibility changes; the outcome isn’t shared back",
+      who: "LDH caseworker",
+      pain: [it("SNAP Works reports stopped participation to LIGHT, but LA Works can’t see whether benefits were lost. LDH would need a data pull, and LA Works can’t tell whether the person is in another activity or has an exemption.", R.dir + "; " + R.ldh),
+             it("Counts of ABAWD participants cut off for missing hours aren’t available.", R.mgr)] },
+    { id: "l_email", lane: 2, col: 2, type: "step", doors: [3], label: "Two consultants answer E&T emails and hand people to a provider",
+      who: "E&T consultants (two dedicated to the inbox)",
+      notes: [it("They ask which parish the person lives in and what they’re interested in, send provider names, locations, and services, then make a warm handoff to the provider the person chooses. If needed, the reverse referral is done in the system.", R.dir),
+              it("Staff reach out to LDH to confirm the person is eligible.", "Working-session board")],
+      works: [it("Staff reported stronger engagement and enrollment among people who reach out this way than among people on direct referral.", R.dir)],
+      askmap: [it("Door 3, E&T email: after the consultants’ warm handoff, how does the referral get into SNAP Works, and does the person still wait for the provider’s first call?")] },
+    { id: "l_watch", lane: 2, col: 4, type: "step", doors: [2], label: "Watches the application after a provider’s heads-up",
+      who: "LA Works E&T staff",
+      notes: [it("When a provider says someone who isn’t on SNAP may want E&T, LA Works watches the application after the person submits it.", R.mgr)],
+      askmap: [it("Door 2, not on SNAP yet: once the person applies, does the referral go back to the same provider, or through the round-robin like Door 1?")] },
+    { id: "l_cap", lane: 2, col: 7, type: "step", label: "Sets provider capacity each year and can pause a backlogged provider",
+      who: "SNAP E&T manager",
+      notes: [it("Providers say how many people they can serve before the fiscal year. It goes in the state plan.", R.mgr),
+              it("Round-robin spreads referrals across providers, unless only one provider offers that training.", R.mgr)],
+      works: [it("If a provider builds up a backlog of direct referrals, LA Works can pause new ones in SNAP Works so they don’t stack up.", R.mgr)] },
+    { id: "l_consult", lane: 2, col: 16, type: "step", label: "Consultants meet providers biweekly or monthly and give technical help",
+      who: "E&T consultants",
+      notes: [it("Each consultant meets with their providers individually on a regular schedule.", R.mgr + "; " + R.con)] },
+    { id: "l_review", lane: 2, col: 18, type: "step", label: "Pulls the monthly component report and asks providers about zero-hour months",
+      who: "E&T consultants",
+      notes: [it("Monthly calls go through each provider’s participants. Consultants ask whether to close a case when a month shows no hours.", R.dir + "; " + R.mgr)],
+      works: [it("The monthly report gives consultants a check on participation and flags people who have gone quiet.", R.dir + "; " + R.mgr)] },
+    { id: "a_walk", lane: 3, col: 2, type: "step", doors: [3], label: "AJC-based consultant explains E&T, checks eligibility, contacts a provider",
+      who: "E&T consultant stationed in an AJC",
+      notes: [it("When a walk-in asks about SNAP E&T, the consultant explains the program, finds out their interests, checks eligibility, and contacts the provider or consultant to check fit and availability. The consultant is often the first person they speak to before they reach a provider.", R.con + "; " + R.dir),
+              it("AJC staff reach out to LDH to confirm the person is eligible.", "Working-session board")],
+      plan: [it("Integrated case management is envisioned but not in place for SNAP E&T. The vision: one person who knows SNAP E&T and WIOA, asks first whether the person receives SNAP, and hands off warmly so people tell their story once. SNAP eligibility stays with eligibility workers. Where it lands on this map isn’t defined yet.", R.ldh + "; " + R.dir),
+             it("The AJC vision: fewer handoffs, one point of contact across funding streams, back-end cross-agency referral through co-location, and less application material, so people don’t retell their story.", "Working-session board")],
+      askmap: [it("Door 3, AJC walk-in: after the AJC consultant contacts a provider, who makes the referral in SNAP Works: the AJC consultant, LA Works, or LDH?")] },
+    { id: "a_wioa", lane: 3, col: 15, type: "unknown", label: "Co-enrolled in WIOA or other programs?",
+      who: "AJC staff",
+      notes: [it("The facilitation guide asks whether people are co-enrolled in WIOA at this stage. It didn’t come up in the session.")] },
+    { id: "a_wrap", lane: 3, col: 16, type: "unknown", label: "Any AJC or other-program role in wraparound?",
+      who: "AJC staff",
+      notes: [it("Wraparound supports came up only as something providers offer.")] },
+    { id: "v_walkin", lane: 4, col: 1, type: "step", sys: "SNAP Works", doors: [2], label: "Introduces E&T and checks SNAP status in SNAP Works",
+      who: "Provider staff",
+      notes: [it("People come in for a specific program. The provider introduces SNAP E&T, then enters the person’s information to see whether they receive SNAP. Contracted providers can see this.", R.dir + "; " + R.mgr)] },
+    { id: "d_snap", lane: 4, col: 2, type: "decision", doors: [2], label: "Receives SNAP?",
+      who: "Provider staff" },
+    { id: "v_rryes", lane: 4, col: 3, row: 0, type: "step", sys: "SNAP Works", doors: [2], label: "Reverse referral in SNAP Works (steps unclear)",
+      who: "Provider staff",
+      notes: [it("If the person already gets SNAP, the provider can do the reverse referral through the system.", R.mgr)],
+      askmap: [it("Door 2, already on SNAP: how does the reverse referral become official, and who authorizes it? Does the person then go straight to that provider’s orientation?")] },
+    { id: "v_rrno", lane: 4, col: 3, row: 1, type: "step", doors: [2], label: "Shares how to apply and tips off LA Works",
+      who: "Provider staff",
+      notes: [it("Providers point the person to the LDH website, which has videos on how to apply. Some partner with SNAP community partners who can help the person apply.", R.dir),
+              it("They also send LA Works a heads-up that the person may want E&T.", R.mgr)] },
+    { id: "v_task", lane: 4, col: 6, type: "system", sys: "SNAP Works", label: "Sees the referral task on the SNAP Works dashboard",
+      who: "Provider staff",
+      notes: [it("Each morning, providers see the direct referrals from cases certified the day before, assigned round-robin among providers who offer the service the person picked.", R.mgr)] },
+    { id: "v_call", lane: 4, col: 7, type: "step", label: "Calls within 10 days: 2+ tries, 1 by phone; logs each referral",
+      who: "Provider staff", time: "Within 10 days of the referral. A busy virtual provider may not call until day 8 or 9.",
+      notes: [it("Providers must try at least twice, once by phone, and keep a log with the contact date, status, ABAWD status, and follow-up.", R.dir),
+              it("How they reach out varies: some call and email, some email then call, and some also text.", R.mgr + "; working-session board")],
+      pain: [it("Add the wait between interview and authorization and the gap before the first call can reach two weeks or more.", R.mgr)] },
+    { id: "v_delink", lane: 4, col: 9, row: 1, type: "step", sys: "SNAP Works", label: "Delinks the referral; SNAP Works sends it to the 2nd choice",
+      who: "Provider staff",
+      notes: [it("A provider delinks when the person declines or isn’t a fit. If the second provider also declines, a re-referral task goes to the SNAP E&T unit.", R.dir)],
+      askmap: [it("What happens if there is no second choice, or neither provider is a fit?")] },
+    { id: "v_orient", lane: 4, col: 11, type: "system", sys: "SNAP Works", label: "Holds orientation: goes over the program and expectations",
+      who: "Provider staff",
+      notes: [it("Providers usually hold orientation first, going over the program and expectations, then do the assessment to identify barriers and see whether the person is a good fit.", R.con),
+              it("The SNAP Works workflow is chronological: providers have to complete orientation, assessment, employment plan, component enrollment, and component tracking in that order. They can’t skip ahead.", R.mgr)] },
+    { id: "v_assess", lane: 4, col: 13, type: "system", sys: "SNAP Works", label: "Records barriers, needs, and a skills baseline; identifies supportive services to offer",
+      who: "Provider staff",
+      notes: [it("The assessment is done in SNAP Works, tab by tab. Skills set a baseline that providers update as the person finishes components.", R.mgr),
+              it("At the assessment, providers identify barriers and needs, then must offer all the supportive services they have. People aren’t expected to ask.", R.mgr)],
+      pain: [it("A second provider can’t see the first provider’s assessment. LA Works can see both under one participant.", R.mgr)] },
+    { id: "v_reach", lane: 4, col: 8, type: "decision", label: "Reaches the person?",
+      who: "Provider staff",
+      notes: [it("Providers must try at least twice, once by phone, and keep a log with the contact date, status, ABAWD status, and follow-up.", R.dir),
+              it("Being unreachable and declining are different outcomes, with potentially different follow-up, so the map shows them separately.")],
+      ask: [it("How many referrals can’t be reached after the provider’s attempts?")],
+      askmap: [it("How are unsuccessful contact attempts distinguished from a participant declining services?"),
+               it("When a provider can’t reach someone after the required attempts, what happens to the referral?")],
+      stubNo: true },
+    { id: "v_determ", lane: 4, col: 14, row: 2, type: "step", label: "Not a fit: records a provider determination and delinks, or steers the person elsewhere",
+      who: "Provider staff",
+      notes: [it("Example: of 100 people interested in CDL, only about 50 have a driver’s license, so the rest can’t move forward. The provider records a provider determination.", R.mgr + "; " + R.dir),
+              it("Some providers help people get a license, but E&T can’t pay fines. Others steer people to a different program.", R.mgr)],
+      askmap: [it("What happens after a provider determines someone is not a fit, and who owns the next referral?")] },
+    { id: "v_enroll", lane: 4, col: 15, type: "step", sys: "SNAP Works", label: "Sets the employment plan, then enrolls the person in education or work experience",
+      who: "Provider staff",
+      notes: [it("The employment plan comes after the assessment. It sets a short-term goal, often the training, and a long-term goal, almost always employment.", R.mgr),
+              it("All providers must offer education and/or work experience.", R.mgr)],
+      plan: [it("New this year: every provider must also offer job retention.", R.mgr)] },
+    { id: "v_support", lane: 4, col: 16, type: "step", sys: "SNAP Works", label: "Offers supportive services and logs reimbursements",
+      who: "Provider staff",
+      notes: [it("Providers enter each reimbursement with the amount, who received it, the reason, case notes, and supporting documents. This links to the invoicing map.", R.mgr)] },
+    { id: "v_hours", lane: 4, col: 17, type: "step", sys: "SNAP Works", label: "Enters each person’s hours in SNAP Works every month",
+      who: "Provider staff",
+      notes: [it("Each month, the provider enters each participant’s hours in SNAP Works. Monthly hours come last in the order SNAP Works sets: orientation, assessment, employment plan, component enrollment, then monthly hours.", R.mgr),
+              it("Providers report ABAWD status and tell people when the program’s hours (about 20 a week) fall short, so they can add other activities.", R.dir),
+              it("LA Works consultants review these hours in the monthly component report and ask providers about months with no hours.", R.dir + "; " + R.mgr)] },
+    { id: "v_retry", lane: 4, col: 18, row: 1, type: "step", label: "Encouraged to keep trying to reach someone who stops coming for a full month before closing them out",
+      who: "Provider staff",
+      notes: [it("LA Works encourages providers to keep contacting someone for a full calendar month, in case benefits or issues at home are the cause.", R.mgr)],
+      works: [it("LA Works encourages providers to keep trying for a full month instead of closing someone out after one missed appointment.", R.mgr)],
+      askmap: [it("Do all providers keep contacting someone for a full month before closing them out?"),
+               it("How does the month of provider outreach connect to participant exit and case closure?")] },
+    { id: "v_retain", lane: 4, col: 21, type: "step", label: "Provides job retention for at least 30 days, up to 90",
+      who: "Provider staff",
+      notes: [it("New this year, every provider must offer job retention.", R.mgr)],
+      pain: [it("Thoroughness varies. A few providers are very thorough, while others check in weekly or monthly.", R.mgr)],
+      plan: [it("LA Works is discussing expanding retention, which would need approval from the Food and Nutrition Service.", R.mgr)] },
+  ];
+
+  // kind: flow | loop (decline) | alt (other way in)
+  var EDGES = [
+    ["p_d1", "p_interview"], ["p_interview", "p_pick"], ["p_pick", "d_yes"], ["d_yes", "p_wait", { label: "Yes", seg: 0, above: true }],
+    ["d_yes", "x_noref", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_wait", "p_call"], ["p_call", "d_still"],
+    ["d_still", "p_orient", { label: "Yes", seg: 0, above: true }], ["p_orient", "d_commit"], ["d_commit", "p_needs", { label: "Yes", seg: 0, above: true }],
+    ["p_needs", "d_fit"], ["d_fit", "p_begin", { label: "Yes", seg: 0, above: true }],
+    ["d_commit", "x_orient", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_begin", "p_support"],
+    ["p_support", "p_attend"], ["p_attend", "d_attend"], ["p_attend", "p_findjob", { kind: "alt", exit: "t", enter: "t", lift: 46, label: "Finds work during training", seg: 1 }], ["d_attend", "p_end", { label: "Yes", seg: 0, above: true }],
+    ["d_attend", "x_stop", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_end", "p_findjob"], ["p_findjob", "p_retain"], ["p_retain", "p_close"], ["p_retain", "v_retain", { exit: "B", enter: "t" }],
+    // the three doors sit side by side, each a step lower, so every door's connectors leave from their own side
+    ["p_d1", "e_online", { exit: "B", enter: "t" }],
+    ["p_d2", "v_walkin", { exit: "B", enter: "t" }], ["p_d2", "p_pick", { exit: "r", enter: "B", dx1: -44 }], ["p_d3", "p_pick", { exit: "r", enter: "B", dx1: 44 }],
+    ["p_d3", "e_change", { exit: "l", gap: 1 }], ["p_d3", "l_email", { exit: "l", gap: 1 }], ["p_d3", "a_walk", { exit: "l", gap: 1 }],
+    ["e_online", "e_rights"], ["e_rights", "e_script"], ["e_script", "e_auth"], ["e_change", "e_script", { exit: "r", enter: "B" }],
+    ["e_auth", "v_task", { exit: "b", enter: "t" }], ["v_task", "v_call"], ["v_call", "v_reach"], ["v_reach", "p_call", { exit: "t", enter: "B", label: "Yes", seg: 0, at: 0.1 }],
+    ["v_walkin", "d_snap"], ["d_snap", "v_rryes", { label: "Yes", seg: 0, above: true }],
+    ["d_snap", "v_rrno", { exit: "b", enter: "l", label: "No", seg: 0 }],
+    ["v_rrno", "l_watch", { kind: "alt", exit: "r", enter: "b" }],
+    ["d_still", "v_delink", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.2 }],
+    ["v_delink", "v_task", { kind: "loop", exit: "l", enter: "b", label: "2nd choice", seg: 0 }],
+    ["v_delink", "e_unit", { kind: "loop", exit: "r", enter: "B", label: "Both declined", seg: 0, at: 0.55 }],
+    ["p_orient", "v_orient", { exit: "B", enter: "t" }], ["p_needs", "v_assess", { exit: "B", enter: "t" }],
+    ["d_fit", "v_determ", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.15 }],
+    ["v_determ", "v_delink", { kind: "loop", exit: "l", enter: "b", label: "To 2nd choice", seg: 0, at: 0.3 }],
+    ["v_orient", "v_assess"], ["v_assess", "v_enroll"], ["v_enroll", "v_support"], ["v_support", "v_hours"], ["v_hours", "v_retain"], ["v_hours", "v_retry", { exit: "b", enter: "l" }],
+    ["v_hours", "l_review", { exit: "r", enter: "B" }]
+  ];
+
+  // questions that apply across the whole journey rather than to one step
+  var QGEN = ["Which reported deadlines and rules reflect federal requirements, Louisiana policy, or provider practice?"];
+  // staff estimates that cover a stretch of the journey, not a single step: drawn as a bracket across that stretch
+  var SPANS = [{ id: "span-referral-assessment", from: "p_wait", to: "p_needs",
+    title: "STAFF ESTIMATE; PENDING DATA VALIDATION",
+    text: "About 2–3% of 52,000 referrals reach assessment. This covers the whole stretch from referral to assessment; it doesn’t show where in that stretch people are lost." }];
+  var ACROSS = {
+    works: [
+      { t: "E&T is part of the eligibility interview, with a script and no extra paperwork.", by: R.elig + "; " + R.ldh, n: ["e_script", "p_interview"] },
+      { t: "Staff reported stronger engagement and enrollment among people who independently seek E&T and receive a warm handoff.", by: R.dir, n: ["p_d3", "l_email", "a_walk"] },
+      { t: "The state-built SNAP E&T unit calls people who fall through the cracks.", by: R.elig, n: ["e_unit"] },
+      { t: "ABAWD rules are repeated at the interview, in notices, and by providers.", by: R.ldh + "; " + R.elig + "; " + R.dir, n: ["e_rights"] },
+      { t: "Monthly reports let consultants spot participants with no hours.", by: R.dir + "; " + R.mgr, n: ["l_review"] },
+      { t: "LDH and LA Works talk constantly and meet regularly.", by: R.elig + "; " + R.con + "; " + R.mgr, n: ["e_auth", "l_cap"] }
+    ],
+    pain: [
+      { t: "The provider’s first call confuses people. They don’t recall E&T and ask whether their benefits are at risk.", by: R.dir + "; " + R.elig + "; " + R.con, n: ["p_call", "p_pick"] },
+      { t: "Two weeks or more can pass between the interview and the first call.", by: R.mgr, n: ["p_wait", "v_call"] },
+      { t: "The interview script doesn’t check prerequisites, so people pick programs they can’t enter.", by: R.elig + "; " + R.ldh + "; " + R.mgr, n: ["e_script", "p_pick", "p_needs"] },
+      { t: "People who lose SNAP or find work stop attending, and LA Works can’t see the benefit outcome.", by: R.mgr + "; " + R.dir, n: ["p_attend", "e_update"] },
+      { t: "Rural parishes have little physical access and rideshare.", by: R.mgr, n: ["p_support"] },
+      { t: "A second provider can’t see the first provider’s assessment.", by: R.mgr, n: ["p_needs", "v_assess"] }
+    ],
+    plan: [
+      { t: "An automatic alert to the caseworker when an ABAWD logs under 80 hours starts this fiscal year.", by: R.mgr, n: ["e_abawd"] },
+      { t: "Prerequisites added to the provider list, worker training, and possibly building them into provider selection.", by: R.ldh + "; " + R.mgr, n: ["e_script"] },
+      { t: "Every provider must now offer job retention, and expanding it is under discussion.", by: R.mgr, n: ["v_enroll", "p_retain", "v_retain"] },
+      { t: "Integrated case management is envisioned, not yet in place for SNAP E&T.", by: R.ldh + "; " + R.dir, n: ["a_walk"] }
+    ]
+  };
+  var TIMES = [
+    ["Eligibility interview", "About 30 to 45 minutes or more", R.mgr + "; " + R.dir, "p_interview"],
+    ["Sending proof", "At least 10 days; accepted through day 30", R.ldh, "p_interview"],
+    ["Interview to authorization", "Same day when verification is in; often about a week", R.mgr + "; " + R.ldh, "e_auth"],
+    ["Referral to first call", "Within 10 days; a busy virtual provider may take 8 to 9", R.mgr, "v_call"],
+    ["Starting a component", "Next day with virtual providers; at set cohort dates for most colleges", R.mgr, "p_begin"],
+    ["Trying to reach a no-show", "Providers are encouraged to keep trying for a full calendar month before closing someone out", R.mgr, "v_retry"],
+    ["Job retention", "At least 30 days, up to 90", R.mgr, "v_retain"],
+    ["Regaining lost benefits", "30 days of participation", R.mgr, "p_attend"]
+  ];
+
+  /* ---------- map text in the invoicing-map format: bold title, one line, who ---------- */
+  var TITLE = {
+    p_d1: "Applies for SNAP", p_d2: "Walks into a provider", p_d3: "Asks about E&T on their own", p_interview: "Has the eligibility interview", p_pick: "Picks training options", p_wait: "Waits to hear from a provider",
+     p_orient: "Attends orientation", p_needs: "Has a needs assessment", p_findjob: "Finds a job", p_retain: "Offered job retention support", p_close: "Finishes retention",
+    p_begin: "Starts the training", p_support: "Uses supportive services", p_attend: "Attends the training", p_end: "Completes the training",
+    e_online: "Application reaches a worker", x_noref: "Leaves: no referral", x_stop: "Leaves: stops attending", v_retry: "Attrition/retention outreach for absent participants", x_orient: "Leaves: doesn’t start", e_change: "Adds E&T screening", e_rights: "Rights and responsibilities", e_script: "E&T script and module",
+    e_auth: "Authorizes the case", e_unit: "SNAP E&T unit follows up", e_abawd: "Under-80-hours alert", e_update: "Updates the case",
+    l_email: "Answers E&T emails", l_watch: "Watches the application", l_cap: "Sets provider capacity",
+    l_consult: "Provider check-ins", l_review: "Monthly component review",
+    a_walk: "AJC walk-in", a_wioa: "WIOA co-enrollment", a_wrap: "AJC role in wraparound",
+    v_walkin: "Provider walk-in", v_rryes: "Reverse referral", v_rrno: "Points to the application", v_task: "Sees the referral task",
+    v_call: "First contact", v_delink: "Delinks the referral", v_orient: "Holds orientation", v_assess: "Needs assessment in SNAP Works", v_determ: "Provider determination",
+    v_enroll: "Employment plan and enrollment", v_support: "Supportive services", v_hours: "Logs monthly hours", v_retain: "Provides job retention"
+  };
+  // short on-map versions of each finding, same order as the full items (full text stays in the detail panel)
+  var SHORT = {
+    p_d1: { pain: ["Many wait until their case is about to close (month 2 or 3) to engage"], ask: ["Clarify: do community partners screen for E&T when they help someone apply? Sources disagree"] },
+    p_d3: { works: ["Self-referrers with a warm handoff enroll more"], ask: ["No counts by door yet"] },
+    p_interview: { pain: ["E&T gets lost among everything else in the interview, so people don’t remember it later"], works: ["No extra paperwork: E&T is part of the same interview"] },
+    p_pick: { pain: ["No one asks about barriers, supports, or prerequisites, so people can pick programs they can’t do", "Notices show mixed agency names, so people don’t know whom to contact"], ask: ["Are people told a provider will call? Does a notice name E&T?"] },
+    p_needs: { pain: ["If sent to a 2nd provider, the person has to repeat the assessment"] },
+    p_findjob: { pain: ["Often stop responding once they have a job, so the provider may not know"] },
+    p_retain: { ask: ["How many people get retention support?"] },
+    
+    p_support: { pain: ["Rural parishes have few sites and little rideshare, so getting to training is hard"] },
+    p_end: { ask: ["What share complete, and why do people leave?"] },
+    p_wait: { pain: ["Up to 2+ weeks with no contact after the interview, so interest fades"] },
+    e_rights: { works: ["ABAWD rules repeated at every touchpoint"] },
+    e_script: { works: ["Script and module built into the interview"], pain: ["The script doesn’t check prerequisites, like a license for CDL", "System fixes are slow: a change requested in 2024 is still pending"], plan: ["Prerequisites on the provider list and worker training; later in the system (~$250K)"], ask: ["Who keeps the provider and service list current?"] },
+    e_unit: { works: ["State-built unit catches people who fall through"], ask: ["Does it also call people who said no? Accounts differ"] },
+    e_abawd: { plan: ["New this fiscal year: automatic caseworker task"] },
+    e_update: { pain: ["LA Works can’t see whether someone lost SNAP, so it can’t tell why they stopped", "No count of ABAWDs who lose SNAP for missing hours"] },
+    l_email: { works: ["People who reach out this way enroll more often"] },
+    l_cap: { works: ["Can pause referrals to a backlogged provider"] },
+    l_review: { works: ["Monthly report flags people with no hours"] },
+    a_walk: { plan: ["Integrated case management envisioned, not yet in place", "AJC vision: fewer handoffs, one contact across funding streams"] },
+    a_wioa: { ask: ["Is anyone co-enrolled in WIOA or other programs?"] },
+    a_wrap: { ask: ["Do AJCs or other programs play a role?"] },
+    v_rryes: { ask: ["How does it become official, and who authorizes it?"] },
+    v_rrno: { ask: ["Any pathway beyond the application and a heads-up?"] },
+    v_call: { pain: ["The provider’s 10 days come on top of up to a week for authorization"] },
+    v_assess: { pain: ["A 2nd provider can’t see the 1st provider’s assessment, so it gets redone"] },
+    v_enroll: { plan: ["New: every provider must offer job retention"] },
+    v_retain: { pain: ["Retention quality varies: some providers are thorough, others check in monthly"], plan: ["Expansion under discussion; needs FNS approval"] }
+  };
+  SHORT.d_yes = { pain: ["Focused on getting food benefits, so E&T doesn’t register", "Too overwhelmed or distracted in a 45-minute interview to take it in"], ask: ["How many say no here?"] };
+  SHORT.x_noref = { ask: ["Does anyone follow up with people who said no?"] };
+  SHORT.d_still = { pain: ["Doesn’t link the call to the interview, so doesn’t know why the provider is calling", "Fears losing SNAP if they say no", "Only said yes to get through the interview", "Has already found a job", "2+ weeks have passed since the interview", "Lost interest after being screened"], ask: ["How many can’t be reached at all?"] };
+  SHORT.d_fit = { pain: ["Missing a prerequisite, like a clear license for CDL", "Can’t get to the training site: few sites and little rideshare in rural areas", "Needs help E&T can’t pay for, like license fines"], ask: ["How many leave here, and why?"] };
+  SHORT.d_attend = { pain: ["Got a job and stopped coming, often without telling the provider", "Lost interest, or the training wasn’t what they wanted", "Lost SNAP, or is no longer an ABAWD and not required to take part"], ask: ["How often? Staff accounts differ"] };
+  SHORT.d_commit = { pain: ["Expectations weren’t clear, so the requirements come as a surprise", "The training doesn’t match what they’re interested in", "No remote option, and they can’t get to an in-person site"], ask: ["How many leave here, and why? To confirm"] };
+  SHORT.x_orient = { ask: ["Delinked to 2nd choice, or closed?"] };
+  SHORT.v_retry = { works: ["Keeps trying for a month instead of closing someone out"] };
+  // the biggest drop-offs, as staff described them on Oct 6
+  var FLAG = {
+    d_fit: ["MAJOR DROP-OFF", "CDL example: about half lack a license"]
+  };
+  var LOOPS = { v_delink: 1, e_unit: 1 };
+  NODES.forEach(function (n) {
+    n.title = TITLE[n.id] || "";
+    n.loop = !!LOOPS[n.id];
+    var s = SHORT[n.id] || {};
+    ["pain", "works", "plan", "ask"].forEach(function (k) { (n[k] || []).forEach(function (x, i) { x.s = (s[k] && s[k][i]) || x.t; }); });
+  });
+
+  /* ---------- geometry ---------- */
+  var COL_W = 290, PAD_L = 16, PAD_R = 28, STAGE_H = 0, LANE_W = 230, SEP = 6;
+  var CW = 238, DW = 196;
+  var C = { canvas: "#FDFBF5", paper: "#FFFFFF", ink: "#1C1717", grey: "#5A5A5C", gray: "#EFEFF2", blue: "#0086AE", blue60: "#62B2CA", blue2: "#006E8F", blue40: "#93C9D9", blue20: "#C4DFE7", green: "#00A76F", green40: "#93D6BF", green20: "#C4E5DA", purple: "#862E88", purple40: "#C9A5C9", purple20: "#DFCDDF", yellow: "#FFC500",
+            tint: "#E6F1F5", other: "#F7F7F9", otherLine: "#B4B4BA" };
+  // lane label blocks step from light to dark, as on the invoicing board
+  var LSTY = [
+    { fill: C.gray, text: C.ink, band: C.gray, accent: C.yellow },
+    { fill: C.blue20, text: C.ink, band: C.paper },
+    { fill: C.blue40, text: C.ink, band: C.canvas },
+    { fill: C.blue60, text: C.ink, band: C.paper },
+    { fill: C.blue2, text: "#FFFFFF", band: C.canvas },
+    { fill: C.grey, text: "#FFFFFF", band: C.gray }
+  ];
+  var FONT = "Barlow, 'Helvetica Neue', Arial, sans-serif";
+  var F_T = "700 17px " + FONT, F_D = "400 15px " + FONT, F_W = "600 14px " + FONT, F_TAG = "600 13px " + FONT,
+      F_C = "600 14px " + FONT, F_FEEL = "500 14px " + FONT, F_DEC = "600 16px " + FONT;
+  var LH_T = 21, LH_D = 19, LH_W = 18, LH_TAG = 17, LH_C = 18, LH_F = 20, CALLGAP = 12, CALLSEP = 8;
+  var NS = "http://www.w3.org/2000/svg";
+  var byId = {};
+  NODES.forEach(function (n) { byId[n.id] = n; n.row = n.row || 0; n.P = n.lane === 0; n.nIn = 0; n.nOut = 0; });
+  // how each step connects, read straight from the edges (nothing is added or inferred):
+  // no edges at all = ongoing work that runs alongside its stage; an open map-clarity question with no way out = next handoff not yet known
+  EDGES.forEach(function (e) { byId[e[0]].nOut++; byId[e[1]].nIn++; });
+  NODES.forEach(function (n) {
+    n.alongside = !n.P && n.type !== "unknown" && n.nIn === 0 && n.nOut === 0;
+    n.openEnd = !n.P && n.nOut === 0 && !!(n.askmap && n.askmap.length);
+  });
+  // door colors (brand blue, green, yellow) and the connectors that belong to each door's route before it joins the main path.
+  // A connector is on a door's route when it starts at a step that only that door uses and stays among that door's steps.
+  var DOOR = {
+    1: { line: "#0086AE", dark: "#006E8F", fill: "#0086AE", on: "#FFFFFF" },
+    2: { line: "#00A76F", dark: "#00744D", fill: "#00A76F", on: "#1C1717" },
+    3: { line: "#FFC500", dark: "#8C6900", fill: "#FFC500", on: "#1C1717" }
+  };
+  var DSET = { 1: {}, 2: {}, 3: {} };
+  NODES.forEach(function (n) { (n.doors || []).forEach(function (d) { DSET[d][n.id] = 1; }); });
+  EDGES.forEach(function (e) { var a = byId[e[0]]; if (a.doors && a.doors.length === 1) DSET[a.doors[0]][e[1]] = 1; });
+  EDGES.forEach(function (e) {
+    var a = byId[e[0]];
+    e.door = 0;
+    if (a.doors && a.doors.length > 1) return;
+    [1, 2, 3].forEach(function (d) { if (DSET[d][e[0]] && DSET[d][e[1]]) e.door = d; });
+  });
+  NODES.forEach(function (n) { n.door1 = n.doors && n.doors.length === 1 ? n.doors[0] : 0; });
+  EDGES.forEach(function (e, i) { e.key = "link:" + e[0] + "--" + e[1]; e.i = i; });
+  var byLink = {};
+  EDGES.forEach(function (e) { byLink[e.key] = e; });
+
+  var ctx = document.createElement("canvas").getContext("2d");
+  function measure(text, font) { ctx.font = font; return ctx.measureText(text).width; }
+  function wrap(text, font, maxW) {
+    var words = String(text).split(" "), lines = [], cur = "";
+    words.forEach(function (w) {
+      var t = cur ? cur + " " + w : w;
+      if (cur && measure(t, font) > maxW) { lines.push(cur); cur = w; } else { cur = t; }
+    });
+    if (cur) lines.push(cur);
+    return lines;
+  }
+  function el(name, attrs, parent) {
+    var e = document.createElementNS(NS, name);
+    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function txt(parent, x, y, s, font, size, weight, fill, extra) {
+    var a = { x: x, y: y, "font-family": FONT, "font-size": size, "font-weight": weight, fill: fill };
+    if (extra) for (var k in extra) a[k] = extra[k];
+    var t = el("text", a, parent); t.textContent = s; return t;
+  }
+  function colX(c) { return PAD_L + c * COL_W + COL_W / 2; }
+  function gapX(c) { return PAD_L + (c + 1) * COL_W; }
+  function stageX0(i) { return i === 0 ? 0 : PAD_L + STAGES[i].from * COL_W; }
+  function stageX1(i) { return i === STAGES.length - 1 ? W : PAD_L + (STAGES[i].to + 1) * COL_W; }
+
+  var W, H, laneGeo = [], TBOX = [];
+  var NCOL = 23, TL = LANES.length - 1;
+
+  function tagsOf(n) {
+    var t = [];
+    if (n.doors) t.push((n.doors.length > 1 ? "DOORS " : "DOOR ") + n.doors.join(" · "));
+    if (n.sys) t.push(n.sys.toUpperCase());
+    if (n.alongside) t.push("RUNS ALONGSIDE");
+    if (n.type === "unknown") t.push("OPEN QUESTION");
+    return t;
+  }
+
+  function layout() {
+    NODES.forEach(function (n) {
+      n.calls = []; // findings show as icons on the step; the full text lives in the detail panel
+      n.timeLines = (n.P && n.time) ? wrap(n.time, F_D, CW - 74) : [];
+      n.timeH = n.timeLines.length ? n.timeLines.length * LH_D + 14 : 0;
+      n.preH = n.timeH ? CALLGAP + n.timeH : 0;
+      n.callH = n.preH + (n.calls.length ? CALLGAP + n.calls.reduce(function (a, c) { return a + c.lines.length * LH_C + CALLSEP; }, 0) - CALLSEP : 0);
+      if (n.type === "decision") {
+        n.w = DW; n.lines = wrap(n.label, F_DEC, 104);
+        n.h = Math.max(136, n.lines.length * 20 + 92);
+        return;
+      }
+      n.w = CW;
+      n.tagLines = tagsOf(n);
+      n.tLines = wrap(n.title || n.label, F_T, CW - 40);
+      n.dLines = n.title ? wrap(n.label, F_D, CW - 28) : [];
+      n.fLines = n.feel ? [].concat.apply([], n.feel.map(function (f) { return wrap(f, F_FEEL, CW - 48); })) : [];
+      n.wLines = wrap(n.who || LANES[n.lane].title, F_W, CW - 28);
+      n.h = 20 + (n.tagLines.length ? n.tagLines.length * LH_TAG + 4 : 0) + n.tLines.length * LH_T +
+            (n.dLines.length ? 4 + n.dLines.length * LH_D : 0) + (n.fLines.length ? 8 + n.fLines.length * LH_F : 0) +
+            8 + n.wLines.length * LH_W + 12;
+    });
+    TBOX = TIMES.map(function (r) {
+      var n = byId[r[3]];
+      var b = { col: n.col, id: r[3], hLines: wrap(r[0], F_T, CW - 28), lines: wrap(r[1], F_D, CW - 28) };
+      b.h = 14 + b.hLines.length * LH_T + 2 + b.lines.length * LH_D + 10;
+      return b;
+    });
+    var y = STAGE_H;
+    laneGeo = LANES.map(function (lane, i) {
+      var pad = i === 0 ? 74 : 28, gap = 34;
+      if (i === TL) {
+        var colH = {};
+        TBOX.forEach(function (b) { b.y0 = colH[b.col] || 0; colH[b.col] = b.y0 + b.h + 12; });
+        var mx = Math.max.apply(null, Object.keys(colH).map(function (k) { return colH[k]; })) - 12;
+        var tg = { top: y, h: Math.max(130, pad * 2 + mx + SEP), pad: pad };
+        y += tg.h; return tg;
+      }
+      var rows = [];
+      NODES.forEach(function (n) { if (n.lane !== i) return; var r = rows[n.row] || (rows[n.row] = { card: 0, call: 0 }); r.card = Math.max(r.card, n.h); r.call = Math.max(r.call, n.callH); });
+      var tot = 0, tops = [];
+      rows.forEach(function (r, k) { tops[k] = tot; tot += r.card + r.call + (k < rows.length - 1 ? gap : 0); });
+      var h = Math.max(pad + tot + pad + SEP, 160);
+      var g = { top: y, h: h, rows: rows, tops: tops, tot: tot, pad: pad, gap: gap };
+      y += h; return g;
+    });
+    H = y; W = PAD_L + NCOL * COL_W + PAD_R;
+    NODES.forEach(function (n) {
+      var g = laneGeo[n.lane], rowTop;
+      rowTop = g.top + SEP + (g.h - SEP - g.tot) / 2 + g.tops[n.row];
+      n.x = colX(n.col);
+      n.y = rowTop + g.rows[n.row].card / 2;
+    });
+    TBOX.forEach(function (b) { b.x = colX(b.col); b.top = laneGeo[TL].top + SEP + laneGeo[TL].pad + b.y0; });
+  }
+
+  function anchor(n, side) {
+    if (side === "r") return { x: n.x + n.w / 2, y: n.y };
+    if (side === "l") return { x: n.x - n.w / 2, y: n.y };
+    if (side === "t") return { x: n.x, y: n.y - n.h / 2 };
+    if (side === "B") return { x: n.x, y: n.y + n.h / 2 + n.callH };
+    return { x: n.x, y: n.y + n.h / 2 };
+  }
+  function vert(s) { return s === "t" || s === "b" || s === "B"; }
+  function route(a, b, o) {
+    var ex = o.exit || "r", en = o.enter || "l";
+    var p0 = anchor(a, ex), p1 = anchor(b, en);
+    if (o.dx0) p0.x += o.dx0;
+    if (o.dx1) p1.x += o.dx1;
+    var hx = !vert(ex), hn = !vert(en);
+    var pts;
+    if (hx && hn) {
+      if (Math.abs(p0.y - p1.y) < 0.5) pts = [p0, p1];
+      else {
+        var mx = o.gap != null ? gapX(o.gap) + (o.off || 0) : (p0.x + p1.x) / 2;
+        pts = [p0, { x: mx, y: p0.y }, { x: mx, y: p1.y }, p1];
+      }
+    } else if (!hx && !hn) {
+      if (Math.abs(p0.x - p1.x) < 0.5) pts = [p0, p1];
+      else { var my = o.lift != null ? Math.min(p0.y, p1.y) - o.lift : (p0.y + p1.y) / 2; pts = [p0, { x: p0.x, y: my }, { x: p1.x, y: my }, p1]; }
+    } else if (hx && !hn) pts = [p0, { x: p1.x, y: p0.y }, p1];
+    else pts = [p0, { x: p0.x, y: p1.y }, p1];
+    return pts.filter(function (p, i) { return i === 0 || Math.abs(p.x - pts[i - 1].x) + Math.abs(p.y - pts[i - 1].y) > 0.5; });
+  }
+  function pathD(pts, r) {
+    var d = "M" + pts[0].x + "," + pts[0].y;
+    for (var i = 1; i < pts.length - 1; i++) {
+      var p = pts[i], a = pts[i - 1], b = pts[i + 1];
+      var l1 = Math.hypot(p.x - a.x, p.y - a.y), l2 = Math.hypot(b.x - p.x, b.y - p.y);
+      var rr = Math.min(r, l1 / 2, l2 / 2);
+      var s = { x: p.x - (p.x - a.x) / l1 * rr, y: p.y - (p.y - a.y) / l1 * rr };
+      var e = { x: p.x + (b.x - p.x) / l2 * rr, y: p.y + (b.y - p.y) / l2 * rr };
+      d += " L" + s.x + "," + s.y + " Q" + p.x + "," + p.y + " " + e.x + "," + e.y;
+    }
+    var last = pts[pts.length - 1];
+    return d + " L" + last.x + "," + last.y;
+  }
+
+  var mapSvg = document.getElementById("mapSvg"), laneSvg = document.getElementById("laneSvg");
+  var selected = "p_call";
+  var ORDER = NODES.slice().sort(function (a, b) { return a.col - b.col || a.lane - b.lane || a.row - b.row; });
+  var PNUM = {}, pk = 1;
+  ORDER.forEach(function (n) { if (!n.P || n.type === "exit") return; PNUM[n.id] = (n.type === "start") ? 1 : ++pk; });
+  function stageOf(n) { for (var i = 0; i < STAGES.length; i++) if (n.col >= STAGES[i].from && n.col <= STAGES[i].to) return STAGES[i]; return STAGES[0]; }
+
+  function badge(k, cx, cy, r, parent) {
+    var bg = el("g", null, parent);
+    if (k === "ask") {
+      el("circle", { cx: cx, cy: cy, r: r - 1, fill: C.paper, stroke: C.yellow, "stroke-width": 2.5 }, bg);
+      txt(bg, cx, cy + 4.6, "?", null, 13, 700, C.ink, { "text-anchor": "middle" });
+    } else if (k === "plan") {
+      el("circle", { cx: cx, cy: cy, r: r, fill: C.blue2 }, bg);
+      el("path", { d: "M" + (cx - 4.5) + "," + cy + " H" + (cx + 3.5) + " M" + (cx + 0.5) + "," + (cy - 3.5) + " L" + (cx + 4) + "," + cy + " L" + (cx + 0.5) + "," + (cy + 3.5), stroke: "#FFFFFF", "stroke-width": 1.8, fill: "none" }, bg);
+    } else {
+      el("circle", { cx: cx, cy: cy, r: r, fill: k === "pain" ? C.purple : C.green }, bg);
+      txt(bg, cx, cy + 5, k === "pain" ? "!" : "+", null, 14, 700, k === "pain" ? "#FFFFFF" : C.ink, { "text-anchor": "middle" });
+    }
+    return bg;
+  }
+
+  // one icon per kind of finding on the step's top edge (on a decision, along its upper-right edge); hover names it
+  var TIP = { pain: "Pain points", works: "Working well", plan: "Planned changes", ask: "To confirm" };
+  function askCount(n) { return (n.ask ? n.ask.length : 0) + (n.askmap ? n.askmap.length : 0) + (n.type === "unknown" ? 1 : 0); }
+  function findingBadges(n, g, x0, y0) {
+    var present = ["pain", "works", "plan", "ask"].filter(function (k) { return k === "ask" ? askCount(n) > 0 : !!(n[k] && n[k].length); });
+    present.forEach(function (k, i) {
+      var bx, by;
+      if (n.type === "decision") { var t = 0.3 + i * 0.2; bx = n.x + t * n.w / 2; by = y0 + t * n.h / 2; }
+      else { bx = x0 + n.w - 16 - (present.length - 1 - i) * 26; by = y0; }
+      var bg = el("g", { "class": "badge b-" + k }, g);
+      var c = k === "ask" ? askCount(n) : n[k].length;
+      el("title", null, bg).textContent = TIP[k] + " (" + c + "). Select the step to read them.";
+      el("circle", { cx: bx, cy: by, r: 13, fill: C.paper }, bg);
+      badge(k, bx, by, 11, bg);
+    });
+  }
+
+  // a "Comment" chip on the selected connector, at the middle of its longest straight run
+  var gSel = null;
+  function linkMid(e) {
+    var best = null, bl = -1;
+    for (var i = 0; i < e.pts.length - 1; i++) {
+      var p = e.pts[i], q = e.pts[i + 1], l = Math.abs(q.x - p.x) + Math.abs(q.y - p.y);
+      if (l > bl) { bl = l; best = { x: (p.x + q.x) / 2, y: (p.y + q.y) / 2, h: Math.abs(q.y - p.y) < 1 }; }
+    }
+    return best;
+  }
+  function drawLinkChip() {
+    if (!gSel) return;
+    gSel.innerHTML = "";
+    var e = byLink[selected];
+    if (!e || !e.pts) return;
+    var m = linkMid(e), x = m.h ? m.x + 20 : m.x + 18, y = m.h ? m.y - 44 : m.y - 13;
+    var cc = el("g", { "class": "cchip linkchip", role: "button", tabindex: 0, "aria-label": "Comment on this connection" }, gSel);
+    el("rect", { x: x, y: y, width: 104, height: 26, rx: 13, fill: C.ink }, cc);
+    txt(cc, x + 52, y + 18, "Comment", null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
+  }
+
+  function draw() {
+    layout();
+    mapSvg.innerHTML = ""; laneSvg.innerHTML = "";
+    mapSvg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    laneSvg.setAttribute("viewBox", "0 0 " + LANE_W + " " + H);
+
+    var defs = el("defs", null, mapSvg);
+    [["flow", C.grey], ["loop", C.purple], ["alt", C.grey], ["spine", C.blue2], ["bgloop", C.grey], ["d1", DOOR[1].dark], ["d2", DOOR[2].dark], ["d3", DOOR[3].dark]].forEach(function (m) {
+      var big = m[0] === "spine" || m[0].charAt(0) === "d";
+      var mk = el("marker", { id: "arr-" + m[0], viewBox: "0 0 10 10", refX: "9.5", refY: "5", markerWidth: big ? "14" : "12", markerHeight: big ? "14" : "12", markerUnits: "userSpaceOnUse", orient: "auto" }, defs);
+      el("path", { d: "M0,0.5 L10,5 L0,9.5 Z", fill: m[1] }, mk);
+    });
+
+    // stage columns: alternating full-height bands, so every step sits visibly inside its stage
+    var gS = el("g", null, mapSvg);
+    STAGES.forEach(function (s, i) {
+      el("rect", { x: stageX0(i), y: 0, width: stageX1(i) - stageX0(i), height: H, fill: i % 2 ? C.tint : C.paper }, gS);
+    });
+    // lanes: a light wash on the participant lane and the timing lane, divider bars between roles
+    var gL = el("g", null, mapSvg);
+    laneGeo.forEach(function (g, i) {
+      if (i === 0 || i === TL) el("rect", { x: 0, y: g.top, width: W, height: g.h, fill: C.ink, "fill-opacity": 0.04 }, gL);
+      if (i) el("rect", { x: 0, y: g.top, width: W, height: SEP, fill: i === 1 ? C.blue40 : C.blue20 }, gL);
+    });
+    // stage dividers drawn over the lane bars, solid and full height
+    STAGES.forEach(function (s, i) {
+      if (i) el("rect", { x: stageX0(i) - 1.5, y: 0, width: 3, height: H, fill: C.blue40 }, gL);
+    });
+
+    // edges: each connector is its own selectable group (a wide invisible hit line plus the drawn line), so people can comment on it
+    var gE = el("g", { fill: "none" }, mapSvg), gB = el("g", null, mapSvg), gEL = el("g", null, mapSvg);
+    var labelQueue = [], bullets = [];
+    EDGES.forEach(function (e) {
+      var a = byId[e[0]], b = byId[e[1]], o = e[2] || {};
+      var kind = o.kind || "flow";
+      var spine = kind === "flow" && a.P && b.P;
+      var pts = route(a, b, o);
+      e.pts = pts;
+      var pLoop = kind === "loop" && (a.P || b.P);
+      var dc = e.door ? DOOR[e.door] : null, d = pathD(pts, 10);
+      var lg = el("g", { "class": "link" + ((!a.P && !b.P) ? " other" : "") + (e.key === selected ? " sel" : ""), id: e.key.replace(":", "-"),
+        "data-link": e.key, "data-a": a.id, "data-b": b.id, "data-comment-target": "", tabindex: 0, role: "button",
+        "aria-label": "Connection from " + (a.title || a.label) + " to " + (b.title || b.label) }, gE);
+      el("path", { "class": "hit", d: d, fill: "none", "stroke-width": 18, "stroke-linecap": "round", "stroke-linejoin": "round" }, lg);
+      var pAlt = kind === "alt" && a.P && b.P;
+      var sw = pLoop ? 3 : (spine ? 4.5 : (pAlt ? 3 : 1.5)), col = pLoop ? C.purple : (spine || pAlt ? C.blue2 : C.grey);
+      var mk = spine || pAlt ? "spine" : (pLoop ? "loop" : (kind === "loop" ? "bgloop" : kind));
+      var dash = kind === "loop" ? (pLoop ? "9 6" : "6 4") : (kind === "alt" ? (pAlt ? "8 5" : "4 4") : null);
+      if (dc) {
+        // a door's route: the door's color with a darker casing, like a transit line
+        sw = spine ? 4.5 : 3; col = dc.line; mk = "d" + e.door;
+        var ca = { "class": "case", d: d, fill: "none", stroke: dc.dark, "stroke-width": sw + 2.5 };
+        if (dash) ca["stroke-dasharray"] = dash;
+        el("path", ca, lg);
+      }
+      var attrs = { "class": "edge vis", d: d, fill: "none", stroke: col, "stroke-width": sw, "marker-end": "url(#arr-" + mk + ")" };
+      if (dash) attrs["stroke-dasharray"] = dash;
+      el("path", attrs, lg);
+      if (o.label) labelQueue.push({ pts: pts, o: o, kind: kind, P: a.P || b.P, alt: pAlt });
+      else if (dc) bullets.push({ door: e.door, pts: pts, key: e.key, other: !a.P && !b.P });
+    });
+    // door number markers along each door's route (one per straight run, skipping runs another marker already covers)
+    var placedB = [];
+    bullets.forEach(function (B) {
+      var best = null, bl = 0;
+      for (var i = 0; i < B.pts.length - 1; i++) {
+        var p = B.pts[i], q = B.pts[i + 1], l = Math.abs(q.x - p.x) + Math.abs(q.y - p.y);
+        if (l > bl) { bl = l; best = [p, q]; }
+      }
+      if (!best || bl < 90) return;
+      var p0 = best[0], q0 = best[1];
+      var dup = placedB.some(function (Q) {
+        if (Q.door !== B.door) return false;
+        if (Math.abs(p0.x - q0.x) < 1 && Math.abs(Q.x - p0.x) < 1) return Q.y >= Math.min(p0.y, q0.y) && Q.y <= Math.max(p0.y, q0.y);
+        if (Math.abs(p0.y - q0.y) < 1 && Math.abs(Q.y - p0.y) < 1) return Q.x >= Math.min(p0.x, q0.x) && Q.x <= Math.max(p0.x, q0.x);
+        return false;
+      });
+      if (dup) return;
+      // keep the marker clear of crossing lines and of other markers
+      var horiz = Math.abs(p0.y - q0.y) < 1, mx = null, my = null;
+      [0.5, 0.36, 0.64, 0.24, 0.76].some(function (t) {
+        var x = p0.x + (q0.x - p0.x) * t, y = p0.y + (q0.y - p0.y) * t;
+        var near = placedB.some(function (Q) { return Math.abs(Q.x - x) + Math.abs(Q.y - y) < 44; });
+        var cross = EDGES.some(function (e2) {
+          if (!e2.pts || e2.pts === B.pts) return false;
+          for (var j = 0; j < e2.pts.length - 1; j++) {
+            var a2 = e2.pts[j], b2 = e2.pts[j + 1];
+            if (horiz && Math.abs(a2.x - b2.x) < 1 && Math.abs(a2.x - x) < 22 && y >= Math.min(a2.y, b2.y) - 4 && y <= Math.max(a2.y, b2.y) + 4) return true;
+            if (!horiz && Math.abs(a2.y - b2.y) < 1 && Math.abs(a2.y - y) < 22 && x >= Math.min(a2.x, b2.x) - 4 && x <= Math.max(a2.x, b2.x) + 4) return true;
+          }
+          return false;
+        });
+        if (!near && !cross) { mx = x; my = y; return true; }
+        return false;
+      });
+      if (mx === null) return;
+      var dcol = DOOR[B.door];
+      placedB.push({ door: B.door, x: mx, y: my });
+      var bg = el("g", { "class": "dbullet" + (B.other ? " other" : ""), "data-link": B.key, "aria-hidden": "true" }, gB);
+      el("circle", { cx: mx, cy: my, r: 12, fill: dcol.fill, stroke: dcol.dark, "stroke-width": 2 }, bg);
+      txt(bg, mx, my + 5, String(B.door), null, 14, 700, dcol.on, { "text-anchor": "middle" });
+    });
+    // decision tags: Yes in green, No in purple (the invoicing board's approved / denied tags, in brand colors)
+    labelQueue.forEach(function (L) {
+      var s = Math.min(L.o.seg || 0, L.pts.length - 2), p = L.pts[s], q = L.pts[s + 1], t = L.o.at != null ? L.o.at : 0.5;
+      var x = p.x + (q.x - p.x) * t, y = p.y + (q.y - p.y) * t;
+      if (L.o.above) y -= 16;
+      var f = "700 14px " + FONT, w = measure(L.o.label, f) + 20;
+      var yes = L.o.label === "Yes", no = L.o.label === "No";
+      if (L.P) {
+        el("rect", { x: x - w / 2, y: y - 13, width: w, height: 26, rx: 3,
+          fill: yes ? C.green : (no ? C.purple : C.paper), stroke: yes ? C.green : (L.alt ? C.blue2 : C.purple), "stroke-width": 1.5 }, gEL);
+        txt(gEL, x, y + 5, L.o.label, null, 14, 700, no ? "#FFFFFF" : (yes ? C.ink : (L.alt ? C.blue2 : C.purple)), { "text-anchor": "middle" });
+      } else {
+        el("rect", { x: x - w / 2, y: y - 13, width: w, height: 26, rx: 3, fill: C.gray, stroke: C.grey, "stroke-width": 1 }, gEL);
+        txt(gEL, x, y + 5, L.o.label, null, 14, 600, C.grey, { "text-anchor": "middle" });
+      }
+    });
+
+    // nodes
+    var gN = el("g", null, mapSvg);
+    NODES.forEach(function (n) {
+      var P = n.P, num = PNUM[n.id];
+      var g = el("g", { "class": "node " + (P ? "pn" : "other") + (n.id === selected ? " sel" : ""), id: "step-" + n.id, "data-comment-target": "", tabindex: 0, role: "button", "data-id": n.id, "data-doors": (n.doors || []).join(","), "aria-label": (P ? "Step " + num + ": " : "") + (n.title ? n.title + ". " : "") + n.label + " (" + LANES[n.lane].title + ")" }, gN);
+      var x0 = n.x - n.w / 2, y0 = n.y - n.h / 2;
+      if (n.type === "decision") {
+        el("path", { "class": "shape", d: "M" + n.x + "," + y0 + " L" + (n.x + n.w / 2) + "," + n.y + " L" + n.x + "," + (y0 + n.h) + " L" + x0 + "," + n.y + " Z", fill: P ? C.paper : C.other, stroke: P ? C.blue2 : C.grey, "stroke-width": P ? 4 : 1.25 }, g);
+        var dt = el("text", { "text-anchor": "middle", "font-family": FONT, "font-size": 16, "font-weight": P ? 700 : 600, fill: P ? C.ink : C.grey }, g);
+        n.lines.forEach(function (line, i) { var sp = el("tspan", { x: n.x, y: n.y - (n.lines.length - 1) * 10 + 5 + i * 20 }, dt); sp.textContent = line; });
+        if (FLAG[n.id]) {
+          var fl = FLAG[n.id], fg = el("g", { "class": "dropflag" }, g);
+          var fw = Math.max(measure(fl[0], "700 14px " + FONT) * 1.12, measure(fl[1], "500 14px " + FONT)) + 34, ft = y0 - 62;
+          el("line", { x1: n.x, x2: n.x, y1: ft, y2: y0, stroke: C.purple, "stroke-width": 3 }, fg);
+          el("path", { d: "M" + n.x + "," + ft + " H" + (n.x + fw) + " L" + (n.x + fw - 14) + "," + (ft + 23) + " L" + (n.x + fw) + "," + (ft + 46) + " H" + n.x + " Z", fill: C.purple }, fg);
+          txt(fg, n.x + 10, ft + 19, fl[0], null, 14, 700, "#FFFFFF", { "letter-spacing": "0.08em" });
+          txt(fg, n.x + 10, ft + 37, fl[1], null, 14, 500, "#FFFFFF");
+        }
+        if (n.stubNo) {
+          // the "No" outcome leads somewhere the session didn't describe: an open stub instead of an invented step
+          var sg2 = el("g", { "class": "stub" }, g), sx2 = n.x + n.w / 2;
+          el("line", { x1: sx2, x2: sx2 + 34, y1: n.y, y2: n.y, stroke: C.grey, "stroke-width": 1.5, "stroke-dasharray": "3 3" }, sg2);
+          badge("ask", sx2 + 45, n.y, 11, sg2);
+          el("rect", { x: sx2 + 2, y: n.y - 30, width: 32, height: 22, rx: 3, fill: C.gray, stroke: C.grey, "stroke-width": 1 }, sg2);
+          txt(sg2, sx2 + 18, n.y - 14, "No", null, 13, 600, C.grey, { "text-anchor": "middle" });
+        }
+        var dn = el("g", num ? null : { display: "none" }, g);
+        el("circle", { cx: n.x - 38, cy: y0 + 30, r: 14, fill: C.grey, stroke: C.paper, "stroke-width": 2 }, dn);
+        txt(dn, n.x - 38, y0 + 35, String(num), null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
+      } else {
+        var fill = C.paper, stroke = C.blue2, sw = 4, dash = null;
+        if (!P) {
+          fill = C.other; stroke = C.otherLine; sw = 1.25;
+          if (n.type === "system") { dash = "6 4"; stroke = C.grey; }
+          if (n.type === "unknown") { dash = "3 4"; stroke = C.grey; }
+        }
+        if (n.type === "exit") { fill = C.purple20; stroke = C.purple; sw = 2.5; }
+        if (n.type === "start" && n.door1) stroke = DOOR[n.door1].line; // each door card carries its door's color
+        var tc = P ? C.ink : C.grey, ac = P ? C.blue2 : C.grey;
+        var ra = { "class": "shape", x: x0, y: y0, width: n.w, height: n.h, rx: 4, fill: fill, stroke: stroke, "stroke-width": sw };
+        if (dash) ra["stroke-dasharray"] = dash;
+        el("rect", ra, g);
+        var cx = x0 + 16, cur = y0 + 20;
+        n.tagLines.forEach(function (tl, ti) {
+          var dTag = ti === 0 && n.door1;
+          if (dTag) { el("circle", { cx: cx + 5, cy: cur + LH_TAG - 9.5, r: 5.5, fill: DOOR[n.door1].fill, stroke: DOOR[n.door1].dark, "stroke-width": 1.25 }, g); }
+          txt(g, dTag ? cx + 16 : cx, cur + LH_TAG - 5, tl, null, 13, dTag ? 700 : 600, dTag ? DOOR[n.door1].dark : ac, { "letter-spacing": "0.08em" }); cur += LH_TAG;
+        });
+        if (n.tagLines.length) cur += 4;
+        n.tLines.forEach(function (l) { txt(g, cx, cur + LH_T - 5, l, null, 17, P ? 700 : 600, tc); cur += LH_T; });
+        if (n.dLines.length) { cur += 4; n.dLines.forEach(function (l) { txt(g, cx, cur + LH_D - 5, l, null, 15, 400, tc); cur += LH_D; }); }
+        if (n.fLines.length) { cur += 8; n.fLines.forEach(function (l) { txt(g, cx, cur + LH_F - 5, l, null, 15, 500, C.ink); cur += LH_F; }); }
+        cur += 8;
+        n.wLines.forEach(function (l) { txt(g, cx, cur + LH_W - 5, l, null, 14, 600, ac); cur += LH_W; });
+        // step number in the top-left corner, like the invoicing board
+        var ng = el("g", num ? null : { display: "none" }, g);
+        el("circle", { cx: x0 + 2, cy: y0 + 2, r: 14, fill: C.grey, stroke: C.paper, "stroke-width": 2 }, ng);
+        txt(ng, x0 + 2, y0 + 7, String(num), null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
+        // the map doesn't yet show where this goes next: a short open stub instead of a dead end
+        if (n.openEnd) {
+          var sg = el("g", { "class": "stub" }, g), sx = x0 + n.w;
+          el("line", { x1: sx, x2: sx + 30, y1: n.y, y2: n.y, stroke: C.grey, "stroke-width": 1.5, "stroke-dasharray": "3 3" }, sg);
+          badge("ask", sx + 40, n.y, 11, sg);
+        }
+      }
+      // findings written on the map under each step (the invoicing board's flag / check notes)
+      var cxl = n.x - CW / 2;
+      if (n.timeH) {
+        var tg2 = el("g", { "class": "ptime" }, g), ty0 = n.y + n.h / 2 + CALLGAP;
+        el("rect", { x: cxl, y: ty0, width: CW, height: n.timeH, rx: 3, fill: C.blue20 }, tg2);
+        txt(tg2, cxl + 12, ty0 + 7 + LH_D - 5, "TIME", null, 13, 700, C.blue2, { "letter-spacing": "0.08em" });
+        n.timeLines.forEach(function (l, i) { txt(tg2, cxl + 62, ty0 + 7 + LH_D - 5 + i * LH_D, l, null, 15, 500, C.ink); });
+      }
+      // what we heard, as icons on the step (full text in the detail panel), like the invoicing map
+      findingBadges(n, g, x0, y0);
+      // "Comment" chip on every step (shown on hover, focus or selection when commenting is available)
+      var chx = n.type === "decision" ? n.x + 18 : x0 + n.w - 112, chy = n.type === "decision" ? y0 + n.h - 36 : y0 + n.h - 13;
+      var cc = el("g", { "class": "cchip", "data-comment": n.id }, g);
+      el("rect", { x: chx, y: chy, width: 104, height: 26, rx: 13, fill: C.ink }, cc);
+      txt(cc, chx + 52, chy + 18, "Comment", null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
+    });
+    // estimate brackets across the top of the participant lane
+    var gSp = el("g", null, mapSvg);
+    SPANS.forEach(function (sp) {
+      var a = byId[sp.from], b = byId[sp.to], top = laneGeo[0].top + 10;
+      var x0 = a.x - a.w / 2, x1 = b.x, by = top + 54;
+      var g = el("g", { "class": "span", id: sp.id, "data-comment-target": "", role: "img", "aria-label": sp.title + ". " + sp.text }, gSp);
+      var tw = Math.min(x1 - x0 - 20, Math.max(measure(sp.title, "700 14px " + FONT) * 1.12, measure(sp.text, "500 14px " + FONT)) + 28);
+      var lines = wrap(sp.text, "500 14px " + FONT, tw - 28);
+      var bh = 22 + lines.length * 18 + 6;
+      el("rect", { x: x0, y: top, width: tw, height: bh, rx: 3, fill: C.purple }, g);
+      txt(g, x0 + 12, top + 19, sp.title, null, 13, 700, "#FFFFFF", { "letter-spacing": "0.08em" });
+      lines.forEach(function (l, i) { txt(g, x0 + 12, top + 38 + i * 18, l, null, 14, 500, "#FFFFFF"); });
+      var ly = top + bh + 8;
+      el("path", { d: "M" + x0 + "," + (ly + 12) + " V" + ly + " H" + x1 + " V" + (ly + 12), fill: "none", stroke: C.purple, "stroke-width": 2.5 }, g);
+    });
+    gSel = el("g", null, mapSvg);
+    drawLinkChip();
+
+    // estimated timing lane
+    var gT = el("g", null, mapSvg);
+    TBOX.forEach(function (b) {
+      var x0 = b.x - CW / 2, tg = el("g", { "class": "tbox", "data-go": b.id, tabindex: 0, role: "button", "aria-label": "Timing: " + b.hLines.join(" ") }, gT);
+      el("rect", { x: x0, y: b.top, width: CW, height: b.h, rx: 2, fill: C.paper, stroke: C.blue40, "stroke-width": 2 }, tg);
+      var cur = b.top + 14;
+      b.hLines.forEach(function (l, i) { txt(tg, x0 + 14, cur + LH_T - 5, l + (i === b.hLines.length - 1 ? ":" : ""), null, 16, 700, C.ink); cur += LH_T; });
+      cur += 2;
+      b.lines.forEach(function (l) { txt(tg, x0 + 14, cur + LH_D - 5, l, null, 15, 400, C.ink); cur += LH_D; });
+    });
+
+    // lane label blocks
+    laneGeo.forEach(function (g, i) {
+      var lane = LANES[i], s = LSTY[i];
+      el("rect", { x: 0, y: g.top, width: LANE_W, height: g.h, fill: s.fill }, laneSvg);
+      if (i) el("rect", { x: 0, y: g.top, width: LANE_W, height: SEP, fill: C.paper }, laneSvg);
+      if (s.accent) el("rect", { x: 0, y: g.top, width: 10, height: g.h, fill: s.accent }, laneSvg);
+      var tl = wrap(lane.title, "700 21px " + FONT, LANE_W - 40), sl = wrap(lane.sub, "400 14px " + FONT, LANE_W - 40);
+      var total = tl.length * 25 + 6 + sl.length * 18, ty = g.top + SEP / 2 + g.h / 2 - total / 2 + 19;
+      tl.forEach(function (l, j) { txt(laneSvg, LANE_W / 2 + (s.accent ? 5 : 0), ty + j * 25, l, null, 21, 700, s.text, { "text-anchor": "middle" }); });
+      sl.forEach(function (l, j) { txt(laneSvg, LANE_W / 2 + (s.accent ? 5 : 0), ty + tl.length * 25 + 6 + j * 18, l, null, 14, 400, s.text, { "text-anchor": "middle" }); });
+    });
+
+    applyZoom();
+    applyDoor();
+  }
+
+  /* ---------- zoom & nav ---------- */
+  var scroller = document.getElementById("scroller");
+  var z = window.innerWidth < 700 ? 0.55 : 0.82;
+  function applyZoom() {
+    mapSvg.setAttribute("width", Math.round(W * z)); mapSvg.setAttribute("height", Math.round(H * z));
+    laneSvg.setAttribute("width", Math.round(LANE_W * z)); laneSvg.setAttribute("height", Math.round(H * z));
+    document.getElementById("zVal").textContent = Math.round(z * 100) + "%";
+    drawStageBar();
+    syncStageBar();
+  }
+
+  /* ---------- stage header: drawn at screen size so it stays readable at any zoom, pinned while you scroll down ---------- */
+  var stageSvg = document.getElementById("stageSvg"), cornerSvg = document.getElementById("cornerSvg");
+  var SRANGE = STAGES.map(function (s) {
+    var nums = NODES.filter(function (n) { return PNUM[n.id] && n.col >= s.from && n.col <= s.to; }).map(function (n) { return PNUM[n.id]; });
+    if (!nums.length) return "";
+    var lo = Math.min.apply(null, nums), hi = Math.max.apply(null, nums);
+    return lo === hi ? "STEP " + lo : "STEPS " + lo + "–" + hi;
+  });
+  var HDL = [];
+  function drawStageBar() {
+    var sw = Math.round(W * z), lw = Math.round(LANE_W * z), LH_SN = 20, NB = 64;
+    var view = scroller.clientWidth || sw;
+    var geo = STAGES.map(function (s, i) {
+      var x0 = stageX0(i) * z, x1 = stageX1(i) * z, lines = wrap(s.name, "700 16px " + FONT, Math.max(60, Math.min(x1 - x0, view) - 28));
+      var lw2 = Math.max(52 + measure(SRANGE[i], "600 13px " + FONT) * 1.1, Math.max.apply(null, lines.map(function (l) { return measure(l, "700 16px " + FONT); }))) + 28;
+      return { x0: x0, x1: x1, lines: lines, lw: lw2 };
+    });
+    HDL = [];
+    var maxL = Math.max.apply(null, geo.map(function (g) { return g.lines.length; }));
+    var hh = NB + (maxL - 1) * LH_SN + 16;
+    stageSvg.innerHTML = ""; cornerSvg.innerHTML = "";
+    stageSvg.setAttribute("width", sw); stageSvg.setAttribute("height", hh); stageSvg.setAttribute("viewBox", "0 0 " + sw + " " + hh);
+    cornerSvg.setAttribute("width", lw); cornerSvg.setAttribute("height", hh); cornerSvg.setAttribute("viewBox", "0 0 " + lw + " " + hh);
+    geo.forEach(function (g, i) {
+      var s = STAGES[i];
+      var hg = el("g", { "class": "stagehd", tabindex: 0, role: "button", "data-stage": i, "aria-label": "Stage " + s.k + ": " + s.name + (SRANGE[i] ? ", " + SRANGE[i].toLowerCase() : "") + ". Jump to this stage." }, stageSvg);
+      el("rect", { "class": "hdbox", x: g.x0, y: 0, width: g.x1 - g.x0, height: hh, fill: i % 2 ? C.tint : C.paper }, hg);
+      el("rect", { x: g.x0, y: 0, width: g.x1 - g.x0, height: 5, fill: C.blue2 }, hg);
+      // the label slides along inside its own stage, so the stage you are reading is always named
+      var lab = el("g", { "class": "hdlabel" }, hg);
+      el("rect", { x: g.x0 + 14, y: 15, width: 28, height: 28, rx: 2, fill: C.blue2 }, lab);
+      txt(lab, g.x0 + 28, 35.5, s.k, null, 18, 700, "#FFFFFF", { "text-anchor": "middle" });
+      if (SRANGE[i]) txt(lab, g.x0 + 52, 34, SRANGE[i], null, 13, 600, C.blue2, { "letter-spacing": "0.08em" });
+      g.lines.forEach(function (l, j) { txt(lab, g.x0 + 14, NB + j * LH_SN, l, null, 16, 700, C.ink); });
+      if (i) el("rect", { x: g.x0 - 1.5, y: 0, width: 3, height: hh, fill: C.blue40 }, hg);
+      HDL.push({ g: lab, x0: g.x0, room: Math.max(0, (g.x1 - g.x0) - g.lw) });
+    });
+    el("rect", { x: 0, y: 0, width: lw, height: hh, fill: C.paper }, cornerSvg);
+    el("rect", { x: 0, y: 0, width: lw, height: 5, fill: C.blue2 }, cornerSvg);
+    txt(cornerSvg, 14, 34, "STAGE", null, 13, 600, C.grey, { "letter-spacing": "0.1em" });
+  }
+  function syncStageBar() {
+    var sl = scroller.scrollLeft;
+    stageSvg.style.transform = "translateX(" + (-sl) + "px)";
+    HDL.forEach(function (h) {
+      var off = Math.max(0, Math.min(h.room, sl - h.x0));
+      h.g.setAttribute("transform", off ? "translate(" + off + ",0)" : "");
+    });
+    var x = (sl + scroller.clientWidth * 0.3) / z, cur = 0;
+    STAGES.forEach(function (s, i) { if (x >= stageX0(i)) cur = i; });
+    document.querySelectorAll(".btn.stage").forEach(function (b) { b.setAttribute("aria-current", String(+b.getAttribute("data-stage") === cur)); });
+  }
+  scroller.addEventListener("scroll", syncStageBar, { passive: true });
+  var rsT = null;
+  window.addEventListener("resize", function () { clearTimeout(rsT); rsT = setTimeout(function () { drawStageBar(); syncStageBar(); }, 120); });
+  function goStage(i) { scrollToX(PAD_L + STAGES[i].from * COL_W - 6, false); }
+  stageSvg.addEventListener("click", function (e) { var h = e.target.closest(".stagehd"); if (h) goStage(+h.getAttribute("data-stage")); });
+  stageSvg.addEventListener("keydown", function (e) {
+    var h = e.target.closest && e.target.closest(".stagehd");
+    if (h && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); goStage(+h.getAttribute("data-stage")); }
+  });
+  function setZoom(nz, keepCenter) {
+    var cx = (scroller.scrollLeft + scroller.clientWidth / 2) / z;
+    z = Math.max(0.25, Math.min(1.5, nz));
+    applyZoom();
+    if (keepCenter) scroller.scrollLeft = cx * z - scroller.clientWidth / 2;
+  }
+  document.getElementById("zIn").onclick = function () { setZoom(z + 0.1, true); };
+  document.getElementById("zOut").onclick = function () { setZoom(z - 0.1, true); };
+  document.getElementById("zFit").onclick = function () { setZoom((scroller.clientWidth - 4) / W, false); scroller.scrollLeft = 0; };
+
+  var nav = document.getElementById("stageNav");
+  STAGES.forEach(function (s, i) {
+    var b = document.createElement("button");
+    b.className = "btn stage"; b.type = "button";
+    b.setAttribute("data-stage", i); b.setAttribute("aria-current", String(i === 0));
+    b.innerHTML = "<b>" + s.k + "</b>" + s.name;
+    b.onclick = function () { goStage(i); };
+    nav.appendChild(b);
+  });
+  function scrollToX(x, center) {
+    var target = center ? x * z - scroller.clientWidth / 2 : x * z;
+    scroller.scrollTo({ left: Math.max(0, target), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+
+  var drag = null;
+  scroller.addEventListener("pointerdown", function (e) {
+    if (e.pointerType !== "mouse" || e.target.closest(".node, .link, .cchip")) return;
+    drag = { x: e.clientX, y: e.clientY, l: scroller.scrollLeft, t: scroller.scrollTop };
+    scroller.classList.add("drag");
+  });
+  window.addEventListener("pointermove", function (e) { if (!drag) return; scroller.scrollLeft = drag.l - (e.clientX - drag.x); scroller.scrollTop = drag.t - (e.clientY - drag.y); });
+  window.addEventListener("pointerup", function () { drag = null; scroller.classList.remove("drag"); });
+
+  // layers
+  var counts = { pain: 0, works: 0, plan: 0, ask: 0 };
+  NODES.forEach(function (n) { ["pain", "works", "plan"].forEach(function (k) { if (n[k]) counts[k] += n[k].length; }); counts.ask += askCount(n); });
+  ["pain", "works", "plan", "ask"].forEach(function (k) {
+    document.getElementById("cnt-" + k).textContent = counts[k];
+    var cb = document.getElementById("lay-" + k);
+    cb.addEventListener("change", function () { mapSvg.classList.toggle("hide-" + k, !cb.checked); });
+  });
+  // participant view
+  document.getElementById("pOnly").addEventListener("change", function (e) { mapSvg.classList.toggle("fp", e.target.checked); });
+  // doors
+  var door = null;
+  function applyDoor() {
+    mapSvg.classList.toggle("dim", door !== null);
+    // a door's view keeps the steps on that door's route (tagged with the door, or reached by its colored connectors)
+    mapSvg.querySelectorAll(".node").forEach(function (g) {
+      g.classList.toggle("dimmed", door !== null && !DSET[door][g.getAttribute("data-id")]);
+    });
+    mapSvg.querySelectorAll(".link, .dbullet").forEach(function (g) {
+      g.classList.toggle("dimmed", door !== null && byLink[g.getAttribute("data-link")].door !== door);
+    });
+  }
+  document.querySelectorAll("[data-door]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var d = +b.getAttribute("data-door"); door = door === d ? null : d;
+      document.querySelectorAll("[data-door]").forEach(function (x) { x.setAttribute("aria-pressed", String(+x.getAttribute("data-door") === door)); });
+      applyDoor();
+      if (door !== null) { var first = ORDER.filter(function (n) { return DSET[door][n.id]; })[0]; if (first) scrollToX(first.x - 200, false); }
+    });
+  });
+
+  /* ---------- detail panel ---------- */
+  var detail = document.getElementById("detail");
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function list(title, cls, icon, items) {
+    if (!items || !items.length) return "";
+    return '<section class="' + cls + '"><h4>' + icon + esc(title) + '</h4><ul class="items">' + items.map(function (x) {
+      return "<li>" + esc(x.t) + (x.by ? '<span class="by">' + esc(x.by) + "</span>" : "") + "</li>";
+    }).join("") + "</ul></section>";
+  }
+  var ICON = {
+    notes: '<svg width="16" height="16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#006E8F" stroke-width="1.5"/></svg>',
+    works: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#00A76F"/></svg>',
+    pain: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#862E88"/></svg>',
+    plan: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#006E8F"/></svg>',
+    ask: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/></svg>'
+  };
+  var DOORNAME = { 1: "SNAP application", 2: "Provider reverse referral", 3: "Asks on their own" };
+
+  function fbLabel(id) {
+    var e = byLink[id];
+    if (e) { var a = byId[e[0]], b = byId[e[1]]; return "Stage " + stageOf(a).k + " \u00b7 Connection: " + (a.title || a.label) + " \u2192 " + (b.title || b.label); }
+    var n = byId[id];
+    return "Stage " + stageOf(n).k + " \u00b7 " + stepName(n) + " (" + LANES[n.lane].title + ")";
+  }
+  function openComposerFor(id) { fbOpen(fbLabel(id), document.getElementById("fbMsg")); }
+  function linkKind(e) {
+    var a = byId[e[0]], b = byId[e[1]], k = (e[2] && e[2].kind) || "flow";
+    if (k === "loop") return (a.P || b.P) ? "Participant declines or isn’t a fit" : "Re-referral loop";
+    if (k === "alt") return (a.P && b.P) ? "Another path the participant can take" : "Side path";
+    if (a.P && b.P) return "Participant’s path";
+    return "Handoff";
+  }
+  function stepName(n) { return (n.P ? "Step " + PNUM[n.id] + " · " : "") + (n.title || n.label); }
+  function renderLinkDetail(e) {
+    var a = byId[e[0]], b = byId[e[1]], o = e[2] || {}, s = stageOf(a);
+    var facts = '<div><dt>From</dt><dd>' + esc(stepName(a)) + ' <span class="muted">(' + esc(LANES[a.lane].title) + ")</span></dd></div>" +
+      '<div><dt>To</dt><dd>' + esc(stepName(b)) + ' <span class="muted">(' + esc(LANES[b.lane].title) + ")</span></dd></div>" +
+      '<div><dt>Type</dt><dd>' + esc(linkKind(e)) + (o.label ? ", marked “" + esc(o.label) + "”" : "") + "</dd></div>" +
+      (e.door ? '<div><dt>Way in</dt><dd>Door ' + e.door + " · " + esc(DOORNAME[e.door]) + "</dd></div>" : "");
+    detail.innerHTML =
+      '<div class="dhead"><div><div class="dkicker">Connection · Stage ' + s.k + " · " + esc(s.name) + '</div><h3>' + esc(a.title || a.label) + " → " + esc(b.title || b.label) + "</h3></div></div>" +
+      '<dl class="facts">' + facts + "</dl>" +
+      '<div class="ends"><button class="btn" type="button" data-sel="' + a.id + '">Open “' + esc(a.title || a.label) + '”</button><button class="btn" type="button" data-sel="' + b.id + '">Open “' + esc(b.title || b.label) + '”</button></div>' +
+      fbBoxHtml("connection");
+    detail.querySelectorAll("[data-sel]").forEach(function (btn) { btn.onclick = function () { select(btn.getAttribute("data-sel"), true); }; });
+    var oc = document.getElementById("fbStep");
+    if (oc) oc.onclick = function () { openComposerFor(selected); };
+  }
+  function renderDetail() {
+    if (byLink[selected]) { renderLinkDetail(byLink[selected]); return; }
+    var n = byId[selected], s = stageOf(n), idx = ORDER.indexOf(n);
+    var kind = { exit: "Leaves the journey", start: "Start", end: "End", decision: "Decision", system: "Step in a system", step: "Step", unknown: "Not yet known" }[n.type];
+    var facts = '<div><dt>Who</dt><dd>' + esc(n.who || LANES[n.lane].title) + "</dd></div>" +
+      '<div><dt>Lane</dt><dd>' + esc(LANES[n.lane].title) + "</dd></div>" +
+      (n.doors ? '<div><dt>' + (n.doors.length > 1 ? "Ways in" : "Way in") + '</dt><dd>' + esc(n.doors.map(function (d) { return DOORNAME[d]; }).join("; ")) + "</dd></div>" : "") +
+      (n.sys ? '<div><dt>System</dt><dd>' + esc(n.sys.replace(/ · /g, ", ")) + "</dd></div>" : "") +
+      (FLAG[n.id] ? '<div><dt>Drop-off</dt><dd>' + esc(FLAG[n.id][0].charAt(0) + FLAG[n.id][0].slice(1).toLowerCase() + ": " + FLAG[n.id][1]) + "</dd></div>" : "") +
+      (n.time ? '<div><dt>Time reported</dt><dd>' + esc(n.time) + "</dd></div>" : "") +
+      (n.alongside ? '<div><dt>Connection</dt><dd>Runs alongside Stage ' + esc(s.k) + ". It isn’t one of the step-by-step handoffs, so no arrows lead to or from it.</dd></div>" : "") +
+      (n.openEnd ? '<div><dt>Next handoff</dt><dd>Not yet known. See the map clarity question below.</dd></div>' : "") +
+      (n.stubNo ? '<div><dt>If not reached</dt><dd>Next step not yet known. See the map clarity questions below.</dd></div>' : "");
+    detail.innerHTML =
+      '<div class="dhead"><div><div class="dkicker">' + (n.P ? "Step " + PNUM[n.id] + " · " : "") + (n.P ? '<span class="pp">Participant</span> · ' : "") + "Stage " + s.k + " · " + esc(s.name) + " · " + kind + '</div><h3>' + esc(n.title || n.label) + '</h3>' + (n.title ? '<p style="margin-top:4px">' + esc(n.label) + "</p>" : "") +
+      (n.feel ? '<p style="margin-top:6px">' + n.feel.map(esc).join("<br>") + "</p>" : "") + '</div>' +
+      '<div class="dnav"><button class="btn" type="button" id="prevStep"' + (idx === 0 ? " disabled" : "") + '>Previous step</button><button class="btn" type="button" id="nextStep"' + (idx === ORDER.length - 1 ? " disabled" : "") + ">Next step</button></div></div>" +
+      '<dl class="facts">' + facts + "</dl>" +
+      '<div class="dlists">' +
+      list("What happens", "t-notes", ICON.notes, n.notes) +
+      list("Working well", "t-works", ICON.works, n.works) +
+      list("Pain points", "t-pain", ICON.pain, n.pain) +
+      list("Planned changes", "t-plan", ICON.plan, n.plan) +
+      list("Data needed", "t-ask", ICON.ask, n.ask) + list("Map clarity", "t-ask", ICON.ask, n.askmap) +
+      "</div>" + fbBoxHtml("step");
+    document.getElementById("prevStep").onclick = function () { select(ORDER[idx - 1].id, true); };
+    document.getElementById("nextStep").onclick = function () { select(ORDER[idx + 1].id, true); };
+    var oc = document.getElementById("fbStep");
+    if (oc) oc.onclick = function () { openComposerFor(selected); };
+  }
+  function select(id, scrollMap) {
+    selected = id;
+    mapSvg.querySelectorAll(".node").forEach(function (g) { g.classList.toggle("sel", g.getAttribute("data-id") === id); });
+    mapSvg.querySelectorAll(".link").forEach(function (g) { g.classList.toggle("sel", g.getAttribute("data-link") === id); });
+    drawLinkChip();
+    renderDetail();
+    if (scrollMap && byId[id]) {
+      var n = byId[id], left = (n.x - n.w) * z, right = (n.x + n.w) * z;
+      if (left < scroller.scrollLeft || right > scroller.scrollLeft + scroller.clientWidth) scrollToX(n.x, true);
+    }
+  }
+  mapSvg.addEventListener("click", function (e) {
+    var chip = e.target.closest(".cchip");
+    if (chip && chip.classList.contains("linkchip")) { openComposerFor(selected); return; }
+    var g = e.target.closest(".node"), lk = e.target.closest(".link");
+    if (g) { select(g.getAttribute("data-id"), false); if (chip) openComposerFor(g.getAttribute("data-id")); return; }
+    if (lk) select(lk.getAttribute("data-link"), false);
+  });
+  mapSvg.addEventListener("keydown", function (e) {
+    if (!(e.key === "Enter" || e.key === " ") || !e.target.closest) return;
+    var lc = e.target.closest(".linkchip"), g = e.target.closest(".node"), lk = e.target.closest(".link"), tb = e.target.closest(".tbox");
+    if (lc) { e.preventDefault(); openComposerFor(selected); }
+    else if (g) { e.preventDefault(); select(g.getAttribute("data-id"), false); }
+    else if (lk) { e.preventDefault(); select(lk.getAttribute("data-link"), false); }
+    else if (tb) { e.preventDefault(); select(tb.getAttribute("data-go"), true); }
+  });
+  function goTo(id) {
+    select(id, true);
+    var m = document.querySelector(".map");
+    m.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  }
+
+  /* ---------- lower sections ---------- */
+  function chipsFor(ids) {
+    return '<div class="chips">' + ids.map(function (id) { return '<button class="chip" type="button" data-go="' + id + '">' + esc((byId[id].P ? "Step " + PNUM[id] : "Stage " + stageOf(byId[id]).k) + " · " + (byId[id].title || byId[id].label)) + "</button>"; }).join("") + "</div>";
+  }
+  function fillAcross(key, elId) {
+    document.getElementById(elId).innerHTML = ACROSS[key].map(function (x) {
+      return "<li><p>" + esc(x.t) + "</p>" + (x.by ? '<p class="muted">' + esc(x.by) + "</p>" : "") + chipsFor(x.n) + "</li>";
+    }).join("");
+  }
+  fillAcross("works", "acrossWorks"); fillAcross("pain", "acrossPain"); fillAcross("plan", "acrossPlan");
+
+  document.getElementById("timeBody").innerHTML = TIMES.map(function (r) {
+    return "<tr><td>" + esc(r[0]) + chipsFor([r[3]]).replace('class="chips"', 'class="chips" style="font-weight:400"') + "</td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>";
+  }).join("");
+
+  function qItems(key) {
+    var qs = [];
+    ORDER.forEach(function (n) { (n[key] || []).forEach(function (a) { qs.push({ t: a.t, id: n.id }); }); });
+    return qs.map(function (q) { return "<li><span>" + esc(q.t) + "</span>" + chipsFor([q.id]) + "</li>"; }).join("");
+  }
+  document.getElementById("qData").innerHTML = qItems("ask");
+  document.getElementById("qMap").innerHTML = qItems("askmap");
+  document.getElementById("qGen").innerHTML = QGEN.map(function (q) { return "<li><span>" + esc(q) + "</span></li>"; }).join("");
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-go]");
+    if (b) goTo(b.getAttribute("data-go"));
+  });
+
+
+  /* ---------- feedback: opens the Microsoft Form with the map and step filled in ---------- */
+  function fbReady() { return /^https:\/\/forms\.(office|microsoft|cloud\.microsoft)\b/i.test(window.FEEDBACK_FORM_URL || ""); }
+  function fbOpen(step, msgEl) {
+    if (!fbReady()) { if (msgEl) msgEl.textContent = "The feedback form isn’t connected yet."; return; }
+    if (step.length > 240) step = step.slice(0, 237) + "...";
+    var u = window.FEEDBACK_FORM_URL.replace("MAPNAME", encodeURIComponent(MAP_NAME)).replace("STEPNAME", encodeURIComponent(step));
+    var w = window.open(u, "_blank", "noopener");
+    if (msgEl) msgEl.textContent = "The form opened in a new tab. If it didn’t, allow pop-ups for this page and try again.";
+  }
+  function fbBoxHtml(what) {
+    return '<div class="flagbox"><h4>Comment on this ' + what + '</h4>' +
+      '<p class="note">Opens a short form in a new tab with this ' + what + ' already filled in. Corrections, missing details, and answers to the questions are all welcome. No sign-in needed.</p>' +
+      '<div class="row"><button class="btn primary" type="button" id="fbStep">Comment on this ' + what + '</button><span class="flagmsg" id="fbMsg" role="status"></span></div></div>';
+  }
+  (function () {
+    var g = document.getElementById("fbGeneral");
+    if (g) g.onclick = function () { fbOpen("General comment (whole map)", document.getElementById("fbGenMsg")); };
+  })();
+
+  /* ---------- boot ---------- */
+  draw(); renderDetail(); document.getElementById("mapBox").classList.add("canflag");
+  var fontsReady = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("400 15px Barlow"), document.fonts.load("500 14px Barlow"), document.fonts.load("600 14px Barlow"), document.fonts.load("700 17px Barlow")]) : Promise.resolve();
+  Promise.race([fontsReady, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () { draw(); });
+})();
+</script>
+
+
+</body></html>

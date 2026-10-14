@@ -1,0 +1,967 @@
+window.FEEDBACK_FORM_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=955QnF6dc0GADBkEmuwlJuMj359ZoPNAsda7Mdp9kmpUNzgxSzYwOFlMVkxKTkJMWU02QjVRMDJVMy4u&re39db6504d074f88bfa7382129bbd76b=MAPNAME&r9813ab6f9ed2432da250c18a6f0245e5=STEPNAME";<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow">
+<script>
+/* =====================================================================
+   FEEDBACK FORM LINK  (the only line you need to edit)
+   Paste the Microsoft Forms pre-filled link between the quotes below.
+   Make that link by typing MAPNAME as the answer to "Map" and STEPNAME
+   as the answer to "Step", then choosing "Get pre-filled link".
+   Until a link is pasted here, the Comment buttons show a notice.
+   ===================================================================== */
+window.FEEDBACK_FORM_URL = "";
+</script></head><body>
+<title>SNAP E&amp;T Provider Invoicing Map</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: wide swimlane map with fixed lane labels and horizontal scroll, then a step detail panel and stacked findings sections. Third Sector palette, single light theme by design. */
+:root {
+  color-scheme: light;
+  --canvas: #FDFBF5;
+  --paper: #FFFFFF;
+  --ink: #1C1717;
+  --grey: #5A5A5C;
+  --gray: #EFEFF2;
+  --blue: #0086AE;
+  --blue2: #006E8F;
+  --blue40: #93C9D9;
+  --blue20: #C4DFE7;
+  --green: #00A76F;
+  --green40: #93D6BF;
+  --green20: #C4E5DA;
+  --purple: #862E88;
+  --purple40: #C9A5C9;
+  --purple20: #DFCDDF;
+  --yellow: #FFC500;
+  --yellow20: #F7EBC4;
+  --font: "Barlow", "Helvetica Neue", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--canvas); color: var(--ink);
+  font-family: var(--font); font-size: 16px; line-height: 1.55;
+  padding-inline: 16px; padding-block: 0 48px;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3 { color: var(--ink); line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 600; letter-spacing: -0.01em; }
+h2 { font-size: 1.45rem; font-weight: 700; }
+h3 { font-size: 1.15rem; font-weight: 700; }
+p { margin: 0; }
+button { font-family: inherit; }
+.wrap { max-width: 1180px; margin-inline: auto; }
+.wide { max-width: 1440px; margin-inline: auto; }
+
+/* header */
+.top { padding-block: 40px 22px; display: grid; gap: 14px; position: relative; }
+.eyebrow { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--blue2); }
+.lede { max-width: 68ch; color: var(--ink); font-size: 1.06rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; font-size: .95rem; color: var(--grey); }
+.status { display: inline-flex; align-items: center; gap: 8px; font-weight: 600; color: var(--ink); border: 1.5px solid var(--ink); padding: 3px 12px; }
+.status::before { content: ""; width: 10px; height: 10px; background: var(--yellow); display: inline-block; }
+.frame { position: absolute; top: 0; right: 0; width: 200px; height: 120px; pointer-events: none; overflow: hidden; }
+.frame::before, .frame::after { content: ""; position: absolute; top: 0; right: 0; }
+.frame::before { border-top: 112px solid var(--green40); border-left: 180px solid transparent; }
+.frame::after { border-top: 64px solid var(--green); border-left: 104px solid transparent; }
+@media (max-width: 720px) { .frame { width: 110px; height: 66px; } .frame::before { border-top-width: 62px; border-left-width: 100px; } .frame::after { border-top-width: 36px; border-left-width: 58px; } }
+
+.scope { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1.5px solid var(--blue); border-bottom: 1px solid var(--blue20); margin-top: 6px; }
+.scope > div { padding: 12px 18px 12px 0; min-width: 0; }
+.scope b { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); font-weight: 600; }
+
+/* toolbar */
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; padding-block: 18px 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: .92rem; color: var(--ink); }
+.legend .k { display: inline-flex; align-items: center; gap: 7px; }
+.legend svg { flex: none; }
+.layers { display: flex; flex-wrap: wrap; gap: 8px; }
+.layer { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid var(--blue20); background: var(--paper); padding: 5px 12px 5px 8px; cursor: pointer; font-size: .92rem; user-select: none; }
+.layer input { position: absolute; opacity: 0; pointer-events: none; }
+.layer:has(input:not(:checked)) { opacity: .5; border-style: dashed; }
+.layer:has(input:focus-visible) { outline: 2px solid var(--blue2); outline-offset: 2px; }
+.layer .n { color: var(--grey); font-variant-numeric: tabular-nums; }
+.controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.btn { border: 1.5px solid var(--blue2); background: var(--paper); color: var(--blue2); font-weight: 600; font-size: .92rem; padding: 5px 12px; cursor: pointer; min-width: 36px; }
+.btn:hover { background: var(--blue20); }
+.btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.btn.stage { border-color: var(--blue20); color: var(--ink); font-weight: 500; }
+.btn.stage b { color: var(--blue2); font-weight: 700; margin-right: 4px; }
+.zoomval { font-variant-numeric: tabular-nums; min-width: 48px; text-align: center; font-size: .92rem; color: var(--grey); }
+.hint { font-size: .9rem; color: var(--grey); padding-bottom: 8px; }
+
+/* map */
+.map { display: flex; border: 1.5px solid var(--blue); background: var(--paper); position: relative; }
+.lanecol { flex: none; border-right: 1.5px solid var(--blue); background: var(--paper); }
+.scroller { flex: 1 1 auto; min-width: 0; overflow: auto; cursor: grab; overscroll-behavior-x: contain; }
+.scroller.drag { cursor: grabbing; user-select: none; }
+#mapSvg, #laneSvg { display: block; }
+.node { cursor: pointer; }
+.node:focus { outline: none; }
+.node:focus-visible .shape { stroke: var(--ink); stroke-width: 3; }
+.node.sel .shape { stroke: var(--blue2); stroke-width: 3.5; }
+.node:hover .shape { stroke-width: 2.5; }
+.hide-pain .b-pain, .hide-works .b-works, .hide-plan .b-plan, .hide-ask .b-ask { display: none; }
+
+/* detail */
+.detail { margin-top: 0; background: var(--paper); border: 1.5px solid var(--blue); border-top: 0; padding: 22px 24px 24px; }
+.dhead { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: flex-start; justify-content: space-between; }
+.dhead > div { min-width: 0; }
+.dkicker { font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); font-weight: 600; margin-bottom: 4px; }
+.dnav { display: flex; gap: 8px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px 24px; margin: 14px 0 6px; padding: 12px 0; border-top: 1px solid var(--blue20); border-bottom: 1px solid var(--blue20); }
+.facts div { min-width: 0; }
+.facts dt { font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--grey); font-weight: 600; }
+.facts dd { margin: 0; }
+.dlists { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px 28px; margin-top: 14px; }
+.dlists section { min-width: 0; }
+.dlists h4 { margin: 0 0 6px; font-size: .95rem; display: flex; align-items: center; gap: 8px; }
+.items { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.items li { padding-left: 14px; border-left: 3px solid var(--blue20); }
+.items .by { display: block; font-size: .85rem; color: var(--grey); }
+.t-pain li { border-left-color: var(--purple); }
+.t-works li { border-left-color: var(--green); }
+.t-plan li { border-left-color: var(--blue2); }
+.t-ask li { border-left-color: var(--yellow); }
+
+/* findings */
+.block { padding-block: 44px 0; }
+.block > h2 { margin-bottom: 6px; }
+.block > .sub { color: var(--grey); max-width: 70ch; margin-bottom: 18px; }
+.cols3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+.card { background: var(--paper); border: 1px solid var(--blue40); padding: 20px 22px; min-width: 0; }
+.card h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.card.works { border-color: var(--green40); }
+.card.pain { border-color: var(--purple40); }
+.card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.card li { min-width: 0; }
+.card li p + p { margin-top: 2px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+.chip { border: 1px solid var(--blue40); background: var(--canvas); color: var(--blue2); font-size: .85rem; font-weight: 600; padding: 2px 9px; cursor: pointer; text-align: left; }
+.chip:hover { background: var(--blue20); }
+.chip:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.muted { color: var(--grey); font-size: .9rem; }
+.scope-tag { font-size: .85rem; font-weight: 600; color: var(--grey); border: 1px dashed var(--blue40); padding: 2px 9px; }
+
+.timegrid { display: grid; grid-template-columns: minmax(0, 2.2fr) minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 900px) { .timegrid { grid-template-columns: 1fr; } }
+.tablewrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: .97rem; font-variant-numeric: tabular-nums; min-width: 560px; }
+th { text-align: left; font-weight: 600; color: var(--blue2); border-bottom: 1.5px solid var(--blue); padding: 9px 12px 9px 0; }
+td { padding: 10px 12px 10px 0; border-bottom: 1px solid var(--blue20); vertical-align: top; }
+td:first-child { font-weight: 600; }
+td.by-cell { color: var(--grey); font-size: .9rem; }
+td .tag { display: inline-block; font-size: .8rem; color: var(--grey); font-weight: 500; }
+.figs { display: grid; gap: 18px; }
+.fig { border-left: 1.5px solid var(--blue); padding-left: 18px; }
+.figs-h { font-size: 1rem; margin-bottom: -4px; }
+.fig .num { font-size: 2.6rem; font-weight: 700; line-height: 1; color: var(--blue2); font-variant-numeric: tabular-nums; }
+.fig p { margin-top: 6px; }
+
+.qlist { margin: 0; padding: 0; list-style: none; counter-reset: q; display: grid; gap: 0; border-top: 1px solid var(--blue20); }
+.qlist li { counter-increment: q; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--blue20); }
+.qlist li::before { content: "Q" counter(q); font-weight: 700; color: var(--blue2); font-variant-numeric: tabular-nums; }
+.qlist .chips { grid-column: 2; margin-top: 0; }
+
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
+.two ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
+.dates { margin: 10px 0 0; padding: 0; list-style: none; display: grid; gap: 0; }
+.dates li { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--blue20); }
+.dates b { color: var(--blue2); font-variant-numeric: tabular-nums; }
+footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20); font-size: .8rem; letter-spacing: .04em; color: var(--grey); text-transform: uppercase; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
+@media (max-width: 600px) { .btn.stage { font-size: .85rem; padding: 4px 8px; } .legend, .layer { font-size: .86rem; } }
+
+.flagbox { margin-top: 18px; padding: 16px 18px; border: 2px solid var(--yellow); border-left-width: 8px; background: var(--paper); }
+.flagbox h4 { margin: 0 0 4px; font-size: 1.05rem; }
+.flagbox p.note { color: var(--grey); font-size: .92rem; margin: 0 0 10px; max-width: 70ch; }
+.flagbox .row { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
+.flagmsg { font-size: .95rem; font-weight: 600; }
+.btn.primary { background: var(--blue2); color: #fff; }
+.btn.primary:hover { background: var(--blue); }
+
+.fbgen { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<header class="wrap top">
+  <div class="frame" aria-hidden="true"></div>
+  <div class="eyebrow">LDH &amp; Louisiana Works · SNAP E&amp;T Operational Assessment</div>
+  <h1>Provider Invoicing Process Map</h1>
+  <p class="lede">How a SNAP E&amp;T provider goes from delivering a service to getting paid, and how Louisiana Works is then reimbursed by LDH. This reflects the process as staff described it in the October 2 working session, including steps that are already changing or planned to change.</p>
+  <div class="meta">
+    <span class="status">Draft for validation</span>
+    <span>Working session: Friday, October 2, 2026</span>
+    <span>Prepared by Third Sector Capital Partners</span>
+  </div>
+  <div class="fbgen"><button class="btn primary" type="button" id="fbGeneral">Give feedback on this map</button><span class="flagmsg" id="fbGenMsg" role="status"></span><span class="muted">Or select any step and use the <b>Comment</b> button.</span></div>
+  <div class="scope">
+    <div><b>Starts</b>A provider delivers an allowable service or pays a participant cost up front, and begins an invoice for reimbursement.</div>
+    <div><b>Ends</b>The provider has been paid and Louisiana Works has been reimbursed by LDH, so the expenditure is reconciled.</div>
+  </div>
+</header>
+
+<section class="wide" aria-label="Process map">
+  <div class="toolbar">
+    <div class="legend" aria-label="Map key">
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" fill="#FFFFFF" stroke="#006E8F" stroke-width="1.5"/></svg>Step</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" fill="#FFFFFF" stroke="#0086AE" stroke-width="1.5" stroke-dasharray="4 3"/></svg>Step in a system</span>
+      <span class="k"><svg width="26" height="22" aria-hidden="true"><path d="M13 1 L25 11 L13 21 L1 11 Z" fill="#C4E5DA" stroke="#00A76F" stroke-width="1.5"/></svg>Decision</span>
+      <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" rx="8" fill="#006E8F"/></svg>Start, payment, end</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="2"/></svg>Flow</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#862E88" stroke-width="2.5" stroke-dasharray="7 4"/></svg>Correction loop</span>
+      <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="1.75" stroke-dasharray="3 3"/></svg>Occasional path</span>
+    </div>
+    <div class="layers" role="group" aria-label="Show on map">
+      <label class="layer"><input type="checkbox" id="lay-pain" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#862E88"/><text x="10" y="14.5" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points</label>
+      <label class="layer"><input type="checkbox" id="lay-works" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#00A76F"/><text x="10" y="14.5" text-anchor="middle" font-size="14" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well</label>
+      <label class="layer"><input type="checkbox" id="lay-plan" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#006E8F"/><path d="M6 10 H13 M10 6.5 L13.5 10 L10 13.5" stroke="#FFFFFF" stroke-width="1.8" fill="none"/></svg>Planned changes</label>
+      <label class="layer"><input type="checkbox" id="lay-ask" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.25" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="10" y="14.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>To confirm</label>
+    </div>
+  </div>
+  <div class="toolbar" style="padding-top:0">
+    <div class="controls" role="group" aria-label="Jump to stage" id="stageNav"></div>
+    <div class="controls" role="group" aria-label="Zoom">
+      <button class="btn" id="zOut" aria-label="Zoom out">−</button>
+      <span class="zoomval" id="zVal">100%</span>
+      <button class="btn" id="zIn" aria-label="Zoom in">+</button>
+      <button class="btn" id="zFit">Fit</button>
+    </div>
+  </div>
+  <p class="hint">Scroll or drag sideways to follow the process. Select any step to see who does it, estimated time where staff gave one, and what we heard. To give feedback on a step, select it and choose <b>Comment on this step</b> below the map.</p>
+  <div class="map">
+    <div class="lanecol"><svg id="laneSvg" role="img" aria-label="Swimlanes"></svg></div>
+    <div class="scroller" id="scroller"><svg id="mapSvg" role="group" aria-label="Provider invoicing process steps"></svg></div>
+  </div>
+  <div class="detail" id="detail" aria-live="polite"></div>
+</section>
+
+<section class="wrap block" aria-labelledby="h-across">
+  <h2 id="h-across">Across the process</h2>
+  <p class="sub">The themes that came up at more than one step. Select a step name to find it on the map.</p>
+  <div class="cols3">
+    <div class="card works">
+      <h3><svg width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#00A76F"/><text x="11" y="16" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well</h3>
+      <ul id="acrossWorks"></ul>
+    </div>
+    <div class="card pain">
+      <h3><svg width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#862E88"/><text x="11" y="16" text-anchor="middle" font-size="14" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points heard most</h3>
+      <ul id="acrossPain"></ul>
+    </div>
+    <div class="card">
+      <h3><svg width="22" height="22" aria-hidden="true"><circle cx="11" cy="11" r="10" fill="#006E8F"/><path d="M6.5 11 H14.5 M11 7 L15 11 L11 15" stroke="#FFFFFF" stroke-width="2" fill="none"/></svg>Planned changes</h3>
+      <ul id="acrossPlan"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="wrap block" aria-labelledby="h-time">
+  <h2 id="h-time">Estimated time per invoice</h2>
+  <p class="sub">These are estimates staff gave in the October 2 session, not measured times. Each assumes uninterrupted work on one provider invoice; reviewers noted that is rare, so elapsed time is usually longer. Only steps with a stated estimate are listed.</p>
+  <div class="timegrid">
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th scope="col">Step</th><th scope="col">Smaller provider</th><th scope="col">Larger provider</th><th scope="col">Estimated by</th></tr></thead>
+        <tbody id="timeBody"></tbody>
+      </table>
+      <p class="muted" style="margin-top:12px">No estimate yet for provider correction turnaround (providers are given 3 days), time from approval to provider payment, or LDH verification, review and approval. These are in Questions to confirm.</p>
+    </div>
+    <div class="figs">
+      <h3 class="figs-h">Other estimates we heard</h3>
+      <div class="fig"><div class="num">90%+</div><p>Estimated share of invoices reaching final review that are returned to the provider for corrections.</p><p class="muted">LA Works final reviewer</p></div>
+      <div class="fig"><div class="num">9 in 10</div><p>Estimated share of corrected invoices that come back as a whole new packet instead of only the items requested.</p><p class="muted">LA Works first-level reviewer</p></div>
+      <div class="fig"><div class="num">40–50</div><p>Approximate number of participant reimbursements one provider's invoice may include, each checked by hand for SNAP eligibility.</p><p class="muted">LA Works first-level reviewer</p></div>
+      <div class="fig"><div class="num">99%</div><p>Estimated share of LDH review questions resolved by talking with the LA Works reviewer, without going back to the provider.</p><p class="muted">LA Works final reviewer</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap block" aria-labelledby="h-q">
+  <h2 id="h-q">Questions to confirm</h2>
+  <p class="sub">Points we could not settle in the session. We will follow up one-on-one, and corrections to anything else on this map are welcome.</p>
+  <ol class="qlist" id="qList"></ol>
+</section>
+
+<section class="wrap block two" aria-labelledby="h-next">
+  <div>
+    <h2 id="h-next">Next steps</h2>
+    <ul class="dates">
+      <li><b>Ongoing</b><span>Third Sector follows up one-on-one, with extra time on the LDH steps, which the session ran short on.</span></li>
+      <li><b>Oct 15</b><span>Draft map shared with the working group for validation.</span></li>
+      <li><b>Oct 30</b><span>Completed process map delivered.</span></li>
+    </ul>
+    <p class="muted" style="margin-top:10px">The provider lane will also be checked against one-on-one provider interviews.</p>
+  </div>
+  <div>
+    <h2>Outside this map</h2>
+    <ul>
+      <li>Provider procurement, contracting and onboarding</li>
+      <li>Participant eligibility determination</li>
+      <li>SNAP Works system redesign</li>
+      <li>Budget setting</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="wrap"><span>Third Sector Capital Partners</span><span>Draft · not for distribution beyond the working group</span></footer>
+
+<script>
+(function () {
+  "use strict";
+  var MAP_NAME = "Provider Invoicing Map";
+
+  /* ---------- content ---------- */
+  var LANES = [
+    { id: "prov", title: "Provider", sub: "Invoicing staff and case managers", org: "prov" },
+    { id: "cons", title: "LA Works · SNAP E&T consultants", sub: "Documentation review", org: "law" },
+    { id: "rev",  title: "LA Works · Invoice review", sub: "First-level and final review", org: "law" },
+    { id: "fis",  title: "LA Works · Fiscal", sub: "Provider payment and billing to LDH", org: "law" },
+    { id: "ldhf", title: "LDH · Fiscal", sub: "Verification, coding and approval", org: "ldh" },
+    { id: "ldhp", title: "LDH · SNAP E&T program", sub: "Program review", org: "ldh" }
+  ];
+  var STAGES = [
+    { k: "A", name: "Provider submits", from: 0, to: 3 },
+    { k: "B", name: "Consultant review", from: 4, to: 7 },
+    { k: "C", name: "Invoice review", from: 8, to: 10 },
+    { k: "D", name: "Provider payment", from: 11, to: 14 },
+    { k: "E", name: "Billing to LDH", from: 15, to: 16 },
+    { k: "F", name: "LDH review and reimbursement", from: 17, to: 24 }
+  ];
+  var R = {
+    dir: "LA Works SNAP E&T director", mgr: "LA Works SNAP E&T manager", con: "LA Works SNAP E&T consultants", first: "LA Works first-level reviewer",
+    fin: "LA Works final reviewer", fd: "LA Works fiscal director", lf: "LDH fiscal", lp: "LDH SNAP E&T consultant"
+  };
+  function it(t, by) { return { t: t, by: by }; }
+
+  var NODES = [
+    { id: "n_start", lane: 0, col: 0, type: "start", label: "Provider delivers a service or pays a participant cost up front",
+      who: "Provider",
+      notes: [it("Start of this map. Participant costs include supportive services such as gas cards or child care assistance.")] },
+    { id: "n_snap", lane: 0, col: 1, type: "system", sys: "SNAP Works", label: "Case manager enters each supportive service in SNAP Works",
+      who: "Provider case manager",
+      notes: [it("Each item is its own entry. Four gas cards in a month means four entries, not one lump sum.", R.fin)],
+      pain: [it("Entries are sometimes miscategorized, entered with the wrong amount, or lumped together. Providers can't change an entry once saved, so the E&T consultant has to correct it.", R.fin),
+             it("The case manager entering services is often not the person preparing the invoice, and usually doesn't know the budget. Reimbursements requested on the invoice may not be in the system.", R.con)],
+      plan: [it("SNAP Works financial suite, pending authorization: reimbursements entered here would flow straight onto the provider's invoice, and the system would block entries over the line-item budget in real time.", R.mgr)] },
+    { id: "n_packet", lane: 0, col: 2, type: "step", label: "Invoicing staff assembles the monthly invoice packet",
+      who: "Provider invoicing staff",
+      notes: [it("Packet: cost reimbursement form, budget tracker, bills, timesheets for any salary claimed, proof of payment, and the participant reimbursement report run from SNAP Works."),
+              it("With a two-week pay period, the same timesheet may need to be submitted two months in a row.", R.fin)],
+      pain: [it("Most providers don't run the participant reimbursement report before submitting.", R.first),
+             it("Common errors: wrong dates on check stubs, bills from outside the service month, missing timesheets or proof of payment, miscalculated cost reimbursement form or budget tracker, and unallowable items.", R.con + "; " + R.fin),
+             it("Large packets. One multi-site provider's packet may run to about 20 documents, including several utility and phone bills per location.", R.con)],
+      plan: [it("A guide defining allowable expenses for this federal fiscal year, and fewer reimbursable line items in budgets, so packets should be smaller (for example, no 150-page phone bills).", R.dir)] },
+    { id: "n_email", lane: 0, col: 3, type: "step", sys: "Email", label: "Emails invoice and documents to the consultants' group inbox by the 15th",
+      who: "Provider invoicing staff",
+      notes: [it("Invoices are due by the 15th of each month. One consultant said their providers mostly submit by then, and late ones were tied to the person who handles invoices being out.", R.con)],
+      plan: [it("A provider portal exists but isn't in use yet.", R.dir + "; " + R.fin)] },
+
+    { id: "n_intake", lane: 1, col: 4, type: "system", sys: "Shared drive · Monday", label: "Assigned consultant saves the packet to the shared drive and logs it on the Monday board",
+      who: "LA Works SNAP E&T consultant assigned to the provider (about 7 to 8 consultants in all)",
+      works: [it("The Monday board tracks every provider's invoice through each review step, with notes anyone on the team can open.", R.fin)] },
+    { id: "n_report", lane: 1, col: 5, type: "system", sys: "SNAP Works", label: "Runs the participant reimbursement report if the provider left it out",
+      who: "Assigned LA Works SNAP E&T consultant",
+      pain: [it("Consultants often end up running the report the provider was asked to include, and saving it with the invoice.", R.first)],
+      plan: [it("With the financial suite, reimbursements would already be on the invoice, so this printed report would no longer be needed.", R.mgr)] },
+    { id: "n_docreview", lane: 1, col: 6, type: "step", label: "Reviews documentation against the service month and approved budget",
+      who: "Assigned LA Works SNAP E&T consultant",
+      time: "About 1 day for a smaller provider, 1 to 2 days for a larger one, if uninterrupted. Matching the reimbursement report alone can take a full day.",
+      notes: [it("Checks that every claimed item has support, falls in the service month, is allowable, and is a line item in the approved budget. Consultants do not check calculations; that happens at the next level.", R.dir),
+              it("Matches the participant reimbursement report against SNAP Works entries and the budget.", R.con)],
+      pain: [it("Allowable expenses aren't always clearly defined. Consultants check with the invoice reviewers and wait for an answer before responding to the provider.", R.con),
+             it("No template or quick reference for common questions and errors.", R.con),
+             it("Review competes with other duties across several invoices at once.", R.con)],
+      ask: [it("Where does the SNAP E&T manager's front-end review fit: before, alongside, or after the consultant's review?")] },
+    { id: "d_docs", lane: 1, col: 7, type: "decision", label: "Documents complete?",
+      who: "Assigned LA Works SNAP E&T consultant",
+      notes: [it("Consultants review and request corrections. They don't approve or deny invoices.", R.con)],
+      ask: [it("Do consultants always resolve missing items before sending an invoice to first-level review, or sometimes pass it on with notes?")] },
+    { id: "n_fix1", lane: 0, col: 7, type: "step", sys: "Email", label: "Provider gathers missing items and re-sends (3-day window)",
+      who: "Provider, working with the LA Works SNAP E&T consultant",
+      pain: [it("Three days often isn't enough: the case manager has to get receipts or check stubs from someone else, the one invoicing staff member is out, the office is closed, or staff have turned over.", R.con + "; " + R.dir),
+             it("Back-and-forth, with the consultant in the middle relaying requests between providers and reviewers.", R.con),
+             it("Some providers repeat the same errors month after month despite training. Consultants see this more with newer providers than long-standing ones.", R.dir + "; " + R.con)],
+      works: [it("Providers get regular technical assistance from their consultant (often daily contact), quarterly provider meetings that walk through recent issues, an annual in-person training, and a best-practice guide.", R.dir)],
+      ask: [it("Is the 3-day window business days or calendar days?")] },
+
+    { id: "n_first", lane: 2, col: 8, type: "step", label: "First-level review: recalculates each budget category and checks participant eligibility",
+      who: "LA Works first-level reviewer",
+      time: "3 to 4 hours for a smaller provider; a full uninterrupted day for a larger one.",
+      notes: [it("Recalculates salaries, fringe, operating expenses and other charges (participant reimbursements) against the approved budget, and verifies dates on operating expenses.", R.first)],
+      pain: [it("Other charges is the slowest part. SNAP Works can accept a reimbursement for someone who wasn't SNAP-eligible that month, so each reimbursement (an estimated 40 to 50 on one provider's invoice) is checked by hand, with system delays, against the report and receipts.", R.first),
+             it("Fringe benefit calculations take the most time for the smallest amounts. One example given: three hours of calculation to confirm $1.25.", R.fin)],
+      works: [it("A salary and fringe calculation spreadsheet built this fiscal year saves an estimated hour of calculation per invoice.", R.first)] },
+    { id: "n_final", lane: 2, col: 9, type: "step", label: "Final review of the full invoice and every supporting document",
+      who: "LA Works final reviewers, including the Workforce Development Contracts Unit program manager",
+      time: "3 to 4 hours for a smaller provider; about a day for a large one (a couple hundred pages), which can stay on a reviewer's desk for 2 days.",
+      notes: [it("A complete review of everything submitted, including the calculations. Last check before the invoice goes to fiscal for payment.", R.fin)],
+      works: [it("First-level and final reviewers talk invoices through on Teams so their comments to the provider are as specific as possible.", R.fin),
+              it("Reviewing invoices month to month shows how a provider is serving participants, and can prompt a closer look at case notes in SNAP Works.", R.fin)] },
+    { id: "d_errors", lane: 2, col: 10, type: "decision", label: "Corrections needed?",
+      who: "First-level and final reviewers",
+      notes: [it("First-level comments travel with the invoice to final review, and anything final review finds is added, so the provider gets one combined list instead of several rounds.", R.first)],
+      pain: [it("An estimated 90%+ of invoices reaching final review are returned to the provider for corrections.", R.fin)],
+      works: [it("Returns are organized by cost reimbursement form category, with the exact correction needed, so the provider only has to update the tracker and the form.", R.fin)],
+      ask: [it("Does the combined list go to the provider directly, or through the consultant?")] },
+    { id: "n_fix2", lane: 0, col: 10, type: "step", label: "Provider corrects and resubmits, often the whole packet",
+      who: "Provider",
+      time: "Re-review of a full resubmission: about another full day (provider size not specified).",
+      pain: [it("An estimated 9 times out of 10 the provider sends a whole new packet rather than only what was asked for. Numbers shift (an added utility bill, a new reimbursement), so the invoice is re-reviewed in full and may be returned a second time.", R.first + "; " + R.fin)],
+      works: [it("One-on-one Teams walk-throughs with providers, usually with their consultant included.", R.fin)],
+      ask: [it("Is there a deadline for corrections after final review?")] },
+
+    { id: "n_fiscalin", lane: 3, col: 11, type: "step", sys: "Email · spreadsheets", label: "Fiscal director logs the approved total in tracking spreadsheets",
+      who: "LA Works fiscal director",
+      notes: [it("Final reviewers email the approved invoice to the fiscal payables mailbox and copy the fiscal director.", R.fin),
+              it("This funding doesn't follow LA Works' usual payment process, so in this first year the fiscal director tracks running monthly totals directly.", R.fd)],
+      plan: [it("The payables unit is expected to take over this tracking.", R.fd)] },
+    { id: "d_cash", lane: 3, col: 12, type: "decision", label: "Cash available in fund and PO?",
+      who: "LA Works fiscal director",
+      notes: [it("LDH is the grant recipient, so LA Works pays providers first and is reimbursed later. Unlike most of LA Works' federal funds, this cash can't go negative: if the fund is short, payments won't go through.", R.fd)] },
+    { id: "n_wait", lane: 3, col: 12, row: 1, type: "step", label: "Wait for LDH reimbursement or arrange a fund loan",
+      who: "LA Works fiscal director",
+      pain: [it("Payment can wait until LDH reimburses earlier payments, or until a loan from another LA Works fund is arranged. This is why there is sometimes a delay between approval and payment.", R.fd)],
+      ask: [it("What is the typical time from final approval to provider payment?")] },
+    { id: "n_pay", lane: 3, col: 13, type: "system", sys: "LaGov", label: "Payables enters the payment in LaGov",
+      who: "LA Works payables unit",
+      notes: [it("The fiscal director emails payables to release the payments. Entering the payment itself is quick.", R.fd)] },
+    { id: "n_paid", lane: 0, col: 14, type: "milestone", label: "Provider receives payment",
+      who: "Provider",
+      notes: [it("Milestone for the provider. The process continues until LA Works is reimbursed by LDH.")] },
+    { id: "n_confirm", lane: 2, col: 14, type: "system", sys: "Look-up · Monday", label: "Confirms payment in the look-up system; marks Paid on the Monday board",
+      who: "LA Works Workforce Development Contracts Unit program manager (final reviewer)",
+      notes: [it("Each month, looks up providers by contract number to confirm payment, marks Paid on the Monday board, and contacts the fiscal director if a payment hasn't gone through. Issues are rare.", R.fin)],
+      ask: [it("What is the name of the system used to look up payments by contract number?")] },
+    { id: "n_weekly", lane: 3, col: 14, type: "system", sys: "Payables report", label: "Friday payables report flags any payment that didn't go out",
+      who: "LA Works payables unit, for the fiscal director",
+      notes: [it("Added after a payment was blocked at the end of the last fiscal year. Reasons a payment can fail include a cash shortfall or a vendor on the legislative audit noncompliance list.", R.fd)],
+      works: [it("Catches a payment that didn't go out before LA Works bills LDH for it.", R.fd)] },
+
+    { id: "n_folder", lane: 3, col: 15, type: "step", sys: "OneDrive", label: "Builds a monthly OneDrive folder and summary invoice by provider",
+      who: "LA Works fiscal director",
+      notes: [it("Once a month's payments are made, all support goes into a OneDrive folder for that month (for example, a July folder holds the providers paid for July) with a summary invoice by vendor. The files are too large to email.", R.fd)],
+      ask: [it("How often does LA Works bill LDH, and what decides when a batch is sent?")] },
+    { id: "n_z8", lane: 3, col: 16, type: "system", sys: "LaGov", label: "Creates the Z8 interagency bill in LaGov and emails LDH",
+      who: "LA Works fiscal director",
+      notes: [it("The Z8 is LaGov's interagency billing document. The email tells LDH fiscal (with the LDH program lead copied) that the folder, invoice and Z8 are ready.", R.fd)] },
+
+    { id: "n_verify", lane: 4, col: 17, type: "system", sys: "LaGov", label: "Pulls a LaGov report to confirm each provider was paid",
+      who: "LDH fiscal team",
+      notes: [it("Confirms that every payment LA Works is billing for was actually made. This is LDH's evidence to auditors that payment was verified.", R.lf)] },
+    { id: "d_paid", lane: 4, col: 18, type: "decision", label: "All providers paid?",
+      who: "LDH fiscal",
+      notes: [it("If everything checks out, LDH fiscal emails the program team with the LaGov report, which starts program review.", R.lf)] },
+    { id: "n_resolve", lane: 3, col: 18, type: "step", label: "Resolves the unpaid item with LDH (not needed to date)",
+      who: "LA Works fiscal director, contacted by the LDH fiscal team",
+      notes: [it("LDH fiscal would reach out to the LA Works fiscal director. This has not happened yet.", R.lf)] },
+    { id: "n_progrev", lane: 5, col: 19, type: "step", sys: "OneDrive · shared drive", label: "Reviews every invoice: documents, eligibility, calculations; completes checklist",
+      who: "LDH SNAP E&T consultant",
+      notes: [it("Downloads the invoices from OneDrive to LDH's shared drive so others can access them.", R.lp),
+              it("Reviews 100% of each invoice: support for each claimed item, whether items are eligible, then the calculations, using a compliance checklist for each provider.", R.lp),
+              it("Known recurring issues are documented every month for audit, even when the invoice is approved.", R.lp)],
+      works: [it("Most invoices are clean. The LDH SNAP E&T consultant has returned two invoices: one LA Works miscalculation and one provider calculation that couldn't be followed.", R.lp)],
+      ask: [it("How long do LDH verification, program review and approval typically take?")] },
+    { id: "d_q", lane: 5, col: 20, type: "decision", label: "Questions or discrepancies?",
+      who: "LDH SNAP E&T consultant",
+      notes: [it("LDH program staff contact the LA Works reviewer who signed off on the invoice, not the provider.", R.lp)] },
+    { id: "n_explain", lane: 2, col: 20, type: "step", label: "LDH reviewer talks it through with the LA Works reviewer who signed off",
+      who: "LDH SNAP E&T consultant with an LA Works final reviewer",
+      works: [it("An estimated 99% of questions are resolved this way, without going back to the provider.", R.fin)] },
+    { id: "n_cover", lane: 3, col: 21, type: "step", label: "Issues a corrected cover sheet with the adjusted amount",
+      who: "LA Works fiscal director",
+      notes: [it("When an amount has to be reduced, LDH fiscal tells the LA Works fiscal director, and a corrected cover sheet comes back.", R.lf + "; " + R.lp)],
+      plan: [it("Suggested: copy the LA Works fiscal director when the two program teams discuss a discrepancy, so the fiscal director knows before the adjustment request arrives.", R.lf)] },
+    { id: "n_third", lane: 5, col: 21, type: "step", label: "Third-level review (policy: about a 2% sample)",
+      who: "LDH SNAP E&T program lead (third-level reviewer)",
+      notes: [it("Policy calls for sampling about 2% of invoices to reconcile totals, approval and payment.")],
+      ask: [it("Is the third-level review a 2% sample in practice, or are most invoices reviewed?")] },
+    { id: "n_code", lane: 4, col: 22, type: "step", label: "Checks for questioned costs; one person codes, a second approves",
+      who: "LDH fiscal staff, including the new account manager, with the LDH fiscal lead overseeing",
+      notes: [it("Checks each provider's checklist for questioned costs, then codes the invoice. The person who codes can't be the one who approves.", R.lf)],
+      pain: [it("Invoices arrive in bursts, sometimes several months at once, on top of SNAP E&T admin invoices. When that overlaps quarterly reporting (SNAP and Medicaid report at the same time; October is a reporting month), approvals slow down.", R.lf)],
+      plan: [it("Two LDH fiscal staff, including the new account manager, are taking over coding and approval from the LDH fiscal lead.", R.lf),
+             it("LDH management evaluation recommendations (draft): set times for invoices to come in, with about 15 days for LA Works to collect provider invoices including back-and-forth, and possibly a set schedule for supplemental invoices.", R.lp)] },
+    { id: "n_approve", lane: 4, col: 23, type: "system", sys: "LaGov", label: "Approves the Z8 in LaGov, emails confirmation, files the audit record",
+      who: "LDH fiscal",
+      notes: [it("A screenshot of the Z8 approval goes into an email to the LA Works fiscal director.", R.lf)],
+      works: [it("LDH keeps a complete audit file: invoices, checklists, correspondence about any issue, and the payment confirmation.", R.lf)] },
+    { id: "n_end", lane: 3, col: 24, type: "end", label: "LA Works reimbursed; expenditure reconciled",
+      who: "LA Works fiscal",
+      notes: [it("End of this map: the provider has been paid and LA Works has been reimbursed.")],
+      ask: [it("How does LA Works confirm the reimbursement arrived, and who closes out the month?")] }
+  ];
+
+  // kind: flow | loop (correction) | alt (occasional)
+  var EDGES = [
+    ["n_start", "n_snap"], ["n_snap", "n_packet"], ["n_packet", "n_email"],
+    ["n_email", "n_intake", { gap: 3 }],
+    ["n_intake", "n_report"], ["n_report", "n_docreview"], ["n_docreview", "d_docs"],
+    ["d_docs", "n_fix1", { exit: "t", enter: "b", kind: "loop", label: "No", seg: 0 }],
+    ["n_fix1", "n_docreview", { exit: "l", enter: "t", kind: "loop", label: "Re-sent", seg: 0 }],
+    ["d_docs", "n_first", { gap: 7, label: "Yes", seg: 1 }],
+    ["n_first", "n_final"], ["n_final", "d_errors"],
+    ["d_errors", "n_fix2", { exit: "t", enter: "b", kind: "loop", label: "Yes", seg: 0 }],
+    ["n_fix2", "n_first", { exit: "l", enter: "t", kind: "loop", label: "Full re-review", seg: 0 }],
+    ["d_errors", "n_fiscalin", { gap: 10, label: "No, approved", seg: 1 }],
+    ["n_fiscalin", "d_cash"],
+    ["d_cash", "n_wait", { exit: "b", enter: "t", kind: "alt", label: "No", seg: 0 }],
+    ["n_wait", "d_cash", { exit: "l", enter: "l", kind: "alt", midx: { gap: 11 } }],
+    ["d_cash", "n_pay", { label: "Yes", seg: 0, above: true }],
+    ["n_pay", "n_weekly"],
+    ["n_pay", "n_paid", { exit: "t", enter: "l" }],
+    ["n_pay", "n_confirm", { exit: "t", enter: "l" }],
+    ["n_weekly", "n_folder"], ["n_folder", "n_z8"],
+    ["n_z8", "n_verify", { gap: 16 }],
+    ["n_verify", "d_paid"],
+    ["d_paid", "n_resolve", { exit: "t", enter: "b", kind: "alt", label: "No", seg: 0 }],
+    ["d_paid", "n_progrev", { gap: 18, label: "Yes", seg: 1 }],
+    ["n_progrev", "d_q"],
+    ["d_q", "n_explain", { exit: "t", enter: "b", kind: "alt", label: "Yes", seg: 0, at: 0.82 }],
+    ["n_explain", "n_progrev", { exit: "l", enter: "t", kind: "alt", label: "Explained", seg: 1, at: 0.3 }],
+    ["n_explain", "n_cover", { exit: "r", enter: "t", kind: "alt", label: "Adjust", seg: 1 }],
+    ["n_cover", "n_third", { exit: "b", enter: "t", kind: "alt" }],
+    ["d_q", "n_third", { label: "No", seg: 0, above: true }],
+    ["n_third", "n_code", { gap: 21 }],
+    ["n_code", "n_approve"],
+    ["n_approve", "n_end", { gap: 23 }]
+  ];
+
+  var ACROSS = {
+    works: [
+      { t: "Several layers of review, three at LA Works and more at LDH, give strong fiscal oversight.", by: R.dir, n: ["n_first", "n_final", "n_progrev"] },
+      { t: "The Monday board shows where every provider's invoice stands, with shared notes.", by: R.fin, n: ["n_intake", "n_confirm"] },
+      { t: "Staff communicate quickly: calls, Teams chats, or walking over to talk an invoice through.", by: R.dir + "; " + R.fin, n: ["n_final", "n_explain"] },
+      { t: "Steady provider support: consultant TA, quarterly provider meetings, annual training, best-practice guide.", by: R.dir, n: ["n_fix1"] },
+      { t: "One combined correction list per round, organized by form category.", by: R.first + "; " + R.fin, n: ["d_errors"] }
+    ],
+    pain: [
+      { t: "Repeated back-and-forth with providers to complete and correct packets, including repeat errors.", by: R.con + "; " + R.fin, n: ["n_fix1", "d_errors"] },
+      { t: "Hand matching and recalculation: the reimbursement report, eligibility for each participant, fringe.", by: R.con + "; " + R.first, n: ["n_docreview", "n_first"] },
+      { t: "Whole-packet resubmissions that restart review.", by: R.first, n: ["n_fix2"] },
+      { t: "Paper-heavy, emailed packets with no portal or financial suite in use.", by: R.con, n: ["n_email", "n_report"] },
+      { t: "LA Works fronts provider payments and can't always pay until LDH reimburses.", by: R.fd, n: ["n_wait"] },
+      { t: "LDH receives invoices in bursts rather than a steady monthly flow.", by: R.lf, n: ["n_code"] }
+    ],
+    plan: [
+      { t: "SNAP Works financial suite, pending authorization.", n: ["n_snap", "n_report"] },
+      { t: "Provider portal, built but not yet in use.", n: ["n_email"] },
+      { t: "Allowable-expenses guide and fewer reimbursable line items this federal fiscal year.", n: ["n_packet"] },
+      { t: "LDH management evaluation: set invoice timing and a possible schedule for supplemental invoices.", n: ["n_code"] },
+      { t: "New owners for tracking and approval: the LA Works payables unit, and two LDH fiscal staff.", n: ["n_fiscalin", "n_code"] },
+      { t: "Copy the LA Works fiscal director on program discussions about discrepancies.", n: ["n_cover"] }
+    ]
+  };
+
+  // [step, smaller, larger (null = one estimate for both), estimated by, node]
+  var TIMES = [
+    ["SNAP E&T consultant documentation review", "About 1 day", "1 to 2 days", "LA Works SNAP E&T consultants", "n_docreview"],
+    ["First-level review", "3 to 4 hours", "About 1 full day", "LA Works first-level reviewer", "n_first"],
+    ["Final review", "3 to 4 hours", "About 1 day; may stay on a reviewer's desk up to 2 days alongside other work", "LA Works final reviewer", "n_final"],
+    ["Re-review after a full resubmission", "About another full day (provider size not specified)", null, "LA Works first-level reviewer", "n_fix2"]
+  ];
+
+  /* ---------- geometry ---------- */
+  var COL_W = 190, NODE_W = 160, PAD_L = 14, PAD_R = 24, STAGE_H = 50, LANE_PAD = 18, ROW_GAP = 28;
+  var DIA_W = 148, LANE_W = 176;
+  var C = { canvas: "#FDFBF5", paper: "#FFFFFF", ink: "#1C1717", grey: "#5A5A5C", gray: "#EFEFF2", blue: "#0086AE", blue2: "#006E8F", blue40: "#93C9D9", blue20: "#C4DFE7", green: "#00A76F", green40: "#93D6BF", green20: "#C4E5DA", purple: "#862E88", yellow: "#FFC500" };
+  var FONT = "Barlow, 'Helvetica Neue', Arial, sans-serif";
+  var NS = "http://www.w3.org/2000/svg";
+  var byId = {};
+  NODES.forEach(function (n) { byId[n.id] = n; n.row = n.row || 0; });
+
+  var ctx = document.createElement("canvas").getContext("2d");
+  function measure(text, font) { ctx.font = font; return ctx.measureText(text).width; }
+  function wrap(text, font, maxW) {
+    var words = text.split(" "), lines = [], cur = "";
+    words.forEach(function (w) {
+      var t = cur ? cur + " " + w : w;
+      if (cur && measure(t, font) > maxW) { lines.push(cur); cur = w; } else { cur = t; }
+    });
+    if (cur) lines.push(cur);
+    return lines;
+  }
+  function el(name, attrs, parent) {
+    var e = document.createElementNS(NS, name);
+    if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function colX(c) { return PAD_L + c * COL_W + COL_W / 2; }
+  function gapX(c) { return PAD_L + (c + 1) * COL_W; }
+
+  var W, H, laneGeo = [];
+
+  function layout() {
+    var F_LABEL = "500 14.5px " + FONT, F_DEC = "600 14px " + FONT;
+    NODES.forEach(function (n) {
+      if (n.type === "decision") {
+        n.lines = wrap(n.label, F_DEC, 86);
+        n.w = DIA_W; n.h = Math.max(104, n.lines.length * 17 + 62);
+      } else {
+        var inner = n.type === "start" || n.type === "end" || n.type === "milestone" ? NODE_W - 34 : NODE_W - 24;
+        n.lines = wrap(n.label, F_LABEL, inner);
+        n.w = NODE_W;
+        n.tagLines = [];
+        if (n.sys) {
+          var tag = n.sys.toUpperCase(), tw = measure(tag, "600 11.5px " + FONT) + tag.length * 0.95;
+          n.tagLines = tw > NODE_W - 16 ? tag.split(" · ") : [tag];
+        }
+        n.h = 18 + n.tagLines.length * 16 + (n.sys ? 3 : 0) + n.lines.length * 18 + 14;
+        if (n.type === "start" || n.type === "end" || n.type === "milestone") n.h = Math.max(n.h, 64);
+      }
+    });
+    var y = STAGE_H;
+    laneGeo = LANES.map(function (lane, i) {
+      var r0 = 0, r1 = 0;
+      NODES.forEach(function (n) { if (n.lane === i) { if (n.row) r1 = Math.max(r1, n.h); else r0 = Math.max(r0, n.h); } });
+      var top = y, h = LANE_PAD + r0 + (r1 ? ROW_GAP + r1 : 0) + LANE_PAD;
+      h = Math.max(h, 116);
+      var g = { top: top, h: h, r0: r0, r1: r1 };
+      y += h;
+      return g;
+    });
+    H = y; W = PAD_L + 25 * COL_W + PAD_R;
+    NODES.forEach(function (n) {
+      var g = laneGeo[n.lane];
+      n.x = colX(n.col);
+      if (n.row) n.y = g.top + LANE_PAD + g.r0 + ROW_GAP + g.r1 / 2;
+      else n.y = g.top + LANE_PAD + (g.r1 ? g.r0 / 2 : (g.h - 2 * LANE_PAD) / 2);
+    });
+  }
+
+  function anchor(n, side) {
+    if (side === "r") return { x: n.x + n.w / 2, y: n.y };
+    if (side === "l") return { x: n.x - n.w / 2, y: n.y };
+    if (side === "t") return { x: n.x, y: n.y - n.h / 2 };
+    return { x: n.x, y: n.y + n.h / 2 };
+  }
+  function route(a, b, o) {
+    var ex = o.exit || "r", en = o.enter || "l";
+    var p0 = anchor(a, ex), p1 = anchor(b, en);
+    var hx = ex === "r" || ex === "l", hn = en === "r" || en === "l";
+    var pts;
+    if (hx && hn) {
+      if (Math.abs(p0.y - p1.y) < 0.5) pts = [p0, p1];
+      else {
+        var mx = o.gap != null ? gapX(o.gap) : (o.midx ? gapX(o.midx.gap) : (p0.x + p1.x) / 2);
+        pts = [p0, { x: mx, y: p0.y }, { x: mx, y: p1.y }, p1];
+      }
+    } else if (!hx && !hn) {
+      if (Math.abs(p0.x - p1.x) < 0.5) pts = [p0, p1];
+      else { var my = (p0.y + p1.y) / 2; pts = [p0, { x: p0.x, y: my }, { x: p1.x, y: my }, p1]; }
+    } else if (hx && !hn) pts = [p0, { x: p1.x, y: p0.y }, p1];
+    else pts = [p0, { x: p0.x, y: p1.y }, p1];
+    return pts.filter(function (p, i) { return i === 0 || Math.abs(p.x - pts[i - 1].x) + Math.abs(p.y - pts[i - 1].y) > 0.5; });
+  }
+  function pathD(pts, r) {
+    var d = "M" + pts[0].x + "," + pts[0].y;
+    for (var i = 1; i < pts.length - 1; i++) {
+      var p = pts[i], a = pts[i - 1], b = pts[i + 1];
+      var l1 = Math.hypot(p.x - a.x, p.y - a.y), l2 = Math.hypot(b.x - p.x, b.y - p.y);
+      var rr = Math.min(r, l1 / 2, l2 / 2);
+      var s = { x: p.x - (p.x - a.x) / l1 * rr, y: p.y - (p.y - a.y) / l1 * rr };
+      var e = { x: p.x + (b.x - p.x) / l2 * rr, y: p.y + (b.y - p.y) / l2 * rr };
+      d += " L" + s.x + "," + s.y + " Q" + p.x + "," + p.y + " " + e.x + "," + e.y;
+    }
+    var last = pts[pts.length - 1];
+    return d + " L" + last.x + "," + last.y;
+  }
+
+  var mapSvg = document.getElementById("mapSvg"), laneSvg = document.getElementById("laneSvg");
+  var selected = "n_docreview";
+  var ORDER = NODES.slice().sort(function (a, b) { return a.col - b.col || a.lane - b.lane || a.row - b.row; });
+
+  function stageOf(n) { for (var i = 0; i < STAGES.length; i++) if (n.col >= STAGES[i].from && n.col <= STAGES[i].to) return STAGES[i]; return STAGES[0]; }
+
+  function draw() {
+    layout();
+    mapSvg.innerHTML = ""; laneSvg.innerHTML = "";
+    mapSvg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    laneSvg.setAttribute("viewBox", "0 0 " + LANE_W + " " + H);
+
+    var defs = el("defs", null, mapSvg);
+    [["flow", C.grey], ["loop", C.purple], ["alt", C.grey]].forEach(function (m) {
+      var mk = el("marker", { id: "arr-" + m[0], viewBox: "0 0 10 10", refX: "9.5", refY: "5", markerWidth: "11", markerHeight: "11", markerUnits: "userSpaceOnUse", orient: "auto" }, defs);
+      el("path", { d: "M0,0.5 L10,5 L0,9.5 Z", fill: m[1] }, mk);
+    });
+
+    // lanes
+    var gL = el("g", null, mapSvg);
+    laneGeo.forEach(function (g, i) {
+      el("rect", { x: 0, y: g.top, width: W, height: g.h, fill: i % 2 ? C.gray : C.paper }, gL);
+      if (i) el("line", { x1: 0, x2: W, y1: g.top, y2: g.top, stroke: LANES[i].org !== LANES[i - 1].org ? C.blue : C.blue20, "stroke-width": LANES[i].org !== LANES[i - 1].org ? 1.5 : 1 }, gL);
+    });
+    // stages
+    var gS = el("g", null, mapSvg);
+    STAGES.forEach(function (s, i) {
+      var x0 = PAD_L + s.from * COL_W, x1 = PAD_L + (s.to + 1) * COL_W;
+      if (i === 0) x0 = 0;
+      if (i === STAGES.length - 1) x1 = W;
+      el("rect", { x: x0, y: 0, width: x1 - x0, height: STAGE_H, fill: i % 2 ? C.paper : C.blue20 }, gS);
+      var t = el("text", { x: x0 + 14, y: 31, "font-family": FONT, "font-size": 16, fill: C.ink }, gS);
+      var k = el("tspan", { "font-weight": 700, fill: C.blue2 }, t); k.textContent = s.k + "  ";
+      var nm = el("tspan", { "font-weight": 600 }, t); nm.textContent = s.name;
+      if (i) el("line", { x1: x0, x2: x0, y1: 0, y2: H, stroke: C.blue40, "stroke-width": 1, "stroke-dasharray": "2 5" }, gS);
+    });
+    el("line", { x1: 0, x2: W, y1: STAGE_H, y2: STAGE_H, stroke: C.blue, "stroke-width": 1.5 }, gS);
+
+    // edges
+    var gE = el("g", { fill: "none" }, mapSvg), gEL = el("g", null, mapSvg);
+    var labelQueue = [];
+    EDGES.forEach(function (e) {
+      var a = byId[e[0]], b = byId[e[1]], o = e[2] || {};
+      var kind = o.kind || "flow";
+      var pts = route(a, b, o);
+      var attrs = { d: pathD(pts, 10), stroke: kind === "loop" ? C.purple : C.grey, "stroke-width": kind === "loop" ? 2.5 : (kind === "alt" ? 1.75 : 2), "marker-end": "url(#arr-" + kind + ")" };
+      if (kind === "loop") attrs["stroke-dasharray"] = "8 5";
+      if (kind === "alt") attrs["stroke-dasharray"] = "4 4";
+      el("path", attrs, gE);
+      if (o.label) labelQueue.push({ pts: pts, o: o, kind: kind });
+    });
+    labelQueue.forEach(function (L) {
+      var s = Math.min(L.o.seg || 0, L.pts.length - 2), p = L.pts[s], q = L.pts[s + 1], t = L.o.at != null ? L.o.at : 0.5;
+      var x = p.x + (q.x - p.x) * t, y = p.y + (q.y - p.y) * t;
+      if (L.o.above) y -= 14;
+      var f = "600 13px " + FONT, w = measure(L.o.label, f) + 14;
+      el("rect", { x: x - w / 2, y: y - 11, width: w, height: 22, fill: C.paper, stroke: L.kind === "loop" ? C.purple : C.blue40, "stroke-width": 1 }, gEL);
+      var tx = el("text", { x: x, y: y + 4.5, "text-anchor": "middle", "font-family": FONT, "font-size": 13, "font-weight": 600, fill: L.kind === "loop" ? C.purple : C.ink }, gEL);
+      tx.textContent = L.o.label;
+    });
+
+    // nodes
+    var gN = el("g", null, mapSvg);
+    NODES.forEach(function (n) {
+      var g = el("g", { class: "node" + (n.id === selected ? " sel" : ""), tabindex: 0, role: "button", "data-id": n.id, "aria-label": n.label + " (" + LANES[n.lane].title + ")" }, gN);
+      var x0 = n.x - n.w / 2, y0 = n.y - n.h / 2, txtColor = C.ink, tagColor = C.blue2;
+      if (n.type === "decision") {
+        el("path", { class: "shape", d: "M" + n.x + "," + y0 + " L" + (n.x + n.w / 2) + "," + n.y + " L" + n.x + "," + (y0 + n.h) + " L" + x0 + "," + n.y + " Z", fill: C.green20, stroke: C.green, "stroke-width": 1.75 }, g);
+      } else if (n.type === "start" || n.type === "end") {
+        el("rect", { class: "shape", x: x0, y: y0, width: n.w, height: n.h, rx: 30, fill: C.blue2, stroke: C.blue2, "stroke-width": 1.5 }, g);
+        txtColor = "#FFFFFF";
+      } else if (n.type === "milestone") {
+        el("rect", { class: "shape", x: x0, y: y0, width: n.w, height: n.h, rx: 30, fill: C.blue2, stroke: C.blue2, "stroke-width": 1.5 }, g);
+        txtColor = "#FFFFFF";
+      } else {
+        var a = { class: "shape", x: x0, y: y0, width: n.w, height: n.h, fill: C.paper, stroke: n.type === "system" ? C.blue : C.blue2, "stroke-width": 1.5 };
+        if (n.type === "system") a["stroke-dasharray"] = "6 4";
+        el("rect", a, g);
+      }
+      var lh = n.type === "decision" ? 17 : 18;
+      var tagL = n.tagLines || [];
+      var blockH = n.lines.length * lh + (tagL.length ? tagL.length * 16 + 3 : 0);
+      var ty = n.y - blockH / 2 + 13;
+      tagL.forEach(function (tl) {
+        var st = el("text", { x: n.x, y: ty, "text-anchor": "middle", "font-family": FONT, "font-size": 11.5, "font-weight": 600, "letter-spacing": "0.08em", fill: tagColor }, g);
+        st.textContent = tl;
+        ty += 16;
+      });
+      if (tagL.length) ty += 3;
+      var tt = el("text", { "text-anchor": "middle", "font-family": FONT, "font-size": n.type === "decision" ? 14 : 14.5, "font-weight": n.type === "decision" ? 600 : 500, fill: txtColor }, g);
+      n.lines.forEach(function (line, i) {
+        var sp = el("tspan", { x: n.x, y: ty + i * lh }, tt); sp.textContent = line;
+      });
+      // badges
+      var types = [["pain", C.purple], ["works", C.green], ["plan", C.blue2], ["ask", null]];
+      var present = types.filter(function (t) { return n[t[0]] && n[t[0]].length; });
+      present.forEach(function (t, i) {
+        var bx, by;
+        if (n.type === "decision") { bx = n.x + 24 + i * 23; by = y0 + 18 + i * 4; }
+        else { bx = x0 + n.w - 12 - (present.length - 1 - i) * 23; by = y0; }
+        var bg = el("g", { class: "badge b-" + t[0] }, g);
+        var tip = el("title", null, bg); tip.textContent = { pain: "Pain point", works: "Working well", plan: "Planned change", ask: "To confirm" }[t[0]];
+        if (t[0] === "ask") {
+          el("circle", { cx: bx, cy: by, r: 9.25, fill: C.paper, stroke: C.yellow, "stroke-width": 2.75 }, bg);
+          var q = el("text", { x: bx, y: by + 4.5, "text-anchor": "middle", "font-family": FONT, "font-size": 13, "font-weight": 700, fill: C.ink }, bg); q.textContent = "?";
+        } else {
+          el("circle", { cx: bx, cy: by, r: 10.5, fill: t[1], stroke: C.paper, "stroke-width": 1.5 }, bg);
+          if (t[0] === "plan") el("path", { d: "M" + (bx - 4.5) + "," + by + " H" + (bx + 3.5) + " M" + (bx + 0.5) + "," + (by - 3.5) + " L" + (bx + 4) + "," + by + " L" + (bx + 0.5) + "," + (by + 3.5), stroke: "#FFFFFF", "stroke-width": 1.8, fill: "none" }, bg);
+          else {
+            var bt = el("text", { x: bx, y: by + 4.8, "text-anchor": "middle", "font-family": FONT, "font-size": t[0] === "works" ? 15 : 14, "font-weight": 700, fill: t[0] === "works" ? C.ink : "#FFFFFF" }, bg);
+            bt.textContent = t[0] === "works" ? "+" : "!";
+          }
+        }
+      });
+    });
+
+    // lane column
+    laneGeo.forEach(function (g, i) {
+      var lane = LANES[i];
+      el("rect", { x: 0, y: g.top, width: LANE_W, height: g.h, fill: i % 2 ? C.gray : C.paper }, laneSvg);
+      if (i) el("line", { x1: 0, x2: LANE_W, y1: g.top, y2: g.top, stroke: lane.org !== LANES[i - 1].org ? C.blue : C.blue20, "stroke-width": lane.org !== LANES[i - 1].org ? 1.5 : 1 }, laneSvg);
+      el("rect", { x: 0, y: g.top + (i && lane.org !== LANES[i - 1].org ? 1 : 0), width: 7, height: g.h, fill: lane.org === "prov" ? C.yellow : (lane.org === "law" ? C.blue : C.green) }, laneSvg);
+      var tl = wrap(lane.title, "700 15px " + FONT, LANE_W - 30), sl = wrap(lane.sub, "400 13.5px " + FONT, LANE_W - 30);
+      var total = tl.length * 18 + 4 + sl.length * 17, ty = g.top + g.h / 2 - total / 2 + 13;
+      var t1 = el("text", { "font-family": FONT, "font-size": 15, "font-weight": 700, fill: C.ink }, laneSvg);
+      tl.forEach(function (l, j) { var s = el("tspan", { x: 20, y: ty + j * 18 }, t1); s.textContent = l; });
+      var t2 = el("text", { "font-family": FONT, "font-size": 13.5, fill: C.grey }, laneSvg);
+      sl.forEach(function (l, j) { var s = el("tspan", { x: 20, y: ty + tl.length * 18 + 4 + j * 17 }, t2); s.textContent = l; });
+    });
+    el("rect", { x: 0, y: 0, width: LANE_W, height: STAGE_H, fill: C.paper }, laneSvg);
+    var hl = el("text", { x: 20, y: 31, "font-family": FONT, "font-size": 13, "font-weight": 600, "letter-spacing": "0.1em", fill: C.grey }, laneSvg); hl.textContent = "STAGE";
+    el("line", { x1: 0, x2: LANE_W, y1: STAGE_H, y2: STAGE_H, stroke: C.blue, "stroke-width": 1.5 }, laneSvg);
+
+    applyZoom();
+  }
+
+  /* ---------- zoom & nav ---------- */
+  var scroller = document.getElementById("scroller");
+  var z = window.innerWidth < 700 ? 0.62 : 0.9;
+  function applyZoom() {
+    mapSvg.setAttribute("width", Math.round(W * z)); mapSvg.setAttribute("height", Math.round(H * z));
+    laneSvg.setAttribute("width", Math.round(LANE_W * z)); laneSvg.setAttribute("height", Math.round(H * z));
+    document.getElementById("zVal").textContent = Math.round(z * 100) + "%";
+  }
+  function setZoom(nz, keepCenter) {
+    var cx = (scroller.scrollLeft + scroller.clientWidth / 2) / z;
+    z = Math.max(0.25, Math.min(1.5, nz));
+    applyZoom();
+    if (keepCenter) scroller.scrollLeft = cx * z - scroller.clientWidth / 2;
+  }
+  document.getElementById("zIn").onclick = function () { setZoom(z + 0.1, true); };
+  document.getElementById("zOut").onclick = function () { setZoom(z - 0.1, true); };
+  document.getElementById("zFit").onclick = function () { setZoom((scroller.clientWidth - 4) / W, false); scroller.scrollLeft = 0; };
+
+  var nav = document.getElementById("stageNav");
+  STAGES.forEach(function (s) {
+    var b = document.createElement("button");
+    b.className = "btn stage"; b.type = "button";
+    b.innerHTML = "<b>" + s.k + "</b>" + s.name;
+    b.onclick = function () { scrollToX(PAD_L + s.from * COL_W - 6, false); };
+    nav.appendChild(b);
+  });
+  function scrollToX(x, center) {
+    var target = center ? x * z - scroller.clientWidth / 2 : x * z;
+    scroller.scrollTo({ left: Math.max(0, target), behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  }
+
+  // drag to pan
+  var drag = null;
+  scroller.addEventListener("pointerdown", function (e) {
+    if (e.pointerType !== "mouse" || e.target.closest(".node")) return;
+    drag = { x: e.clientX, y: e.clientY, l: scroller.scrollLeft, t: scroller.scrollTop };
+    scroller.classList.add("drag");
+  });
+  window.addEventListener("pointermove", function (e) { if (!drag) return; scroller.scrollLeft = drag.l - (e.clientX - drag.x); scroller.scrollTop = drag.t - (e.clientY - drag.y); });
+  window.addEventListener("pointerup", function () { drag = null; scroller.classList.remove("drag"); });
+
+  // layers
+  ["pain", "works", "plan", "ask"].forEach(function (k) {
+    var cb = document.getElementById("lay-" + k);
+    cb.addEventListener("change", function () { mapSvg.classList.toggle("hide-" + k, !cb.checked); });
+  });
+
+  /* ---------- detail panel ---------- */
+  var detail = document.getElementById("detail");
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+  function list(title, cls, icon, items) {
+    if (!items || !items.length) return "";
+    return '<section class="' + cls + '"><h4>' + icon + esc(title) + '</h4><ul class="items">' + items.map(function (x) {
+      return "<li>" + esc(x.t) + (x.by ? '<span class="by">' + esc(x.by) + "</span>" : "") + "</li>";
+    }).join("") + "</ul></section>";
+  }
+  var ICON = {
+    notes: '<svg width="16" height="16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#006E8F" stroke-width="1.5"/></svg>',
+    works: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#00A76F"/></svg>',
+    pain: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#862E88"/></svg>',
+    plan: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#006E8F"/></svg>',
+    ask: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/></svg>'
+  };
+  function renderDetail() {
+    var n = byId[selected], s = stageOf(n), idx = ORDER.indexOf(n);
+    var kind = { start: "Start", end: "End and payment", milestone: "Payment", decision: "Decision", system: "Step in a system", step: "Step" }[n.type];
+    var facts = '<div><dt>Who</dt><dd>' + esc(n.who || LANES[n.lane].title) + "</dd></div>" +
+      '<div><dt>Lane</dt><dd>' + esc(LANES[n.lane].title) + "</dd></div>" +
+      (n.sys ? '<div><dt>System</dt><dd>' + esc(n.sys.replace(/ · /g, ", ")) + "</dd></div>" : "") +
+      (n.time ? '<div><dt>Estimated time (as heard)</dt><dd>' + esc(n.time) + "</dd></div>" : "");
+    detail.innerHTML =
+      '<div class="dhead"><div><div class="dkicker">Stage ' + s.k + " · " + esc(s.name) + " · " + kind + '</div><h3>' + esc(n.label) + '</h3></div>' +
+      '<div class="dnav"><button class="btn" type="button" id="prevStep"' + (idx === 0 ? " disabled" : "") + '>Previous step</button><button class="btn" type="button" id="nextStep"' + (idx === ORDER.length - 1 ? " disabled" : "") + ">Next step</button></div></div>" +
+      '<dl class="facts">' + facts + "</dl>" +
+      '<div class="dlists">' +
+      list("What happens", "t-notes", ICON.notes, n.notes) +
+      list("Working well", "t-works", ICON.works, n.works) +
+      list("Pain points", "t-pain", ICON.pain, n.pain) +
+      list("Planned changes", "t-plan", ICON.plan, n.plan) +
+      list("To confirm", "t-ask", ICON.ask, n.ask) +
+      "</div>" + fbBoxHtml("step");
+    document.getElementById("fbStep").onclick = function () { fbOpen("Stage " + s.k + " \u00b7 " + n.label + " (" + LANES[n.lane].title + ")", document.getElementById("fbMsg")); };
+    document.getElementById("prevStep").onclick = function () { select(ORDER[idx - 1].id, true); };
+    document.getElementById("nextStep").onclick = function () { select(ORDER[idx + 1].id, true); };
+  }
+  function select(id, scrollMap) {
+    selected = id;
+    mapSvg.querySelectorAll(".node").forEach(function (g) { g.classList.toggle("sel", g.getAttribute("data-id") === id); });
+    renderDetail();
+    if (scrollMap) {
+      var n = byId[id], left = (n.x - n.w) * z, right = (n.x + n.w) * z;
+      if (left < scroller.scrollLeft || right > scroller.scrollLeft + scroller.clientWidth) scrollToX(n.x, true);
+    }
+  }
+  mapSvg.addEventListener("click", function (e) { var g = e.target.closest(".node"); if (g) select(g.getAttribute("data-id"), false); });
+  mapSvg.addEventListener("keydown", function (e) {
+    var g = e.target.closest && e.target.closest(".node");
+    if (g && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); select(g.getAttribute("data-id"), false); }
+  });
+  function goTo(id) {
+    select(id, true);
+    var m = document.querySelector(".map");
+    m.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+  }
+
+  /* ---------- lower sections ---------- */
+  function chipsFor(ids) {
+    return '<div class="chips">' + ids.map(function (id) { return '<button class="chip" type="button" data-go="' + id + '">' + esc(stageOf(byId[id]).k + " · " + byId[id].label) + "</button>"; }).join("") + "</div>";
+  }
+  function fillAcross(key, elId) {
+    document.getElementById(elId).innerHTML = ACROSS[key].map(function (x) {
+      return "<li><p>" + esc(x.t) + "</p>" + (x.by ? '<p class="muted">' + esc(x.by) + "</p>" : "") + chipsFor(x.n) + "</li>";
+    }).join("");
+  }
+  fillAcross("works", "acrossWorks"); fillAcross("pain", "acrossPain"); fillAcross("plan", "acrossPlan");
+
+  document.getElementById("timeBody").innerHTML = TIMES.map(function (r) {
+    var est = r[2] === null ? '<td colspan="2">' + esc(r[1]) + "</td>" : "<td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td>";
+    return "<tr><td>" + esc(r[0]) + chipsFor([r[4]]).replace('class="chips"', 'class="chips" style="font-weight:400"') + "</td>" + est + '<td class="by-cell">' + esc(r[3]) + "</td></tr>";
+  }).join("");
+
+  var qs = [
+    { t: "Which deadlines and reviews reflect federal requirements, Louisiana policy, or current practice?", all: true },
+    { t: "What happens with an invoice that remains unresolved or contains disallowed costs?", all: true }
+  ];
+  ORDER.forEach(function (n) { (n.ask || []).forEach(function (a) { qs.push({ t: a.t, id: n.id }); }); });
+  document.getElementById("qList").innerHTML = qs.map(function (q) {
+    return "<li><span>" + esc(q.t) + "</span>" + (q.all ? '<div class="chips"><span class="scope-tag">Applies across the map</span></div>' : chipsFor([q.id])) + "</li>";
+  }).join("");
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest && e.target.closest("[data-go]");
+    if (b) goTo(b.getAttribute("data-go"));
+  });
+
+
+  /* ---------- feedback: opens the Microsoft Form with the map and step filled in ---------- */
+  function fbReady() { return /^https:\/\/forms\.(office|microsoft|cloud\.microsoft)\b/i.test(window.FEEDBACK_FORM_URL || ""); }
+  function fbOpen(step, msgEl) {
+    if (!fbReady()) { if (msgEl) msgEl.textContent = "The feedback form isn’t connected yet."; return; }
+    if (step.length > 240) step = step.slice(0, 237) + "...";
+    var u = window.FEEDBACK_FORM_URL.replace("MAPNAME", encodeURIComponent(MAP_NAME)).replace("STEPNAME", encodeURIComponent(step));
+    var w = window.open(u, "_blank", "noopener");
+    if (msgEl) msgEl.textContent = "The form opened in a new tab. If it didn’t, allow pop-ups for this page and try again.";
+  }
+  function fbBoxHtml(what) {
+    return '<div class="flagbox"><h4>Comment on this ' + what + '</h4>' +
+      '<p class="note">Opens a short form in a new tab with this ' + what + ' already filled in. Corrections, missing details, and answers to the questions are all welcome. No sign-in needed.</p>' +
+      '<div class="row"><button class="btn primary" type="button" id="fbStep">Comment on this ' + what + '</button><span class="flagmsg" id="fbMsg" role="status"></span></div></div>';
+  }
+  (function () {
+    var g = document.getElementById("fbGeneral");
+    if (g) g.onclick = function () { fbOpen("General comment (whole map)", document.getElementById("fbGenMsg")); };
+  })();
+
+  /* ---------- boot ---------- */
+  draw(); renderDetail();
+  var fontsReady = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("500 14.5px Barlow"), document.fonts.load("600 14px Barlow"), document.fonts.load("700 15px Barlow")]) : Promise.resolve();
+  Promise.race([fontsReady, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () { draw(); });
+})();
+</script>
+
+</body></html>
