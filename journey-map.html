@@ -59,7 +59,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 p { margin: 0; }
 button { font-family: inherit; }
 .wrap { max-width: 1180px; margin-inline: auto; }
-.wide { max-width: 1440px; margin-inline: auto; }
+.wide { max-width: none; margin-inline: auto; }
 
 /* header */
 .top { padding-block: 40px 22px; display: grid; gap: 14px; position: relative; }
@@ -191,6 +191,15 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 @media (max-width: 600px) { .btn.stage { font-size: .85rem; padding: 4px 8px; } .legend, .layer { font-size: .86rem; } }
 
 .fbgen { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+
+/* map key, wider map */
+.mapkey { border: 1px solid var(--blue20); background: var(--paper); padding: 14px 18px 16px; margin-top: 18px; display: grid; gap: 12px; }
+.keyh { font-size: .95rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); }
+.keysec { display: grid; gap: 8px; min-width: 0; }
+.kl { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--grey); }
+.keyint { border-top: 1px solid var(--blue20); padding-top: 12px; }
+.hint { margin-top: 14px; }
+.due { color: var(--ink); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 
 
@@ -258,8 +267,10 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 </header>
 
 <section class="wide" aria-label="Journey map">
-  <div class="toolbar">
-    <div class="legend" aria-label="Map key">
+  <div class="mapkey" role="region" aria-label="Map key">
+    <h2 class="keyh">Map key</h2>
+    <div class="keysec"><span class="kl">Shapes and lines</span>
+        <div class="legend">
       <div class="grp"><span class="gl">Participant</span>
       <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="2" y="2" width="26" height="16" rx="2" fill="#FFFFFF" stroke="#006E8F" stroke-width="3.5"/></svg>Participant step</span>
       <span class="k"><svg width="26" height="22" aria-hidden="true"><path d="M13 2 L24 11 L13 20 L2 11 Z" fill="#FFFFFF" stroke="#006E8F" stroke-width="3"/></svg>Participant decision</span>
@@ -284,13 +295,17 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       <span class="k"><span class="tagsw">RUNS ALONGSIDE</span>Ongoing work in that stage, outside the step-by-step handoffs</span>
       </div>
     </div>
+    </div>
+    <div class="keysec keyint"><span class="kl">What we heard at each step: select to show or hide these icons on the map</span>
     <div class="layers" role="group" aria-label="Show on map">
       <label class="layer"><input type="checkbox" id="lay-pain" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#862E88"/><text x="10" y="14.5" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points <span class="n" id="cnt-pain"></span></label>
       <label class="layer"><input type="checkbox" id="lay-works" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#00A76F"/><text x="10" y="14.5" text-anchor="middle" font-size="14" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well <span class="n" id="cnt-works"></span></label>
       <label class="layer"><input type="checkbox" id="lay-plan" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#006E8F"/><path d="M6 10 H13 M10 6.5 L13.5 10 L10 13.5" stroke="#FFFFFF" stroke-width="1.8" fill="none"/></svg>Planned changes <span class="n" id="cnt-plan"></span></label>
       <label class="layer"><input type="checkbox" id="lay-ask" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.25" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="10" y="14.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>To confirm <span class="n" id="cnt-ask"></span></label>
     </div>
+    </div>
   </div>
+  <p class="hint">Scroll or drag sideways to follow the journey. The lettered stages are columns that run down through every role, and their headers stay pinned at the top as you read down. Participant steps are numbered in order; the three doors are all step 1, because a person uses one of them, and each door’s route keeps its own color until it joins the main path. Icons on a step show what we heard there; select any step or connector for the full detail. To give feedback, select a step or connector and choose <b>Comment</b>; a short form opens with that spot already filled in.</p>
   <div class="toolbar" style="padding-top:0">
     <div class="controls" role="group" aria-label="Jump to stage" id="stageNav"></div>
     <div class="controls" role="group" aria-label="Ways in">
@@ -309,7 +324,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       <button class="btn" id="zFit">Fit</button>
     </div>
   </div>
-  <p class="hint">Scroll or drag sideways to follow the journey. The lettered stages are columns that run down through every role, and their headers stay pinned at the top as you read down. Participant steps are numbered in order; the three doors are all step 1, because a person uses one of them, and each door’s route keeps its own color until it joins the main path. Icons on a step show what we heard there; select any step or connector for the full detail. To give feedback, select a step or connector and choose <b>Comment</b>; a short form opens with that spot already filled in.</p>
   <div class="map" id="mapBox">
     <div class="stagebar" id="stageBar">
       <div class="corner"><svg id="cornerSvg" aria-hidden="true"></svg></div>
@@ -377,6 +391,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     <ul class="dates">
       <li><b>Ongoing</b><span>Third Sector follows up one-on-one on the points to confirm.</span></li>
       <li><b>Oct 15</b><span>Draft map shared with the working group for reactions.</span></li>
+      <li><b>Oct 20</b><span><strong class="due">All client feedback on the draft maps is due.</strong> Use the Comment button on any step, or Give feedback on this map at the top of the page.</span></li>
       <li><b>Oct 30</b><span>Refined map delivered.</span></li>
     </ul>
     <p class="muted" style="margin-top:10px">No participants or providers took part in the session, so the participant lane and the provider lane reflect staff views. Roles are inferred from introductions; comments are attributed by role, not by name.</p>
