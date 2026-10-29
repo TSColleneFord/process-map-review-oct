@@ -1,14 +1,4 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow">
-<script>
-/* =====================================================================
-   FEEDBACK FORM LINK  (the only line you need to edit)
-   Paste the Microsoft Forms pre-filled link between the quotes below.
-   Make that link by typing MAPNAME as the answer to "Map" and STEPNAME
-   as the answer to "Step", then choosing "Get pre-filled link".
-   Until a link is pasted here, the Comment buttons show a notice.
-   ===================================================================== */
-window.FEEDBACK_FORM_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=955QnF6dc0GADBkEmuwlJuMj359ZoPNAsda7Mdp9kmpUNzgxSzYwOFlMVkxKTkJMWU02QjVRMDJVMy4u&re39db6504d074f88bfa7382129bbd76b=MAPNAME&r9813ab6f9ed2432da250c18a6f0245e5=STEPNAME";
-</script></head><body>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>SNAP E&amp;T Provider Invoicing Map</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +41,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 p { margin: 0; }
 button { font-family: inherit; }
 .wrap { max-width: 1180px; margin-inline: auto; }
-.wide { max-width: none; margin-inline: auto; }
+.wide { max-width: 1440px; margin-inline: auto; }
 
 /* header */
 .top { padding-block: 40px 22px; display: grid; gap: 14px; position: relative; }
@@ -68,6 +58,8 @@ button { font-family: inherit; }
 
 .scope { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0; border-top: 1.5px solid var(--blue); border-bottom: 1px solid var(--blue20); margin-top: 6px; }
 .scope > div { padding: 12px 18px 12px 0; min-width: 0; }
+.hdnote { font-size: .98rem; color: var(--ink); }
+.hdnote b { color: var(--blue2); font-weight: 700; }
 .scope b { display: block; font-size: .78rem; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); font-weight: 600; }
 
 /* toolbar */
@@ -135,6 +127,8 @@ button { font-family: inherit; }
 .card.pain { border-color: var(--purple40); }
 .card ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
 .card li { min-width: 0; }
+.card li.lead { border-left: 4px solid var(--purple); padding-left: 12px; }
+.card li.lead > p:first-child { font-weight: 600; }
 .card li p + p { margin-top: 2px; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
 .chip { border: 1px solid var(--blue40); background: var(--canvas); color: var(--blue2); font-size: .85rem; font-weight: 600; padding: 2px 9px; cursor: pointer; text-align: left; }
@@ -162,6 +156,9 @@ td .tag { display: inline-block; font-size: .8rem; color: var(--grey); font-weig
 .qlist li { counter-increment: q; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--blue20); }
 .qlist li::before { content: "Q" counter(q); font-weight: 700; color: var(--blue2); font-variant-numeric: tabular-nums; }
 .qlist .chips { grid-column: 2; margin-top: 0; }
+.qlist.qcont { counter-reset: none; }
+.qgroup { margin-top: 22px; }
+.qgroup-sub { margin: 2px 0 10px; }
 
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
 .two ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
@@ -170,25 +167,6 @@ td .tag { display: inline-block; font-size: .8rem; color: var(--grey); font-weig
 .dates b { color: var(--blue2); font-variant-numeric: tabular-nums; }
 footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20); font-size: .8rem; letter-spacing: .04em; color: var(--grey); text-transform: uppercase; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
 @media (max-width: 600px) { .btn.stage { font-size: .85rem; padding: 4px 8px; } .legend, .layer { font-size: .86rem; } }
-
-.flagbox { margin-top: 18px; padding: 16px 18px; border: 2px solid var(--yellow); border-left-width: 8px; background: var(--paper); }
-.flagbox h4 { margin: 0 0 4px; font-size: 1.05rem; }
-.flagbox p.note { color: var(--grey); font-size: .92rem; margin: 0 0 10px; max-width: 70ch; }
-.flagbox .row { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
-.flagmsg { font-size: .95rem; font-weight: 600; }
-.btn.primary { background: var(--blue2); color: #fff; }
-.btn.primary:hover { background: var(--blue); }
-
-.fbgen { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
-
-/* map key, wider map */
-.mapkey { border: 1px solid var(--blue20); background: var(--paper); padding: 14px 18px 16px; margin-top: 18px; display: grid; gap: 12px; }
-.keyh { font-size: .95rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); }
-.keysec { display: grid; gap: 8px; min-width: 0; }
-.kl { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--grey); }
-.keyint { border-top: 1px solid var(--blue20); padding-top: 12px; }
-.hint { margin-top: 14px; }
-.due { color: var(--ink); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
 
@@ -200,20 +178,19 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   <div class="meta">
     <span class="status">Draft for validation</span>
     <span>Working session: Friday, October 2, 2026</span>
+    <span>Draft validated: Thursday, October 22, 2026</span>
     <span>Prepared by Third Sector Capital Partners</span>
   </div>
-  <div class="fbgen"><button class="btn primary" type="button" id="fbGeneral">Give feedback on this map</button><span class="flagmsg" id="fbGenMsg" role="status"></span><span class="muted">Or select any step and use the <b>Comment</b> button.</span></div>
   <div class="scope">
     <div><b>Starts</b>A provider delivers an allowable service or pays a participant cost up front, and begins an invoice for reimbursement.</div>
     <div><b>Ends</b>The provider has been paid and Louisiana Works has been reimbursed by LDH, so the expenditure is reconciled.</div>
   </div>
+  <p class="hdnote"><b>Note:</b> The Monday board is updated at every step as an invoice moves through review and payment.</p>
 </header>
 
 <section class="wide" aria-label="Process map">
-  <div class="mapkey" role="region" aria-label="Map key">
-    <h2 class="keyh">Map key</h2>
-    <div class="keysec"><span class="kl">Shapes and lines</span>
-        <div class="legend">
+  <div class="toolbar">
+    <div class="legend" aria-label="Map key">
       <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" fill="#FFFFFF" stroke="#006E8F" stroke-width="1.5"/></svg>Step</span>
       <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" fill="#FFFFFF" stroke="#0086AE" stroke-width="1.5" stroke-dasharray="4 3"/></svg>Step in a system</span>
       <span class="k"><svg width="26" height="22" aria-hidden="true"><path d="M13 1 L25 11 L13 21 L1 11 Z" fill="#C4E5DA" stroke="#00A76F" stroke-width="1.5"/></svg>Decision</span>
@@ -222,17 +199,13 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#862E88" stroke-width="2.5" stroke-dasharray="7 4"/></svg>Correction loop</span>
       <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="1.75" stroke-dasharray="3 3"/></svg>Occasional path</span>
     </div>
-    </div>
-    <div class="keysec keyint"><span class="kl">What we heard at each step: select to show or hide these icons on the map</span>
     <div class="layers" role="group" aria-label="Show on map">
       <label class="layer"><input type="checkbox" id="lay-pain" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#862E88"/><text x="10" y="14.5" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points</label>
       <label class="layer"><input type="checkbox" id="lay-works" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#00A76F"/><text x="10" y="14.5" text-anchor="middle" font-size="14" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well</label>
       <label class="layer"><input type="checkbox" id="lay-plan" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#006E8F"/><path d="M6 10 H13 M10 6.5 L13.5 10 L10 13.5" stroke="#FFFFFF" stroke-width="1.8" fill="none"/></svg>Planned changes</label>
       <label class="layer"><input type="checkbox" id="lay-ask" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.25" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="10" y="14.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>To confirm</label>
     </div>
-    </div>
   </div>
-  <p class="hint">Scroll or drag sideways to follow the process. Select any step to see who does it, estimated time where staff gave one, and what we heard. To give feedback on a step, select it and choose <b>Comment on this step</b> below the map.</p>
   <div class="toolbar" style="padding-top:0">
     <div class="controls" role="group" aria-label="Jump to stage" id="stageNav"></div>
     <div class="controls" role="group" aria-label="Zoom">
@@ -242,6 +215,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       <button class="btn" id="zFit">Fit</button>
     </div>
   </div>
+  <p class="hint">Scroll or drag sideways to follow the process. Select any step to see who does it, estimated time where staff gave one, and what we heard.</p>
   <div class="map">
     <div class="lanecol"><svg id="laneSvg" role="img" aria-label="Swimlanes"></svg></div>
     <div class="scroller" id="scroller"><svg id="mapSvg" role="group" aria-label="Provider invoicing process steps"></svg></div>
@@ -270,20 +244,20 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
 <section class="wrap block" aria-labelledby="h-time">
   <h2 id="h-time">Estimated time per invoice</h2>
-  <p class="sub">These are estimates staff gave in the October 2 session, not measured times. Each assumes uninterrupted work on one provider invoice; reviewers noted that is rare, so elapsed time is usually longer. Only steps with a stated estimate are listed.</p>
+  <p class="sub">These are estimates staff gave in the October 2 session and in feedback on the draft map, not measured times. Each assumes uninterrupted work on one provider invoice; reviewers noted that is rare, so elapsed time is usually longer. Only steps with a stated estimate are listed.</p>
   <div class="timegrid">
     <div class="tablewrap">
       <table>
         <thead><tr><th scope="col">Step</th><th scope="col">Smaller provider</th><th scope="col">Larger provider</th><th scope="col">Estimated by</th></tr></thead>
         <tbody id="timeBody"></tbody>
       </table>
-      <p class="muted" style="margin-top:12px">No estimate yet for provider correction turnaround (providers are given 3 days), time from approval to provider payment, or LDH verification, review and approval. These are in Questions to confirm.</p>
+      <p class="muted" style="margin-top:12px">No estimate yet for provider correction turnaround (providers are given 3 business days after final review) or total time from first submission to provider payment. These are in Questions to confirm.</p>
     </div>
     <div class="figs">
       <h3 class="figs-h">Other estimates we heard</h3>
       <div class="fig"><div class="num">90%+</div><p>Estimated share of invoices reaching final review that are returned to the provider for corrections.</p><p class="muted">LA Works final reviewer</p></div>
       <div class="fig"><div class="num">9 in 10</div><p>Estimated share of corrected invoices that come back as a whole new packet instead of only the items requested.</p><p class="muted">LA Works first-level reviewer</p></div>
-      <div class="fig"><div class="num">40–50</div><p>Approximate number of participant reimbursements one provider's invoice may include, each checked by hand for SNAP eligibility.</p><p class="muted">LA Works first-level reviewer</p></div>
+      <div class="fig"><div class="num">40–50</div><p>Approximate number of participant reimbursements one provider's invoice may include, each matched by hand against the SNAP Works report and receipts.</p><p class="muted">LA Works first-level reviewer</p></div>
       <div class="fig"><div class="num">99%</div><p>Estimated share of LDH review questions resolved by talking with the LA Works reviewer, without going back to the provider.</p><p class="muted">LA Works final reviewer</p></div>
     </div>
   </div>
@@ -292,7 +266,12 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 <section class="wrap block" aria-labelledby="h-q">
   <h2 id="h-q">Questions to confirm</h2>
   <p class="sub">Points we could not settle in the session. We will follow up one-on-one, and corrections to anything else on this map are welcome.</p>
+  <h3 class="qgroup">Clarifying the map</h3>
+  <p class="muted qgroup-sub">How the process works today.</p>
   <ol class="qlist" id="qList"></ol>
+  <h3 class="qgroup">Exploring potential opportunities</h3>
+  <p class="muted qgroup-sub">Ideas to test with the working group.</p>
+  <ol class="qlist qcont" id="qListImprove"></ol>
 </section>
 
 <section class="wrap block two" aria-labelledby="h-next">
@@ -301,7 +280,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     <ul class="dates">
       <li><b>Ongoing</b><span>Third Sector follows up one-on-one, with extra time on the LDH steps, which the session ran short on.</span></li>
       <li><b>Oct 15</b><span>Draft map shared with the working group for validation.</span></li>
-      <li><b>Oct 20</b><span><strong class="due">All client feedback on the draft maps is due.</strong> Use the Comment button on any step, or Give feedback on this map at the top of the page.</span></li>
       <li><b>Oct 30</b><span>Completed process map delivered.</span></li>
     </ul>
     <p class="muted" style="margin-top:10px">The provider lane will also be checked against one-on-one provider interviews.</p>
@@ -322,12 +300,11 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 <script>
 (function () {
   "use strict";
-  var MAP_NAME = "Provider Invoicing Map";
 
   /* ---------- content ---------- */
   var LANES = [
     { id: "prov", title: "Provider", sub: "Invoicing staff and case managers", org: "prov" },
-    { id: "cons", title: "LA Works · SNAP E&T consultants", sub: "Documentation review", org: "law" },
+    { id: "cons", title: "LA Works · SNAP E&T consultants", sub: "Documentation review and corrections", org: "law" },
     { id: "rev",  title: "LA Works · Invoice review", sub: "First-level and final review", org: "law" },
     { id: "fis",  title: "LA Works · Fiscal", sub: "Provider payment and billing to LDH", org: "law" },
     { id: "ldhf", title: "LDH · Fiscal", sub: "Verification, coding and approval", org: "ldh" },
@@ -343,7 +320,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   ];
   var R = {
     dir: "LA Works SNAP E&T director", mgr: "LA Works SNAP E&T manager", con: "LA Works SNAP E&T consultants", first: "LA Works first-level reviewer",
-    fin: "LA Works final reviewer", fd: "LA Works fiscal director", lf: "LDH fiscal", lp: "LDH SNAP E&T consultant"
+    fin: "LA Works final reviewer", fd: "LA Works fiscal director", lf: "LDH fiscal", lp: "LDH SNAP E&T consultant",
+    fbl: "LA Works feedback on the draft map", fbd: "LDH feedback on the draft map"
   };
   function it(t, by) { return { t: t, by: by }; }
 
@@ -373,9 +351,9 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "n_intake", lane: 1, col: 4, type: "system", sys: "Shared drive · Monday", label: "Assigned consultant saves the packet to the shared drive and logs it on the Monday board",
       who: "LA Works SNAP E&T consultant assigned to the provider (about 7 to 8 consultants in all)",
       works: [it("The Monday board tracks every provider's invoice through each review step, with notes anyone on the team can open.", R.fin)] },
-    { id: "n_report", lane: 1, col: 5, type: "system", sys: "SNAP Works", label: "Runs the participant reimbursement report if the provider left it out",
+    { id: "n_report", lane: 1, col: 5, type: "system", sys: "SNAP Works", label: "Runs the participant reimbursement report from SNAP Works for every invoice",
       who: "Assigned LA Works SNAP E&T consultant",
-      pain: [it("Consultants often end up running the report the provider was asked to include, and saving it with the invoice.", R.first)],
+      notes: [it("The consultant runs the report even when the provider included one, because the provider's copy may have errors or may have been altered. It is saved with the invoice.", R.fbl)],
       plan: [it("With the financial suite, reimbursements would already be on the invoice, so this printed report would no longer be needed.", R.mgr)] },
     { id: "n_docreview", lane: 1, col: 6, type: "step", label: "Reviews documentation against the service month and approved budget",
       who: "Assigned LA Works SNAP E&T consultant",
@@ -388,21 +366,22 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       ask: [it("Where does the SNAP E&T manager's front-end review fit: before, alongside, or after the consultant's review?")] },
     { id: "d_docs", lane: 1, col: 7, type: "decision", label: "Documents complete?",
       who: "Assigned LA Works SNAP E&T consultant",
-      notes: [it("Consultants review and request corrections. They don't approve or deny invoices.", R.con)],
-      ask: [it("Do consultants always resolve missing items before sending an invoice to first-level review, or sometimes pass it on with notes?")] },
+      notes: [it("Consultants review and request corrections. They don't approve or deny invoices.", R.con),
+              it("Consultants resolve what they can with the provider first, and escalate to the invoice reviewers when they have questions.", R.con)],
+      ask: [{ kind: "improve", t: "Is there a way to leave a standing note in a provider's file when they do something a bit differently and it has been approved, so later reviews see the reason and don't flag it again?" }] },
     { id: "n_fix1", lane: 0, col: 7, type: "step", sys: "Email", label: "Provider gathers missing items and re-sends (3-day window)",
       who: "Provider, working with the LA Works SNAP E&T consultant",
       pain: [it("Three days often isn't enough: the case manager has to get receipts or check stubs from someone else, the one invoicing staff member is out, the office is closed, or staff have turned over.", R.con + "; " + R.dir),
              it("Back-and-forth, with the consultant in the middle relaying requests between providers and reviewers.", R.con),
              it("Some providers repeat the same errors month after month despite training. Consultants see this more with newer providers than long-standing ones.", R.dir + "; " + R.con)],
-      works: [it("Providers get regular technical assistance from their consultant (often daily contact), quarterly provider meetings that walk through recent issues, an annual in-person training, and a best-practice guide.", R.dir)],
-      ask: [it("Is the 3-day window business days or calendar days?")] },
+      works: [it("Providers get regular technical assistance from their consultant (often daily contact), quarterly provider meetings that walk through recent issues, an annual in-person training, and a best-practice guide.", R.dir)] },
 
-    { id: "n_first", lane: 2, col: 8, type: "step", label: "First-level review: recalculates each budget category and checks participant eligibility",
+    { id: "n_first", lane: 2, col: 8, type: "step", label: "First-level review: recalculates each budget category and checks the SNAP Works report against supporting documents",
       who: "LA Works first-level reviewer",
       time: "3 to 4 hours for a smaller provider; a full uninterrupted day for a larger one.",
-      notes: [it("Recalculates salaries, fringe, operating expenses and other charges (participant reimbursements) against the approved budget, and verifies dates on operating expenses.", R.first)],
-      pain: [it("Other charges is the slowest part. SNAP Works can accept a reimbursement for someone who wasn't SNAP-eligible that month, so each reimbursement (an estimated 40 to 50 on one provider's invoice) is checked by hand, with system delays, against the report and receipts.", R.first),
+      notes: [it("Recalculates salaries, fringe, operating expenses and other charges (participant reimbursements) against the approved budget, and verifies dates on operating expenses.", R.first),
+              it("Reviews the SNAP Works report and the supporting documentation to confirm they align.", R.fbl)],
+      pain: [it("Other charges is the slowest part. SNAP E&T can't pay for a participant who wasn't receiving SNAP that month, but SNAP Works doesn't stop those entries. So each reimbursement (an estimated 40 to 50 on one provider's invoice) is matched by hand against the SNAP Works report and receipts, and system delays slow this down.", R.first + "; corrected in feedback on the draft map"),
              it("Fringe benefit calculations take the most time for the smallest amounts. One example given: three hours of calculation to confirm $1.25.", R.fin)],
       works: [it("A salary and fringe calculation spreadsheet built this fiscal year saves an estimated hour of calculation per invoice.", R.first)] },
     { id: "n_final", lane: 2, col: 9, type: "step", label: "Final review of the full invoice and every supporting document",
@@ -413,39 +392,49 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
               it("Reviewing invoices month to month shows how a provider is serving participants, and can prompt a closer look at case notes in SNAP Works.", R.fin)] },
     { id: "d_errors", lane: 2, col: 10, type: "decision", label: "Corrections needed?",
       who: "First-level and final reviewers",
-      notes: [it("First-level comments travel with the invoice to final review, and anything final review finds is added, so the provider gets one combined list instead of several rounds.", R.first)],
+      notes: [it("First-level comments travel with the invoice to final review, and anything final review finds is added, so the provider gets one combined list instead of several rounds.", R.first),
+              it("After final review, the list of errors, corrections or missing information goes to the consultant, who sends it to the provider.", R.fbl)],
       pain: [it("An estimated 90%+ of invoices reaching final review are returned to the provider for corrections.", R.fin)],
       works: [it("Returns are organized by cost reimbursement form category, with the exact correction needed, so the provider only has to update the tracker and the form.", R.fin)],
-      ask: [it("Does the combined list go to the provider directly, or through the consultant?")] },
+      ask: [it("When reviewers question some items on an invoice, can the provider be paid for the rest while those items are resolved, or is the whole invoice held?")] },
+    { id: "n_sendfix", lane: 1, col: 10, type: "step", sys: "Email", label: "Consultant sends the correction list to the provider (due in 3 business days)",
+      who: "Assigned LA Works SNAP E&T consultant",
+      notes: [it("The final reviewer sends the list of errors to the consultants, who then send it to the provider.", R.fbl),
+              it("Invoice edits are due within 3 business days.", R.fbl)] },
+    { id: "n_saveedits", lane: 1, col: 9, type: "system", sys: "Shared drive · Email", label: "Consultant saves the edits to the shared drive and emails the final reviewer",
+      who: "Assigned LA Works SNAP E&T consultant",
+      notes: [it("The resubmission goes straight back to final review.", R.fbl)] },
     { id: "n_fix2", lane: 0, col: 10, type: "step", label: "Provider corrects and resubmits, often the whole packet",
-      who: "Provider",
-      time: "Re-review of a full resubmission: about another full day (provider size not specified).",
+      who: "Provider, sending edits to the LA Works SNAP E&T consultant",
+      time: "Final re-review of a full resubmission: about another full day (provider size not specified; estimate given by a first-level reviewer).",
+      notes: [it("The provider sends invoice edits to the consultant. Resubmissions go back to final review, not first-level review.", R.fbl)],
       pain: [it("An estimated 9 times out of 10 the provider sends a whole new packet rather than only what was asked for. Numbers shift (an added utility bill, a new reimbursement), so the invoice is re-reviewed in full and may be returned a second time.", R.first + "; " + R.fin)],
-      works: [it("One-on-one Teams walk-throughs with providers, usually with their consultant included.", R.fin)],
-      ask: [it("Is there a deadline for corrections after final review?")] },
+      works: [it("One-on-one Teams walk-throughs with providers, usually with their consultant included.", R.fin)] },
 
-    { id: "n_fiscalin", lane: 3, col: 11, type: "step", sys: "Email · spreadsheets", label: "Fiscal director logs the approved total in tracking spreadsheets",
+    { id: "n_tofiscal", lane: 2, col: 11, type: "step", sys: "Email", label: "Final reviewer emails the approved invoice and all supporting documents to Fiscal",
+      who: "LA Works final reviewer",
+      notes: [it("Once the final reviewer approves the invoice, they email the invoice and all supporting documents to Fiscal: the fiscal payables mailbox, with the fiscal director copied.", R.fin)] },
+    { id: "n_fiscalin", lane: 3, col: 11, type: "step", sys: "Spreadsheets", label: "Fiscal director logs the approved total in tracking spreadsheets",
       who: "LA Works fiscal director",
-      notes: [it("Final reviewers email the approved invoice to the fiscal payables mailbox and copy the fiscal director.", R.fin),
-              it("This funding doesn't follow LA Works' usual payment process, so in this first year the fiscal director tracks running monthly totals directly.", R.fd)],
+      notes: [it("This funding doesn't follow LA Works' usual payment process, so in this first year the fiscal director tracks running monthly totals herself.", R.fd)],
       plan: [it("The payables unit is expected to take over this tracking.", R.fd)] },
     { id: "d_cash", lane: 3, col: 12, type: "decision", label: "Cash available in fund and PO?",
       who: "LA Works fiscal director",
       notes: [it("LDH is the grant recipient, so LA Works pays providers first and is reimbursed later. Unlike most of LA Works' federal funds, this cash can't go negative: if the fund is short, payments won't go through.", R.fd)] },
     { id: "n_wait", lane: 3, col: 12, row: 1, type: "step", label: "Wait for LDH reimbursement or arrange a fund loan",
       who: "LA Works fiscal director",
-      pain: [it("Payment can wait until LDH reimburses earlier payments, or until a loan from another LA Works fund is arranged. This is why there is sometimes a delay between approval and payment.", R.fd)],
-      ask: [it("What is the typical time from final approval to provider payment?")] },
+      notes: [it("Providers are typically paid within 2 to 3 days of final approval. Only once has a provider not received a payment.", "Heard in follow-up")],
+      pain: [it("Payment can wait until LDH reimburses earlier payments, or until a loan from another LA Works fund is arranged. This is why there is sometimes a delay between approval and payment.", R.fd)] },
     { id: "n_pay", lane: 3, col: 13, type: "system", sys: "LaGov", label: "Payables enters the payment in LaGov",
       who: "LA Works payables unit",
       notes: [it("The fiscal director emails payables to release the payments. Entering the payment itself is quick.", R.fd)] },
     { id: "n_paid", lane: 0, col: 14, type: "milestone", label: "Provider receives payment",
       who: "Provider",
-      notes: [it("Milestone for the provider. The process continues until LA Works is reimbursed by LDH.")] },
-    { id: "n_confirm", lane: 2, col: 14, type: "system", sys: "Look-up · Monday", label: "Confirms payment in the look-up system; marks Paid on the Monday board",
+      notes: [it("Milestone for the provider. The process continues until LA Works is reimbursed by LDH.")],
+      ask: [it("From a provider’s first submission to payment, how long does an invoice usually take in total, counting waiting time and correction rounds? What are the shortest and longest times in recent months?")] },
+    { id: "n_confirm", lane: 2, col: 14, type: "system", sys: "LaGov · Monday", label: "Confirms payment in LaGov; marks Paid on the Monday board",
       who: "LA Works Workforce Development Contracts Unit program manager (final reviewer)",
-      notes: [it("Each month, looks up providers by contract number to confirm payment, marks Paid on the Monday board, and contacts the fiscal director if a payment hasn't gone through. Issues are rare.", R.fin)],
-      ask: [it("What is the name of the system used to look up payments by contract number?")] },
+      notes: [it("Each month, looks up providers by contract number in LaGov to confirm payment, marks Paid on the Monday board, and contacts the fiscal director if a payment hasn't gone through. Issues are rare.", R.fin)] },
     { id: "n_weekly", lane: 3, col: 14, type: "system", sys: "Payables report", label: "Friday payables report flags any payment that didn't go out",
       who: "LA Works payables unit, for the fiscal director",
       notes: [it("Added after a payment was blocked at the end of the last fiscal year. Reasons a payment can fail include a cash shortfall or a vendor on the legislative audit noncompliance list.", R.fd)],
@@ -454,7 +443,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "n_folder", lane: 3, col: 15, type: "step", sys: "OneDrive", label: "Builds a monthly OneDrive folder and summary invoice by provider",
       who: "LA Works fiscal director",
       notes: [it("Once a month's payments are made, all support goes into a OneDrive folder for that month (for example, a July folder holds the providers paid for July) with a summary invoice by vendor. The files are too large to email.", R.fd)],
-      ask: [it("How often does LA Works bill LDH, and what decides when a batch is sent?")] },
+      ask: [{ kind: "improve", t: "LA Works bills LDH monthly. Since most errors start on the provider side and take longer to fix, would billing in batches work better if LDH could see the pipeline and know what is coming?" }] },
     { id: "n_z8", lane: 3, col: 16, type: "system", sys: "LaGov", label: "Creates the Z8 interagency bill in LaGov and emails LDH",
       who: "LA Works fiscal director",
       notes: [it("The Z8 is LaGov's interagency billing document. The email tells LDH fiscal (with the LDH program lead copied) that the folder, invoice and Z8 are ready.", R.fd)] },
@@ -468,13 +457,13 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "n_resolve", lane: 3, col: 18, type: "step", label: "Resolves the unpaid item with LDH (not needed to date)",
       who: "LA Works fiscal director, contacted by the LDH fiscal team",
       notes: [it("LDH fiscal would reach out to the LA Works fiscal director. This has not happened yet.", R.lf)] },
-    { id: "n_progrev", lane: 5, col: 19, type: "step", sys: "OneDrive · shared drive", label: "Reviews every invoice: documents, eligibility, calculations; completes checklist",
+    { id: "n_progrev", lane: 5, col: 19, type: "step", sys: "OneDrive · shared drive", label: "Reviews every invoice: SNAP Works report against supporting documents, calculations; completes checklist",
       who: "LDH SNAP E&T consultant",
+      time: "Up to 5 business days, depending on the volume of the reimbursement packet.",
       notes: [it("Downloads the invoices from OneDrive to LDH's shared drive so others can access them.", R.lp),
-              it("Reviews 100% of each invoice: support for each claimed item, whether items are eligible, then the calculations, using a compliance checklist for each provider.", R.lp),
+              it("Reviews 100% of each invoice: checks that the SNAP Works report and the supporting documentation align, then the calculations, using a compliance checklist for each provider.", R.lp + "; corrected in feedback on the draft map"),
               it("Known recurring issues are documented every month for audit, even when the invoice is approved.", R.lp)],
-      works: [it("Most invoices are clean. The LDH SNAP E&T consultant has returned two invoices: one LA Works miscalculation and one provider calculation that couldn't be followed.", R.lp)],
-      ask: [it("How long do LDH verification, program review and approval typically take?")] },
+      works: [it("Most invoices are clean. The LDH SNAP E&T consultant has returned two invoices: one LA Works miscalculation and one provider calculation that couldn't be followed.", R.lp)] },
     { id: "d_q", lane: 5, col: 20, type: "decision", label: "Questions or discrepancies?",
       who: "LDH SNAP E&T consultant",
       notes: [it("LDH program staff contact the LA Works reviewer who signed off on the invoice, not the provider.", R.lp)] },
@@ -484,13 +473,13 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "n_cover", lane: 3, col: 21, type: "step", label: "Issues a corrected cover sheet with the adjusted amount",
       who: "LA Works fiscal director",
       notes: [it("When an amount has to be reduced, LDH fiscal tells the LA Works fiscal director, and a corrected cover sheet comes back.", R.lf + "; " + R.lp)],
-      plan: [it("Suggested: copy the LA Works fiscal director when the two program teams discuss a discrepancy, so the fiscal director knows before the adjustment request arrives.", R.lf)] },
-    { id: "n_third", lane: 5, col: 21, type: "step", label: "Third-level review (policy: about a 2% sample)",
+      plan: [it("Suggested: copy the LA Works fiscal director when the two program teams discuss a discrepancy, so she knows before the adjustment request arrives.", R.lf)] },
+    { id: "n_third", lane: 5, col: 21, type: "step", label: "Third-level review (about a 2% sample)",
       who: "LDH SNAP E&T program lead (third-level reviewer)",
-      notes: [it("Policy calls for sampling about 2% of invoices to reconcile totals, approval and payment.")],
-      ask: [it("Is the third-level review a 2% sample in practice, or are most invoices reviewed?")] },
+      notes: [it("Samples about 2% of invoices to reconcile totals, approval and payment. LDH confirmed this is the practice.", R.fbd)] },
     { id: "n_code", lane: 4, col: 22, type: "step", label: "Checks for questioned costs; one person codes, a second approves",
       who: "LDH fiscal staff, including the new account manager, with the LDH fiscal lead overseeing",
+      time: "LDH fiscal verification and approval together: about 3 to 4 days (heard in follow-up).",
       notes: [it("Checks each provider's checklist for questioned costs, then codes the invoice. The person who codes can't be the one who approves.", R.lf)],
       pain: [it("Invoices arrive in bursts, sometimes several months at once, on top of SNAP E&T admin invoices. When that overlaps quarterly reporting (SNAP and Medicaid report at the same time; October is a reporting month), approvals slow down.", R.lf)],
       plan: [it("Two LDH fiscal staff, including the new account manager, are taking over coding and approval from the LDH fiscal lead.", R.lf),
@@ -501,9 +490,18 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       works: [it("LDH keeps a complete audit file: invoices, checklists, correspondence about any issue, and the payment confirmation.", R.lf)] },
     { id: "n_end", lane: 3, col: 24, type: "end", label: "LA Works reimbursed; expenditure reconciled",
       who: "LA Works fiscal",
-      notes: [it("End of this map: the provider has been paid and LA Works has been reimbursed.")],
-      ask: [it("How does LA Works confirm the reimbursement arrived, and who closes out the month?")] }
+      notes: [it("End of this map: the provider has been paid and LA Works has been reimbursed."),
+              it("After LDH emails that the reimbursement has been paid, LA Works fiscal checks that it arrived.", "Heard in follow-up")],
+      ask: [it("Who closes out the month once the reimbursement is confirmed?")] }
   ];
+
+  // Every LA Works step updates the Monday board before handing off; steps that already describe it are skipped.
+  NODES.forEach(function (n) {
+    if (n.lane >= 1 && n.lane <= 3 && !/Monday/.test(n.sys || "")) {
+      if (n.type !== "decision") n.sys = n.sys ? n.sys + " · Monday" : "Monday";
+      n.notes = (n.notes || []).concat([it("Before moving the invoice to the next person, they update its status on the Monday board.")]);
+    }
+  });
 
   // kind: flow | loop (correction) | alt (occasional)
   var EDGES = [
@@ -514,9 +512,12 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     ["n_fix1", "n_docreview", { exit: "l", enter: "t", kind: "loop", label: "Re-sent", seg: 0 }],
     ["d_docs", "n_first", { gap: 7, label: "Yes", seg: 1 }],
     ["n_first", "n_final"], ["n_final", "d_errors"],
-    ["d_errors", "n_fix2", { exit: "t", enter: "b", kind: "loop", label: "Yes", seg: 0 }],
-    ["n_fix2", "n_first", { exit: "l", enter: "t", kind: "loop", label: "Full re-review", seg: 0 }],
-    ["d_errors", "n_fiscalin", { gap: 10, label: "No, approved", seg: 1 }],
+    ["d_errors", "n_sendfix", { exit: "t", enter: "b", kind: "loop", label: "Yes · error list", seg: 0 }],
+    ["n_sendfix", "n_fix2", { exit: "t", enter: "b", kind: "loop" }],
+    ["n_fix2", "n_saveedits", { exit: "l", enter: "t", kind: "loop", label: "Edits", seg: 0 }],
+    ["n_saveedits", "n_final", { exit: "b", enter: "t", kind: "loop", label: "Back to final review", seg: 0 }],
+    ["d_errors", "n_tofiscal", { label: "No", seg: 0, above: true }],
+    ["n_tofiscal", "n_fiscalin", { exit: "b", enter: "t" }],
     ["n_fiscalin", "d_cash"],
     ["d_cash", "n_wait", { exit: "b", enter: "t", kind: "alt", label: "No", seg: 0 }],
     ["n_wait", "d_cash", { exit: "l", enter: "l", kind: "alt", midx: { gap: 11 } }],
@@ -543,14 +544,14 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   var ACROSS = {
     works: [
       { t: "Several layers of review, three at LA Works and more at LDH, give strong fiscal oversight.", by: R.dir, n: ["n_first", "n_final", "n_progrev"] },
-      { t: "The Monday board shows where every provider's invoice stands, with shared notes.", by: R.fin, n: ["n_intake", "n_confirm"] },
+      { t: "The Monday board is updated at every step, so it shows where every provider's invoice stands, with shared notes.", by: R.fin + "; " + R.fbl, n: ["n_intake", "n_confirm"] },
       { t: "Staff communicate quickly: calls, Teams chats, or walking over to talk an invoice through.", by: R.dir + "; " + R.fin, n: ["n_final", "n_explain"] },
       { t: "Steady provider support: consultant TA, quarterly provider meetings, annual training, best-practice guide.", by: R.dir, n: ["n_fix1"] },
       { t: "One combined correction list per round, organized by form category.", by: R.first + "; " + R.fin, n: ["d_errors"] }
     ],
     pain: [
-      { t: "Repeated back-and-forth with providers to complete and correct packets, including repeat errors.", by: R.con + "; " + R.fin, n: ["n_fix1", "d_errors"] },
-      { t: "Hand matching and recalculation: the reimbursement report, eligibility for each participant, fringe.", by: R.con + "; " + R.first, n: ["n_docreview", "n_first"] },
+      { lead: true, t: "Biggest pain point: provider errors are frequent because the process is tedious on both sides. Providers enter costs by hand with nothing restricting what goes in, and reviewers verify every item by hand. The result is repeated back-and-forth to complete and correct packets, including repeat errors.", by: R.con + "; " + R.first + "; " + R.fin, n: ["n_snap", "n_fix1", "n_first", "d_errors"] },
+      { t: "Hand matching and recalculation: the reimbursement report against SNAP Works and receipts, fringe.", by: R.con + "; " + R.first, n: ["n_docreview", "n_first"] },
       { t: "Whole-packet resubmissions that restart review.", by: R.first, n: ["n_fix2"] },
       { t: "Paper-heavy, emailed packets with no portal or financial suite in use.", by: R.con, n: ["n_email", "n_report"] },
       { t: "LA Works fronts provider payments and can't always pay until LDH reimburses.", by: R.fd, n: ["n_wait"] },
@@ -571,7 +572,10 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     ["SNAP E&T consultant documentation review", "About 1 day", "1 to 2 days", "LA Works SNAP E&T consultants", "n_docreview"],
     ["First-level review", "3 to 4 hours", "About 1 full day", "LA Works first-level reviewer", "n_first"],
     ["Final review", "3 to 4 hours", "About 1 day; may stay on a reviewer's desk up to 2 days alongside other work", "LA Works final reviewer", "n_final"],
-    ["Re-review after a full resubmission", "About another full day (provider size not specified)", null, "LA Works first-level reviewer", "n_fix2"]
+    ["Final re-review after a full resubmission", "About another full day (provider size not specified)", null, "LA Works first-level reviewer (to confirm)", "n_fix2"],
+    ["Final approval to provider payment", "Within 2 to 3 days", null, "Heard in follow-up", "n_wait"],
+    ["LDH SNAP E&T program review", "Up to 5 business days, depending on the volume of the reimbursement packet", null, "LDH", "n_progrev"],
+    ["LDH fiscal verification and approval", "About 3 to 4 days", null, "Heard in follow-up", "n_code"]
   ];
 
   /* ---------- geometry ---------- */
@@ -897,8 +901,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       list("Pain points", "t-pain", ICON.pain, n.pain) +
       list("Planned changes", "t-plan", ICON.plan, n.plan) +
       list("To confirm", "t-ask", ICON.ask, n.ask) +
-      "</div>" + fbBoxHtml("step");
-    document.getElementById("fbStep").onclick = function () { fbOpen("Stage " + s.k + " \u00b7 " + n.label + " (" + LANES[n.lane].title + ")", document.getElementById("fbMsg")); };
+      "</div>";
     document.getElementById("prevStep").onclick = function () { select(ORDER[idx - 1].id, true); };
     document.getElementById("nextStep").onclick = function () { select(ORDER[idx + 1].id, true); };
   }
@@ -928,7 +931,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   }
   function fillAcross(key, elId) {
     document.getElementById(elId).innerHTML = ACROSS[key].map(function (x) {
-      return "<li><p>" + esc(x.t) + "</p>" + (x.by ? '<p class="muted">' + esc(x.by) + "</p>" : "") + chipsFor(x.n) + "</li>";
+      return "<li" + (x.lead ? ' class="lead"' : "") + "><p>" + esc(x.t) + "</p>" + (x.by ? '<p class="muted">' + esc(x.by) + "</p>" : "") + chipsFor(x.n) + "</li>";
     }).join("");
   }
   fillAcross("works", "acrossWorks"); fillAcross("pain", "acrossPain"); fillAcross("plan", "acrossPlan");
@@ -939,38 +942,19 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   }).join("");
 
   var qs = [
-    { t: "Which deadlines and reviews reflect federal requirements, Louisiana policy, or current practice?", all: true },
-    { t: "What happens with an invoice that remains unresolved or contains disallowed costs?", all: true }
+    { t: "When a review or a provider’s corrections run late, how is it escalated, and to whom? For example, a provider who misses the 3-day correction window, or an invoice that sits in review longer than usual.", all: true }
   ];
-  ORDER.forEach(function (n) { (n.ask || []).forEach(function (a) { qs.push({ t: a.t, id: n.id }); }); });
-  document.getElementById("qList").innerHTML = qs.map(function (q) {
+  ORDER.forEach(function (n) { (n.ask || []).forEach(function (a) { qs.push({ t: a.t, id: n.id, kind: a.kind }); }); });
+  function qItem(q) {
     return "<li><span>" + esc(q.t) + "</span>" + (q.all ? '<div class="chips"><span class="scope-tag">Applies across the map</span></div>' : chipsFor([q.id])) + "</li>";
-  }).join("");
+  }
+  document.getElementById("qList").innerHTML = qs.filter(function (q) { return q.kind !== "improve"; }).map(qItem).join("");
+  document.getElementById("qListImprove").innerHTML = qs.filter(function (q) { return q.kind === "improve"; }).map(qItem).join("");
 
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-go]");
     if (b) goTo(b.getAttribute("data-go"));
   });
-
-
-  /* ---------- feedback: opens the Microsoft Form with the map and step filled in ---------- */
-  function fbReady() { return /^https:\/\/forms\.(office|microsoft|cloud\.microsoft)\b/i.test(window.FEEDBACK_FORM_URL || ""); }
-  function fbOpen(step, msgEl) {
-    if (!fbReady()) { if (msgEl) msgEl.textContent = "The feedback form isn’t connected yet."; return; }
-    if (step.length > 240) step = step.slice(0, 237) + "...";
-    var u = window.FEEDBACK_FORM_URL.replace("MAPNAME", encodeURIComponent(MAP_NAME)).replace("STEPNAME", encodeURIComponent(step));
-    var w = window.open(u, "_blank", "noopener");
-    if (msgEl) msgEl.textContent = "The form opened in a new tab. If it didn’t, allow pop-ups for this page and try again.";
-  }
-  function fbBoxHtml(what) {
-    return '<div class="flagbox"><h4>Comment on this ' + what + '</h4>' +
-      '<p class="note">Opens a short form in a new tab with this ' + what + ' already filled in. Corrections, missing details, and answers to the questions are all welcome. No sign-in needed.</p>' +
-      '<div class="row"><button class="btn primary" type="button" id="fbStep">Comment on this ' + what + '</button><span class="flagmsg" id="fbMsg" role="status"></span></div></div>';
-  }
-  (function () {
-    var g = document.getElementById("fbGeneral");
-    if (g) g.onclick = function () { fbOpen("General comment (whole map)", document.getElementById("fbGenMsg")); };
-  })();
 
   /* ---------- boot ---------- */
   draw(); renderDetail();

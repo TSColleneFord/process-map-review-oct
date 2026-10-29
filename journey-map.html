@@ -1,15 +1,5 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow">
-<script>
-/* =====================================================================
-   FEEDBACK FORM LINK  (the only line you need to edit)
-   Paste the Microsoft Forms pre-filled link between the quotes below.
-   Make that link by typing MAPNAME as the answer to "Map" and STEPNAME
-   as the answer to "Step", then choosing "Get pre-filled link".
-   Until a link is pasted here, the Comment buttons show a notice.
-   ===================================================================== */
-window.FEEDBACK_FORM_URL = "https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=955QnF6dc0GADBkEmuwlJuMj359ZoPNAsda7Mdp9kmpUNzgxSzYwOFlMVkxKTkJMWU02QjVRMDJVMy4u&re39db6504d074f88bfa7382129bbd76b=MAPNAME&r9813ab6f9ed2432da250c18a6f0245e5=STEPNAME";
-</script></head><body>
-<title>SNAP E&amp;T Client Journey Map</title>
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>SNAP E&amp;T Client Journey Map (Final)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
@@ -59,7 +49,7 @@ h3 { font-size: 1.15rem; font-weight: 700; }
 p { margin: 0; }
 button { font-family: inherit; }
 .wrap { max-width: 1180px; margin-inline: auto; }
-.wide { max-width: none; margin-inline: auto; }
+.wide { max-width: 1440px; margin-inline: auto; }
 
 /* header */
 .top { padding-block: 40px 22px; display: grid; gap: 14px; position: relative; }
@@ -189,17 +179,6 @@ td .tag { display: inline-block; font-size: .8rem; color: var(--grey); font-weig
 .dates b { color: var(--blue2); font-variant-numeric: tabular-nums; }
 footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20); font-size: .8rem; letter-spacing: .04em; color: var(--grey); text-transform: uppercase; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; }
 @media (max-width: 600px) { .btn.stage { font-size: .85rem; padding: 4px 8px; } .legend, .layer { font-size: .86rem; } }
-
-.fbgen { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
-
-/* map key, wider map */
-.mapkey { border: 1px solid var(--blue20); background: var(--paper); padding: 14px 18px 16px; margin-top: 18px; display: grid; gap: 12px; }
-.keyh { font-size: .95rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue2); }
-.keysec { display: grid; gap: 8px; min-width: 0; }
-.kl { font-size: .76rem; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--grey); }
-.keyint { border-top: 1px solid var(--blue20); padding-top: 12px; }
-.hint { margin-top: 14px; }
-.due { color: var(--ink); font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 
 
@@ -249,7 +228,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
 <header class="wrap top">
   <div class="frame" aria-hidden="true"></div>
-  <div class="banner">Draft based on the October 6 working session. Please flag anything we captured incorrectly, omitted, or need to confirm.</div>
+  <div class="banner">Final version based on interviews, the October 6 working session, and team feedback.</div>
   <div class="eyebrow">LDH &amp; Louisiana Works · SNAP E&amp;T Operational Assessment</div>
   <h1>Client Journey Map</h1>
   <p class="lede">How a SNAP recipient moves from being found eligible, or being identified by a provider, to starting and finishing SNAP E&amp;T services. The participant is at the center: their steps run along the top lane with a heavier border, and every other role is shown only as far as it shapes what the participant experiences. This reflects state staff descriptions from the October 6 working session. Participant experiences and provider steps have not yet been validated directly with participants or providers.</p>
@@ -258,7 +237,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     <span>Working session: Tuesday, October 6, 2026</span>
     <span>Prepared by Third Sector Capital Partners</span>
   </div>
-  <div class="fbgen"><button class="btn primary" type="button" id="fbGeneral">Give feedback on this map</button><span class="flagmsg" id="fbGenMsg" role="status"></span><span class="muted">Or select any step and use the <b>Comment</b> button.</span></div>
   <div class="scope">
     <div><b>Starts</b>A person is confirmed SNAP-eligible, or a provider identifies someone who may be eligible.</div>
     <div><b>Ends</b>The participant completes services, finds work, or exits. Staff described job retention support lasting 30–90 days; access and uptake remain to be confirmed.</div>
@@ -267,10 +245,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 </header>
 
 <section class="wide" aria-label="Journey map">
-  <div class="mapkey" role="region" aria-label="Map key">
-    <h2 class="keyh">Map key</h2>
-    <div class="keysec"><span class="kl">Shapes and lines</span>
-        <div class="legend">
+  <div class="toolbar">
+    <div class="legend" aria-label="Map key">
       <div class="grp"><span class="gl">Participant</span>
       <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="2" y="2" width="26" height="16" rx="2" fill="#FFFFFF" stroke="#006E8F" stroke-width="3.5"/></svg>Participant step</span>
       <span class="k"><svg width="26" height="22" aria-hidden="true"><path d="M13 2 L24 11 L13 20 L2 11 Z" fill="#FFFFFF" stroke="#006E8F" stroke-width="3"/></svg>Participant decision</span>
@@ -291,21 +267,16 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       <span class="k"><svg width="30" height="20" aria-hidden="true"><rect x="1" y="2" width="28" height="16" rx="2" fill="#F7F7F9" stroke="#5A5A5C" stroke-width="1.25" stroke-dasharray="2 3"/></svg>Clarity needed</span>
       <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="1.5"/></svg>Handoff</span>
       <span class="k"><svg width="34" height="12" aria-hidden="true"><line x1="0" y1="6" x2="34" y2="6" stroke="#5A5A5C" stroke-width="1.5" stroke-dasharray="6 4"/></svg>Re-referral loop</span>
-      <span class="k"><svg width="46" height="22" aria-hidden="true"><line x1="0" y1="11" x2="30" y2="11" stroke="#5A5A5C" stroke-width="1.5" stroke-dasharray="3 3"/><circle cx="36" cy="11" r="8.5" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="36" y="15.5" text-anchor="middle" font-size="12" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>Next handoff not yet known</span>
       <span class="k"><span class="tagsw">RUNS ALONGSIDE</span>Ongoing work in that stage, outside the step-by-step handoffs</span>
       </div>
     </div>
-    </div>
-    <div class="keysec keyint"><span class="kl">What we heard at each step: select to show or hide these icons on the map</span>
     <div class="layers" role="group" aria-label="Show on map">
       <label class="layer"><input type="checkbox" id="lay-pain" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#862E88"/><text x="10" y="14.5" text-anchor="middle" font-size="13" font-weight="700" fill="#FFFFFF" font-family="Barlow, Arial">!</text></svg>Pain points <span class="n" id="cnt-pain"></span></label>
       <label class="layer"><input type="checkbox" id="lay-works" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#00A76F"/><text x="10" y="14.5" text-anchor="middle" font-size="14" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">+</text></svg>Working well <span class="n" id="cnt-works"></span></label>
       <label class="layer"><input type="checkbox" id="lay-plan" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="#006E8F"/><path d="M6 10 H13 M10 6.5 L13.5 10 L10 13.5" stroke="#FFFFFF" stroke-width="1.8" fill="none"/></svg>Planned changes <span class="n" id="cnt-plan"></span></label>
       <label class="layer"><input type="checkbox" id="lay-ask" checked><svg width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="8.25" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/><text x="10" y="14.5" text-anchor="middle" font-size="12.5" font-weight="700" fill="#1C1717" font-family="Barlow, Arial">?</text></svg>To confirm <span class="n" id="cnt-ask"></span></label>
     </div>
-    </div>
   </div>
-  <p class="hint">Scroll or drag sideways to follow the journey. The lettered stages are columns that run down through every role, and their headers stay pinned at the top as you read down. Participant steps are numbered in order; the three doors are all step 1, because a person uses one of them, and each door’s route keeps its own color until it joins the main path. Icons on a step show what we heard there; select any step or connector for the full detail. To give feedback, select a step or connector and choose <b>Comment</b>; a short form opens with that spot already filled in.</p>
   <div class="toolbar" style="padding-top:0">
     <div class="controls" role="group" aria-label="Jump to stage" id="stageNav"></div>
     <div class="controls" role="group" aria-label="Ways in">
@@ -324,6 +295,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       <button class="btn" id="zFit">Fit</button>
     </div>
   </div>
+  <p class="hint">Scroll or drag sideways to follow the journey. The lettered stages are columns that run down through every role, and their headers stay pinned at the top as you read down. Participant steps are numbered in order; the three doors are all step 1, because a person uses one of them, and each door’s route keeps its own color until it joins the main path. Icons on a step show what we heard there; select any step or connector for the full detail. To give feedback, select a step or connector and choose <b>Comment</b>.</p>
   <div class="map" id="mapBox">
     <div class="stagebar" id="stageBar">
       <div class="corner"><svg id="cornerSvg" aria-hidden="true"></svg></div>
@@ -376,13 +348,11 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
 <section class="wrap block" aria-labelledby="h-q">
   <h2 id="h-q">Questions to confirm</h2>
-  <p class="sub">Three kinds of follow-up: numbers we need to size each drop-off, places where the map doesn’t yet show how the process works, and questions that apply across the whole journey. Corrections to anything else on the map are welcome.</p>
+  <p class="sub">Two kinds of follow-up: numbers we need to size each drop-off, and possibilities worth exploring. Corrections to anything else on the map are welcome.</p>
   <h3 class="qhead">Data needed</h3>
   <ol class="qlist" id="qData"></ol>
-  <h3 class="qhead">Map clarity: how the process works</h3>
-  <ol class="qlist" id="qMap"></ol>
-  <h3 class="qhead">Across the journey</h3>
-  <ol class="qlist" id="qGen"></ol>
+  <h3 class="qhead">Exploring possibilities</h3>
+  <ol class="qlist" id="qExplore"></ol>
 </section>
 
 <section class="wrap block two" aria-labelledby="h-next">
@@ -391,7 +361,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     <ul class="dates">
       <li><b>Ongoing</b><span>Third Sector follows up one-on-one on the points to confirm.</span></li>
       <li><b>Oct 15</b><span>Draft map shared with the working group for reactions.</span></li>
-      <li><b>Oct 20</b><span><strong class="due">All client feedback on the draft maps is due.</strong> Use the Comment button on any step, or Give feedback on this map at the top of the page.</span></li>
       <li><b>Oct 30</b><span>Refined map delivered.</span></li>
     </ul>
     <p class="muted" style="margin-top:10px">No participants or providers took part in the session, so the participant lane and the provider lane reflect staff views. Roles are inferred from introductions; comments are attributed by role, not by name.</p>
@@ -412,7 +381,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 <script>
 (function () {
   "use strict";
-  var MAP_NAME = "Client Journey Map";
 
   /* ---------- content ---------- */
   var LANES = [
@@ -427,13 +395,14 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { k: "A", name: "Ways in: three doors", from: 0, to: 2 },
     { k: "B", name: "Interview: picks training options", from: 3, to: 5 },
     { k: "C", name: "Referral and first provider contact: where most people are lost", from: 6, to: 10 },
-    { k: "D", name: "Orientation: program and expectations", from: 11, to: 12 },
-    { k: "E", name: "Needs assessment and fit; training and supports start", from: 13, to: 16 },
-    { k: "F", name: "Participation and completion", from: 17, to: 19 },
-    { k: "G", name: "Finding work and job retention", from: 20, to: 22 }
+    { k: "D", name: "Orientation and fit", from: 11, to: 13 },
+    { k: "E", name: "Needs assessment, supports, and training start", from: 14, to: 16 },
+    { k: "F", name: "Participation and completion", from: 17, to: 20 },
+    { k: "G", name: "Finding work and job retention", from: 21, to: 23 }
   ];
   var R = { dir: "SNAP E&T director", mgr: "SNAP E&T manager", con: "E&T consultant", elig: "LDH eligibility supervisor", ldh: "LDH SNAP staff" };
   function it(t, by) { return { t: t, by: by }; }
+  var RQ = R.mgr + "; answers to map questions";
 
   var NODES = [
     /* ===== participant lane ===== */
@@ -441,9 +410,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       who: "Participant",
       notes: [it("Applies online through the LDH website (CAFE-SSP), by phone, or on paper.", R.ldh),
               it("Most people are focused on getting food benefits. Unless they already know about E&T, it first comes up at the eligibility interview.", "Working-session board"),
-              it("SNAP community partners and outreach agencies can help with the application.", R.ldh)],
-      pain: [it("Many people engage late. They know the work requirement, but often wait until the second or third month, when their case is about to close, then rush to enroll.", R.dir + "; " + R.mgr)],
-      askmap: [it("Door 1: when community partners help someone apply, do they screen for E&T? The draft map says no screening; the October 6 board says screening is built into that help.")] },
+              it("SNAP community partners and outreach agencies can help with the application.", R.ldh),
+              it("Community partners can help someone apply, but they don’t screen for E&T. Only SNAP eligibility staff can.", RQ)] },
     { id: "p_d2", lane: 0, col: 1, row: 1, type: "start", doors: [2], label: "Goes to a provider for a specific program, such as CDL, and hears about E&T there",
       who: "Participant", feel: ["😥"],
       notes: [it("People come in for a specific program. The provider or partner introduces SNAP E&T while delivering its existing services: what it is and how it helps.", R.dir + "; working-session board"),
@@ -470,22 +438,29 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
               it("They don’t learn which provider they’ll be referred to. Several providers can offer the same service, so referrals are assigned round-robin once the case is authorized.", R.mgr),
               it("No needs assessment happens here. The script doesn’t ask about barriers, supports such as transportation or child care, or prerequisites such as a clear driver’s license.", R.elig + "; " + R.ldh)],
       pain: [it("No needs assessment at the interview, so people can pick programs they can’t get to or can’t enter.", R.elig + "; " + R.ldh),
-             it("Mailed notices still show a mix of agency names, so people aren’t sure whom to contact after an interview with LDH.", R.mgr)] },
+             it("Mailed notices still show a mix of agency names, so people aren’t sure whom to contact after an interview with LDH.", R.mgr)],
+      explore: [it("Could people pick among the possible providers? They may have preferences based on location or other factors. If not, could they at least learn at the interview which provider will call them, so they know whom to expect a call from?")] },
     { id: "d_yes", lane: 0, col: 5, type: "decision", label: "Says yes to E&T?",
       who: "Participant",
       notes: [it("E&T is voluntary in Louisiana. The module records whether the person is interested and which options they pick.", R.ldh),
               it("If they say yes, the referral waits until the case is authorized.", R.ldh)],
       pain: [it("Most people are focused on getting food benefits, and E&T is new to many of them.", R.ldh + "; working-session board"),
-             it("Some are overwhelmed or dealing with other things during a 45-minute interview and don’t take E&T in.", R.ldh)],
+             it("Some are overwhelmed or dealing with other things during a 45-minute interview and don’t take E&T in.", R.ldh),
+             it("Many people don’t show interest in E&T until their case is about to close. They know the work requirement, but often wait until the second or third month, then rush to enroll.", R.dir + "; " + R.mgr)],
       ask: [it("How many people say no to E&T at the interview?")] },
     { id: "x_noref", lane: 0, col: 5, row: 1, type: "exit", label: "Leaves without a referral; some come back later through the help line, an office, or the E&T email",
       who: "Participant",
       notes: [it("Some people hear about E&T later, or know someone who went through it, and come back asking about it.", R.ldh),
-              it("Many ABAWDs come back in the second or third month, when their case is about to close.", R.dir)] },
+              it("Many ABAWDs come back in the second or third month, when their case is about to close.", R.dir),
+              it("If the person says no at the SNAP interview, the “No” is recorded in the case, the eligibility worker usually adds it to the case notes, and no referral is made to SNAP E&T.", RQ),
+              it("If the person says no in a reverse-referral screening, the “No” is recorded in LIGHT and SNAP Works sends the provider an “Unsuccessfully Screened” informational task.", RQ)],
+      pain: [it("Some people don’t express interest in E&T until they’re about to lose benefits.", "Feedback on the draft map")],
+      explore: [it("When someone comes back, how quickly can they be engaged? If they were referred to SNAP E&T before, how long does that referral stay active, and is their earlier screening still valid? Are there online options they can choose right away to meet the requirement? (JobReady IL is one example.)")] },
     { id: "p_wait", time: "About a week for the case to be authorized, then up to 10 days for the provider’s call.", lane: 0, col: 6, type: "step", label: "Hears nothing while the referral is processed",
       who: "Participant", feel: ["😕 Left waiting with no contact for 2+ weeks"],
       notes: [it("Authorization can take about a week after the interview. The provider then has 10 days to make first contact.", R.mgr),
-              it("When verification is in at the interview, the case can be authorized the same day and a provider can call that week.", R.ldh)],
+              it("When verification is in at the interview, the case can be authorized the same day and a provider can call that week.", R.ldh),
+              it("When a screening is requested (Doors 2 and 3), the provider is usually already in touch with the person while it’s pending.", RQ)],
       pain: [it("Two weeks or more can pass between the interview and the first call. People may have stopped thinking about E&T by then.", R.mgr)] },
     { id: "p_call", lane: 0, col: 8, type: "step", label: "Gets a call from the provider",
       who: "Participant", feel: ["😕 Confused about why they’re being called", "😥 Worried about losing their benefits"],
@@ -494,6 +469,9 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       pain: [it("Many don’t remember telling LDH they were interested in E&T, or never linked the interview to the call.", R.dir),
              it("Confused about why the provider is calling.", R.dir + "; " + R.elig + "; " + R.con),
              it("Worried their SNAP benefits are at risk if they don’t take part.", R.dir)] },
+    { id: "x_noreach", lane: 0, col: 7, row: 1, type: "exit", label: "Doesn’t answer, or the number no longer works",
+      who: "Participant",
+      pain: [it("Many people don’t answer calls from unknown numbers, or their phone line has been disconnected.", "Feedback on the draft map")] },
     { id: "d_still", lane: 0, col: 9, type: "decision", label: "Still interested when the provider calls?",
       who: "Participant",
       notes: [it("If not, the provider delinks the referral and SNAP Works sends it to the person’s second choice. If that provider is declined too, a re-referral task goes to the SNAP E&T unit.", R.dir),
@@ -503,22 +481,22 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
              it("Said yes only to get through the interview.", R.mgr),
              it("Has found a job since the interview.", R.mgr),
              it("Two weeks or more have passed since the interview.", R.mgr),
-             it("Loses interest once they are screened.", R.con)],
-      ask: [it("Of the people providers reach, how many say they’re no longer interested?")] },
-    { id: "p_needs", lane: 0, col: 13, type: "step", label: "Talks with the provider about their barriers, needs, and skills",
+             it("Loses interest once they are screened.", R.con)] },
+    { id: "p_needs", lane: 0, col: 14, type: "step", label: "Talks with the provider about their barriers, needs, and skills",
       who: "Participant",
-      notes: [it("Usually comes after orientation. The provider uses the assessment to identify barriers and see whether the person is a good fit.", R.con),
+      notes: [it("Usually comes after orientation. The provider uses the assessment to identify barriers and needs.", R.con),
               it("This is the first time anyone asks about the person’s barriers and needs. The eligibility interview doesn’t.", R.con + "; " + R.mgr),
-              it("It is often where people learn that the supports they need aren’t available, or that the program isn’t a fit. Example: of 100 people interested in CDL, only about 50 have a driver’s license.", R.mgr + "; " + R.dir),
+              it("Sometimes this is where people learn that the supports they need aren’t available, or that the program isn’t a fit.", R.mgr + "; " + R.dir + "; updated in feedback on the draft map"),
               it("For programs at a physical site, transportation often decides it. Rural parishes have few sites and little rideshare.", R.mgr)],
       pain: [it("If the person moves to a second provider, they may repeat the assessment, because the second provider can’t see the first provider’s.", R.mgr)] },
-    { id: "d_fit", lane: 0, col: 14, type: "decision", label: "Good fit, with the supports they need?",
+    { id: "d_fit", lane: 0, col: 13, type: "decision", label: "Good fit for the program?",
       who: "Participant",
-      notes: [it("If not, the provider records a provider determination and delinks the referral, which goes to the person’s second choice. Some providers help with a prerequisite, such as a license, or steer the person to another program.", R.dir + "; " + R.mgr)],
+      notes: [it("Providers give detailed information about the program up front so they can tell whether the person is a good fit. Sometimes they learn during the assessment that the person isn’t a fit.", R.mgr + "; feedback on the draft map"),
+              it("If not, the provider records a provider determination and delinks the referral, which goes to the person’s second choice. Some providers help with a prerequisite, such as a license, or steer the person to another program.", R.dir + "; " + R.mgr)],
       pain: [it("Doesn’t meet a prerequisite, such as a clear driver’s license for CDL. In one example, only about 50 of 100 people interested in CDL had a license.", R.mgr + "; " + R.dir),
              it("Can’t get to a physical site. Rural parishes have few sites and little rideshare.", R.mgr),
              it("Needs help E&T can’t cover, such as paying fines to clear a license.", R.mgr)],
-      ask: [it("How many people are found not to be a fit at the needs assessment, and for which reasons?")] },
+      ask: [it("How many people are found not to be a fit, before or during the assessment, and for which reasons?")] },
     { id: "p_orient", lane: 0, col: 11, type: "step", label: "Learns the program’s requirements, what’s expected, and what success looks like",
       who: "Participant",
       notes: [it("Providers usually hold orientation first, before the needs assessment.", R.con),
@@ -534,14 +512,14 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       ask: [it("How many people don’t start the training after orientation, and why?")] },
     { id: "x_orient", lane: 0, col: 12, row: 1, type: "exit", label: "Doesn’t start the training after orientation",
       who: "Participant" },
-    { id: "p_begin", time: "Next day with a virtual provider; the next cohort at most colleges.", lane: 0, col: 15, type: "step", label: "Begins classes or work experience in the program they chose",
+    { id: "p_begin", time: "Next day with a virtual provider; the next cohort at most colleges.", lane: 0, col: 16, type: "step", label: "Begins classes or work experience in the program they chose",
       who: "Participant",
       notes: [it("Virtual providers can almost always start someone the next day. Most educational providers start cohorts at set times.", R.mgr),
               it("Some providers build job search into their other components. A few offer it on its own.", R.mgr)] },
-    { id: "p_support", lane: 0, col: 16, type: "step", label: "Uses supports like bus passes, gas money, or rideshare",
+    { id: "p_support", lane: 0, col: 15, type: "step", label: "Is offered supports like bus passes, gas money, or rideshare before enrolling",
       who: "Participant",
-      askmap: [it("When can supports begin: during assessment, at orientation, or after enrollment?")],
-      notes: [it("Providers must offer all the supportive services they have. People aren’t expected to ask.", R.mgr),
+      notes: [it("Providers offer supportive services after the assessment and before enrollment.", R.mgr + "; feedback on the draft map"),
+              it("Providers must offer all the supportive services they have. People aren’t expected to ask.", R.mgr),
               it("Transportation help varies by provider: bus passes around New Orleans, gas and buses in Southwest Louisiana, a gas-station arrangement near Baton Rouge, and rideshare. Car repairs aren’t covered.", R.mgr)],
       pain: [it("In rural parishes physical access is limited and rideshare is hard to find. Virtual providers get the largest share of enrollment because they are easy to reach.", R.mgr)] },
     { id: "p_attend", lane: 0, col: 17, type: "step", label: "Goes to the training regularly",
@@ -553,26 +531,27 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       pain: [it("Finds a job and stops showing up. The provider may only learn of it when they lose the job and call back.", R.mgr + "; " + R.con),
              it("Loses interest, or realizes the training isn’t what they want.", R.con),
              it("Loses SNAP eligibility or is no longer an ABAWD. More people than usual left for this reason last year.", R.mgr)],
-      ask: [it("How many people stop attending the training, and why?")],
-      askmap: [it("When someone leaves SNAP (by choice or because they lose benefits) or finds work while they still have E&T services to complete, who is notified in each case, and what happens to their E&T services?")] },
+      ask: [it("How many people stop attending the training, and why?")] },
     { id: "x_stop", lane: 0, col: 18, row: 1, type: "exit", label: "Stops going to the training",
       who: "Participant",
       notes: [it("LA Works encourages providers to keep contacting someone for a full calendar month before closing them out, in case benefits or issues at home are the cause.", R.mgr)] },
     { id: "p_end", lane: 0, col: 19, type: "step", label: "Finishes the program they chose",
       who: "Participant",
       notes: [it("A rough guess is that 60 to 70% finish training. The manager didn’t have the figure offhand.", R.mgr)],
-      ask: [it("What share of people who start a training complete it?")],
-      askmap: [it("What happens when someone completes training without a job, or finds work before completing?")] },
-    { id: "p_findjob", lane: 0, col: 20, type: "step", label: "Gets a job, during or after the training",
+      ask: [it("What share of people who start a training complete it?")] },
+    { id: "p_cred", lane: 0, col: 20, type: "step", label: "After the training, earns a certification and/or credential, where the program leads to one",
+      who: "Participant",
+      notes: [it("Completing training can lead to a certification and/or credential, which the person attains after the training.", R.mgr + "; feedback on the draft map")] },
+    { id: "p_findjob", lane: 0, col: 21, type: "step", label: "Gets a job, during or after the training",
       who: "Participant",
       notes: [it("Some people find work while still in training. Others find it after they finish.", R.mgr + "; " + R.con)],
       pain: [it("People who find work during training often just stop showing up, so the provider may not know they’re employed.", R.mgr)] },
-    { id: "p_retain", time: "At least 30 days, up to 90.", lane: 0, col: 21, type: "step", label: "If they take it up, checks in with the provider about how the new job is going",
+    { id: "p_retain", time: "At least 30 days, up to 90.", lane: 0, col: 22, type: "step", label: "If they take it up, checks in with the provider about how the new job is going",
       who: "Participant",
       notes: [it("Every provider must offer job retention this year: at least 30 days, up to 90.", R.mgr),
               it("What retention looks like varies. A few providers are very thorough; others check in weekly or monthly.", R.mgr)],
       ask: [it("Providers must offer retention support, but does everyone who finds a job receive it, and how many do?")] },
-    { id: "p_close", lane: 0, col: 22, type: "end", label: "If the job ends, may come back to the provider for help",
+    { id: "p_close", lane: 0, col: 23, type: "end", label: "If the job ends, may come back to the provider for help",
       who: "Participant",
       notes: [it("Providers often learn someone found work only when that person loses the job and calls back for help.", R.mgr)] },
     { id: "e_online", lane: 1, col: 0, row: 0, type: "system", sys: "CAFE-SSP", doors: [1], label: "Online applications go round-robin to an eligibility worker, who schedules the interview",
@@ -587,11 +566,19 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       works: [it("ABAWD rules are repeated: when rights and responsibilities are read, on the interview screen, in work-requirement notices, and by providers. Staff say people know the rule.", R.ldh + "; " + R.elig + "; " + R.dir)] },
     { id: "e_script", lane: 1, col: 4, type: "system", sys: "LIGHT", label: "E&T script and module explain E&T and record interest and choices",
       who: "LDH eligibility worker",
-      notes: [it("Louisiana’s program is voluntary. The worker explains E&T and the module records whether the person is interested and which options they pick.", R.ldh)],
+      notes: [it("Louisiana’s program is voluntary. The worker explains E&T and the module records whether the person is interested and which options they pick.", R.ldh),
+              it("Only SNAP eligibility staff can screen for E&T: at the SNAP interview, at redetermination, or in a reverse-referral screening.", RQ),
+              it("The worker can select the model and service the person picks, but not a specific provider.", RQ)],
       works: [it("E&T is built into the interview flow, so workers have a script and a module to check off interests, with no extra paperwork.", R.elig + "; " + R.ldh)],
       pain: [it("The script doesn’t ask about prerequisites, such as a clear driver’s license for CDL. People can pick programs they can’t enter and bounce to re-referral.", R.elig + "; " + R.ldh + "; " + R.mgr),
              it("System fixes are slow. A change requested in 2024 is still pending.", R.mgr)],
-      plan: [it("Near term: train workers to ask screening questions, and add a prerequisite column to the provider and service list for quick reference. Later: build it into provider selection, possibly for the next fiscal year. Building it into the system would be about a $250,000 change.", R.ldh + "; " + R.mgr)] },
+      plan: [it("Near term: train workers to ask screening questions, and add a prerequisite column to the provider and service list for quick reference. Later: build it into provider selection, possibly for the next fiscal year. Building it into the system would be about a $250,000 change.", R.ldh + "; " + R.mgr)],
+      explore: [it("Could fit and interest be gauged during the eligibility interview and E&T screening, before the provider makes contact? Do eligibility staff have, or could they build, strengths-based and motivational interviewing skills to help with this?")] },
+    { id: "e_rrscreen", lane: 1, col: 5, row: 1, type: "step", doors: [2, 3], label: "Screens the person for E&T after a screening request in SNAP Works",
+      who: "LDH eligibility staff",
+      notes: [it("A provider or LA Works consultant requests this screening in SNAP Works when the person has no completed E&T referral.", RQ),
+              it("If the person says yes, SNAP Works sends the referral straight to the provider as a “Referral Actionable task.”", RQ),
+              it("If the person says no, the “No” is recorded in LIGHT and SNAP Works sends the provider an “Unsuccessfully Screened” informational task.", RQ)] },
     { id: "e_auth", lane: 1, col: 6, type: "system", sys: "SNAP Works", label: "Authorizes the case; the E&T referral goes to SNAP Works",
       who: "LDH eligibility worker", time: "Same day as the interview when verification is in; often about a week.",
       notes: [it("“Authorized” means the SNAP case is complete and eligible. The E&T referral is submitted to SNAP Works at authorization.", R.dir + "; " + R.ldh),
@@ -610,14 +597,16 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
              it("Counts of ABAWD participants cut off for missing hours aren’t available.", R.mgr)] },
     { id: "l_email", lane: 2, col: 2, type: "step", doors: [3], label: "Two consultants answer E&T emails and hand people to a provider",
       who: "E&T consultants (two dedicated to the inbox)",
-      notes: [it("They ask which parish the person lives in and what they’re interested in, send provider names, locations, and services, then make a warm handoff to the provider the person chooses. If needed, the reverse referral is done in the system.", R.dir),
-              it("Staff reach out to LDH to confirm the person is eligible.", "Working-session board")],
-      works: [it("Staff reported stronger engagement and enrollment among people who reach out this way than among people on direct referral.", R.dir)],
-      askmap: [it("Door 3, E&T email: after the consultants’ warm handoff, how does the referral get into SNAP Works, and does the person still wait for the provider’s first call?")] },
-    { id: "l_watch", lane: 2, col: 4, type: "step", doors: [2], label: "Watches the application after a provider’s heads-up",
+      notes: [it("They ask which parish the person lives in and what they’re interested in, send provider names, locations, and services, then make a warm handoff to the provider the person chooses.", R.dir),
+              it("Staff reach out to LDH to confirm the person is eligible.", "Working-session board"),
+              it("Before the handoff, the LA Works consultant checks SNAP Works for a completed E&T referral. If there is one, the provider can start right away. If there isn’t, the consultant creates a screening request in SNAP Works and assigns it to the provider.", RQ),
+              it("While the screening is pending, the provider usually contacts the person to get started. SNAP eligibility staff complete the screening, and SNAP Works then sends the referral straight to the provider as a “Referral Actionable task.” The provider then moves on to SNAP E&T enrollment.", RQ)],
+      works: [it("Staff reported stronger engagement and enrollment among people who reach out this way than among people on direct referral.", R.dir)] },
+    { id: "l_watch", lane: 2, col: 4, type: "step", doors: [2], label: "Checks the case and makes sure the referral goes to the provider who sent the heads-up",
       who: "LA Works E&T staff",
-      notes: [it("When a provider says someone who isn’t on SNAP may want E&T, LA Works watches the application after the person submits it.", R.mgr)],
-      askmap: [it("Door 2, not on SNAP yet: once the person applies, does the referral go back to the same provider, or through the round-robin like Door 1?")] },
+      notes: [it("When a provider says someone who isn’t on SNAP may want E&T, LA Works watches the application after the person submits it.", R.mgr),
+              it("The LA Works consultant checks the case periodically. If and when the case is authorized, the consultant makes sure the referral is assigned to the provider who sent the heads-up.", RQ),
+              it("Without that step, the referral may not go back to the same provider. The eligibility worker can select the model and service, but not a specific provider.", RQ)] },
     { id: "l_cap", lane: 2, col: 7, type: "step", label: "Sets provider capacity each year and can pause a backlogged provider",
       who: "SNAP E&T manager",
       notes: [it("Providers say how many people they can serve before the fiscal year. It goes in the state plan.", R.mgr),
@@ -632,11 +621,12 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       works: [it("The monthly report gives consultants a check on participation and flags people who have gone quiet.", R.dir + "; " + R.mgr)] },
     { id: "a_walk", lane: 3, col: 2, type: "step", doors: [3], label: "AJC-based consultant explains E&T, checks eligibility, contacts a provider",
       who: "E&T consultant stationed in an AJC",
-      notes: [it("When a walk-in asks about SNAP E&T, the consultant explains the program, finds out their interests, checks eligibility, and contacts the provider or consultant to check fit and availability. The consultant is often the first person they speak to before they reach a provider.", R.con + "; " + R.dir),
-              it("AJC staff reach out to LDH to confirm the person is eligible.", "Working-session board")],
+      notes: [it("When a walk-in asks about SNAP E&T, the consultant explains the program, finds out their interests, checks eligibility, and contacts the provider or consultant to check fit and availability. She is often the first person they speak to before they reach a provider.", R.con + "; " + R.dir),
+              it("AJC staff reach out to LDH to confirm the person is eligible.", "Working-session board"),
+              it("Before the handoff, the AJC-based E&T consultant checks SNAP Works for a completed E&T referral. If there is one, the provider can start right away. If there isn’t, the consultant creates a screening request in SNAP Works and assigns it to the provider.", RQ),
+              it("While the screening is pending, the provider usually contacts the person to get started. SNAP eligibility staff complete the screening, and SNAP Works then sends the referral straight to the provider as a “Referral Actionable task.” The provider then moves on to SNAP E&T enrollment.", RQ)],
       plan: [it("Integrated case management is envisioned but not in place for SNAP E&T. The vision: one person who knows SNAP E&T and WIOA, asks first whether the person receives SNAP, and hands off warmly so people tell their story once. SNAP eligibility stays with eligibility workers. Where it lands on this map isn’t defined yet.", R.ldh + "; " + R.dir),
-             it("The AJC vision: fewer handoffs, one point of contact across funding streams, back-end cross-agency referral through co-location, and less application material, so people don’t retell their story.", "Working-session board")],
-      askmap: [it("Door 3, AJC walk-in: after the AJC consultant contacts a provider, who makes the referral in SNAP Works: the AJC consultant, LA Works, or LDH?")] },
+             it("The AJC vision: fewer handoffs, one point of contact across funding streams, back-end cross-agency referral through co-location, and less application material, so people don’t retell their story.", "Working-session board")] },
     { id: "a_wioa", lane: 3, col: 15, type: "unknown", label: "Co-enrolled in WIOA or other programs?",
       who: "AJC staff",
       notes: [it("The facilitation guide asks whether people are co-enrolled in WIOA at this stage. It didn’t come up in the session.")] },
@@ -645,20 +635,26 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       notes: [it("Wraparound supports came up only as something providers offer.")] },
     { id: "v_walkin", lane: 4, col: 1, type: "step", sys: "SNAP Works", doors: [2], label: "Introduces E&T and checks SNAP status in SNAP Works",
       who: "Provider staff",
-      notes: [it("People come in for a specific program. The provider introduces SNAP E&T, then enters the person’s information to see whether they receive SNAP. Contracted providers can see this.", R.dir + "; " + R.mgr)] },
+      notes: [it("People come in for a specific program. The provider introduces SNAP E&T, then enters the person’s information to see whether they receive SNAP. Contracted providers can see this.", R.dir + "; " + R.mgr)],
+      works: [it("Providers have access to SNAP Works, so they can check right away whether the person is already enrolled in SNAP.", R.mgr + "; feedback on the draft map")],
+      pain: [it("Someone eager to start now has to wait until their SNAP is approved before they can be referred.", "Feedback on the draft map")],
+      explore: [it("If someone was screened before, could a flag in SNAP Works let them enroll right away?")] },
     { id: "d_snap", lane: 4, col: 2, type: "decision", doors: [2], label: "Receives SNAP?",
       who: "Provider staff" },
-    { id: "v_rryes", lane: 4, col: 3, row: 0, type: "step", sys: "SNAP Works", doors: [2], label: "Reverse referral in SNAP Works (steps unclear)",
+    { id: "v_rryes", lane: 4, col: 3, row: 0, type: "step", sys: "SNAP Works", doors: [2], label: "Checks SNAP Works for a completed referral; if there isn’t one, requests a reverse-referral screening",
       who: "Provider staff",
-      notes: [it("If the person already gets SNAP, the provider can do the reverse referral through the system.", R.mgr)],
-      askmap: [it("Door 2, already on SNAP: how does the reverse referral become official, and who authorizes it? Does the person then go straight to that provider’s orientation?")] },
+      notes: [it("If the person already gets SNAP, the provider checks SNAP Works for a completed E&T referral. If there is one, the provider can start right away. If there isn’t, the provider creates a screening request in SNAP Works, called a reverse referral.", RQ),
+              it("While the screening is pending, the provider shares information about its program and gauges the person’s interest.", RQ),
+              it("SNAP eligibility staff complete the screening. SNAP Works then sends the referral straight to the provider as a “Referral Actionable task,” and the provider moves on to SNAP E&T enrollment.", RQ)] },
     { id: "v_rrno", lane: 4, col: 3, row: 1, type: "step", doors: [2], label: "Shares how to apply and tips off LA Works",
       who: "Provider staff",
       notes: [it("Providers point the person to the LDH website, which has videos on how to apply. Some partner with SNAP community partners who can help the person apply.", R.dir),
-              it("They also send LA Works a heads-up that the person may want E&T.", R.mgr)] },
+              it("They also let LA Works know, informally, that the person may be eligible and wants E&T. There’s no SNAP Works task or form for this heads-up.", R.mgr + "; feedback on the draft map"),
+              it("The provider tells the LA Works consultant about the pending application, verbally or by email.", RQ)] },
     { id: "v_task", lane: 4, col: 6, type: "system", sys: "SNAP Works", label: "Sees the referral task on the SNAP Works dashboard",
       who: "Provider staff",
-      notes: [it("Each morning, providers see the direct referrals from cases certified the day before, assigned round-robin among providers who offer the service the person picked.", R.mgr)] },
+      notes: [it("Each morning, providers see the direct referrals from cases certified the day before, assigned round-robin among providers who offer the service the person picked.", R.mgr),
+              it("When a provider or LA Works consultant requested a screening, the completed referral comes straight to that provider as a “Referral Actionable task.”", RQ)] },
     { id: "v_call", lane: 4, col: 7, type: "step", label: "Calls within 10 days: 2+ tries, 1 by phone; logs each referral",
       who: "Provider staff", time: "Within 10 days of the referral. A busy virtual provider may not call until day 8 or 9.",
       notes: [it("Providers must try at least twice, once by phone, and keep a log with the contact date, status, ABAWD status, and follow-up.", R.dir),
@@ -666,13 +662,16 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       pain: [it("Add the wait between interview and authorization and the gap before the first call can reach two weeks or more.", R.mgr)] },
     { id: "v_delink", lane: 4, col: 9, row: 1, type: "step", sys: "SNAP Works", label: "Delinks the referral; SNAP Works sends it to the 2nd choice",
       who: "Provider staff",
-      notes: [it("A provider delinks when the person declines or isn’t a fit. If the second provider also declines, a re-referral task goes to the SNAP E&T unit.", R.dir)],
-      askmap: [it("What happens if there is no second choice, or neither provider is a fit?")] },
+      notes: [it("A provider delinks when the person declines or isn’t a fit. If the second provider also declines, a re-referral task goes to the SNAP E&T unit.", R.dir)] },
     { id: "v_orient", lane: 4, col: 11, type: "system", sys: "SNAP Works", label: "Holds orientation: goes over the program and expectations",
       who: "Provider staff",
-      notes: [it("Providers usually hold orientation first, going over the program and expectations, then do the assessment to identify barriers and see whether the person is a good fit.", R.con),
+      notes: [it("Providers usually hold orientation first, going over the program and expectations, then do the assessment to identify barriers and needs.", R.con),
               it("The SNAP Works workflow is chronological: providers have to complete orientation, assessment, employment plan, component enrollment, and component tracking in that order. They can’t skip ahead.", R.mgr)] },
-    { id: "v_assess", lane: 4, col: 13, type: "system", sys: "SNAP Works", label: "Records barriers, needs, and a skills baseline; identifies supportive services to offer",
+    { id: "v_fitinfo", lane: 4, col: 12, type: "step", label: "Gives detailed information about the program to see whether the person is a good fit",
+      who: "Provider staff",
+      notes: [it("Providers are expected to give detailed information about the program so they can tell whether the person is a good fit.", R.mgr + "; feedback on the draft map"),
+              it("Sometimes providers learn only during the assessment that the person isn’t a good fit.", R.mgr + "; feedback on the draft map")] },
+    { id: "v_assess", lane: 4, col: 14, type: "system", sys: "SNAP Works", label: "Records barriers, needs, and a skills baseline; identifies supportive services to offer",
       who: "Provider staff",
       notes: [it("The assessment is done in SNAP Works, tab by tab. Skills set a baseline that providers update as the person finishes components.", R.mgr),
               it("At the assessment, providers identify barriers and needs, then must offer all the supportive services they have. People aren’t expected to ask.", R.mgr)],
@@ -681,21 +680,18 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       who: "Provider staff",
       notes: [it("Providers must try at least twice, once by phone, and keep a log with the contact date, status, ABAWD status, and follow-up.", R.dir),
               it("Being unreachable and declining are different outcomes, with potentially different follow-up, so the map shows them separately.")],
-      ask: [it("How many referrals can’t be reached after the provider’s attempts?")],
-      askmap: [it("How are unsuccessful contact attempts distinguished from a participant declining services?"),
-               it("When a provider can’t reach someone after the required attempts, what happens to the referral?")],
-      stubNo: true },
-    { id: "v_determ", lane: 4, col: 14, row: 2, type: "step", label: "Not a fit: records a provider determination and delinks, or steers the person elsewhere",
+      ask: [it("How many referrals can’t be reached after the provider’s attempts?"),
+            it("What does the contact gap look like? Of all referrals, how many don’t answer the phone, how many answer but say they’re not interested, and how many say they’re interested but don’t show up for orientation?")] },
+    { id: "v_determ", lane: 4, col: 13, row: 2, type: "step", label: "Not a fit: records a provider determination and delinks, or steers the person elsewhere",
       who: "Provider staff",
       notes: [it("Example: of 100 people interested in CDL, only about 50 have a driver’s license, so the rest can’t move forward. The provider records a provider determination.", R.mgr + "; " + R.dir),
-              it("Some providers help people get a license, but E&T can’t pay fines. Others steer people to a different program.", R.mgr)],
-      askmap: [it("What happens after a provider determines someone is not a fit, and who owns the next referral?")] },
-    { id: "v_enroll", lane: 4, col: 15, type: "step", sys: "SNAP Works", label: "Sets the employment plan, then enrolls the person in education or work experience",
+              it("Some providers help people get a license, but E&T can’t pay fines. Others steer people to a different program.", R.mgr)] },
+    { id: "v_enroll", lane: 4, col: 16, type: "step", sys: "SNAP Works", label: "Sets the employment plan, then enrolls the person in education or work experience",
       who: "Provider staff",
       notes: [it("The employment plan comes after the assessment. It sets a short-term goal, often the training, and a long-term goal, almost always employment.", R.mgr),
               it("All providers must offer education and/or work experience.", R.mgr)],
       plan: [it("New this year: every provider must also offer job retention.", R.mgr)] },
-    { id: "v_support", lane: 4, col: 16, type: "step", sys: "SNAP Works", label: "Offers supportive services and logs reimbursements",
+    { id: "v_support", lane: 4, col: 15, type: "step", sys: "SNAP Works", label: "Offers supportive services before enrollment; logs reimbursements as they’re used",
       who: "Provider staff",
       notes: [it("Providers enter each reimbursement with the amount, who received it, the reason, case notes, and supporting documents. This links to the invoicing map.", R.mgr)] },
     { id: "v_hours", lane: 4, col: 17, type: "step", sys: "SNAP Works", label: "Enters each person’s hours in SNAP Works every month",
@@ -706,10 +702,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "v_retry", lane: 4, col: 18, row: 1, type: "step", label: "Encouraged to keep trying to reach someone who stops coming for a full month before closing them out",
       who: "Provider staff",
       notes: [it("LA Works encourages providers to keep contacting someone for a full calendar month, in case benefits or issues at home are the cause.", R.mgr)],
-      works: [it("LA Works encourages providers to keep trying for a full month instead of closing someone out after one missed appointment.", R.mgr)],
-      askmap: [it("Do all providers keep contacting someone for a full month before closing them out?"),
-               it("How does the month of provider outreach connect to participant exit and case closure?")] },
-    { id: "v_retain", lane: 4, col: 21, type: "step", label: "Provides job retention for at least 30 days, up to 90",
+      works: [it("LA Works encourages providers to keep trying for a full month instead of closing someone out after one missed appointment.", R.mgr)] },
+    { id: "v_retain", lane: 4, col: 22, type: "step", label: "Provides job retention for at least 30 days, up to 90",
       who: "Provider staff",
       notes: [it("New this year, every provider must offer job retention.", R.mgr)],
       pain: [it("Thoroughness varies. A few providers are very thorough, while others check in weekly or monthly.", R.mgr)],
@@ -720,11 +714,11 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   var EDGES = [
     ["p_d1", "p_interview"], ["p_interview", "p_pick"], ["p_pick", "d_yes"], ["d_yes", "p_wait", { label: "Yes", seg: 0, above: true }],
     ["d_yes", "x_noref", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_wait", "p_call"], ["p_call", "d_still"],
-    ["d_still", "p_orient", { label: "Yes", seg: 0, above: true }], ["p_orient", "d_commit"], ["d_commit", "p_needs", { label: "Yes", seg: 0, above: true }],
-    ["p_needs", "d_fit"], ["d_fit", "p_begin", { label: "Yes", seg: 0, above: true }],
-    ["d_commit", "x_orient", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_begin", "p_support"],
-    ["p_support", "p_attend"], ["p_attend", "d_attend"], ["p_attend", "p_findjob", { kind: "alt", exit: "t", enter: "t", lift: 46, label: "Finds work during training", seg: 1 }], ["d_attend", "p_end", { label: "Yes", seg: 0, above: true }],
-    ["d_attend", "x_stop", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_end", "p_findjob"], ["p_findjob", "p_retain"], ["p_retain", "p_close"], ["p_retain", "v_retain", { exit: "B", enter: "t" }],
+    ["d_still", "p_orient", { label: "Yes", seg: 0, above: true }], ["p_orient", "d_commit"], ["d_commit", "d_fit", { label: "Yes", seg: 0, above: true }],
+    ["d_fit", "p_needs", { label: "Yes", seg: 0, above: true }], ["p_needs", "p_support"], ["p_support", "p_begin"],
+    ["d_commit", "x_orient", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }],
+    ["p_begin", "p_attend"], ["p_attend", "d_attend"], ["p_attend", "p_findjob", { kind: "alt", exit: "t", enter: "t", lift: 46, label: "Finds work during training", seg: 1 }], ["d_attend", "p_end", { label: "Yes", seg: 0, above: true }],
+    ["d_attend", "x_stop", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.35 }], ["p_end", "p_cred"], ["p_cred", "p_findjob"], ["p_findjob", "p_retain"], ["p_retain", "p_close"], ["p_retain", "v_retain", { exit: "B", enter: "t" }],
     // the three doors sit side by side, each a step lower, so every door's connectors leave from their own side
     ["p_d1", "e_online", { exit: "B", enter: "t" }],
     ["p_d2", "v_walkin", { exit: "B", enter: "t" }], ["p_d2", "p_pick", { exit: "r", enter: "B", dx1: -44 }], ["p_d3", "p_pick", { exit: "r", enter: "B", dx1: 44 }],
@@ -740,12 +734,21 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     ["p_orient", "v_orient", { exit: "B", enter: "t" }], ["p_needs", "v_assess", { exit: "B", enter: "t" }],
     ["d_fit", "v_determ", { kind: "loop", exit: "B", enter: "t", label: "No", seg: 0, at: 0.15 }],
     ["v_determ", "v_delink", { kind: "loop", exit: "l", enter: "b", label: "To 2nd choice", seg: 0, at: 0.3 }],
-    ["v_orient", "v_assess"], ["v_assess", "v_enroll"], ["v_enroll", "v_support"], ["v_support", "v_hours"], ["v_hours", "v_retain"], ["v_hours", "v_retry", { exit: "b", enter: "l" }],
-    ["v_hours", "l_review", { exit: "r", enter: "B" }]
+    ["v_orient", "v_fitinfo"], ["v_fitinfo", "v_assess"], ["v_assess", "v_support"], ["v_support", "v_enroll"], ["v_enroll", "v_hours"],
+    ["v_assess", "v_determ", { kind: "loop", exit: "b", enter: "r", label: "Sometimes not a fit", seg: 1 }],
+    ["v_reach", "x_noreach", { kind: "loop", exit: "t", enter: "r", dx0: -40, dy0: 28, label: "No", seg: 0, at: 0.5 }], ["v_hours", "v_retain"], ["v_hours", "v_retry", { exit: "b", enter: "l" }],
+    ["v_hours", "l_review", { exit: "r", enter: "B" }],
+    // reverse-referral screening: requests from the E&T email, AJC walk-in, and provider walk-in all feed one screening step
+    ["l_email", "e_rrscreen", { exit: "b", enter: "b", botY: 16, dx1: -14 }],
+    ["a_walk", "e_rrscreen", { exit: "r", enter: "b", dx1: -14 }],
+    ["v_rryes", "e_rrscreen", { exit: "r", enter: "b", dx1: 14 }],
+    ["e_rrscreen", "v_task", { exit: "r", enter: "t", label: "Yes", seg: 0, above: true }],
+    ["e_rrscreen", "x_noref", { kind: "loop", exit: "t", enter: "B", label: "No", seg: 0, at: 0.15 }],
+    ["l_watch", "v_task", { kind: "alt", exit: "r", enter: "t", dx1: -22, label: "Assigned to that provider", seg: 0, at: 0.75 }]
   ];
 
   // questions that apply across the whole journey rather than to one step
-  var QGEN = ["Which reported deadlines and rules reflect federal requirements, Louisiana policy, or provider practice?"];
+  var QGEN = [];
   // staff estimates that cover a stretch of the journey, not a single step: drawn as a bracket across that stretch
   var SPANS = [{ id: "span-referral-assessment", from: "p_wait", to: "p_needs",
     title: "STAFF ESTIMATE; PENDING DATA VALIDATION",
@@ -757,7 +760,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       { t: "The state-built SNAP E&T unit calls people who fall through the cracks.", by: R.elig, n: ["e_unit"] },
       { t: "ABAWD rules are repeated at the interview, in notices, and by providers.", by: R.ldh + "; " + R.elig + "; " + R.dir, n: ["e_rights"] },
       { t: "Monthly reports let consultants spot participants with no hours.", by: R.dir + "; " + R.mgr, n: ["l_review"] },
-      { t: "LDH and LA Works talk constantly and meet regularly.", by: R.elig + "; " + R.con + "; " + R.mgr, n: ["e_auth", "l_cap"] }
+      { t: "LDH and LA Works talk constantly and meet regularly.", by: R.elig + "; " + R.con + "; " + R.mgr, n: ["e_auth", "l_cap"] },
+      { t: "Providers have access to SNAP Works, so they can check right away whether someone is already enrolled in SNAP.", by: R.mgr + "; feedback on the draft map", n: ["v_walkin", "p_d2"] }
     ],
     pain: [
       { t: "The provider’s first call confuses people. They don’t recall E&T and ask whether their benefits are at risk.", by: R.dir + "; " + R.elig + "; " + R.con, n: ["p_call", "p_pick"] },
@@ -765,7 +769,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       { t: "The interview script doesn’t check prerequisites, so people pick programs they can’t enter.", by: R.elig + "; " + R.ldh + "; " + R.mgr, n: ["e_script", "p_pick", "p_needs"] },
       { t: "People who lose SNAP or find work stop attending, and LA Works can’t see the benefit outcome.", by: R.mgr + "; " + R.dir, n: ["p_attend", "e_update"] },
       { t: "Rural parishes have little physical access and rideshare.", by: R.mgr, n: ["p_support"] },
-      { t: "A second provider can’t see the first provider’s assessment.", by: R.mgr, n: ["p_needs", "v_assess"] }
+      { t: "A second provider can’t see the first provider’s assessment.", by: R.mgr, n: ["p_needs", "v_assess"] },
+      { t: "Someone eager to start now has to wait until their SNAP is approved before they can be referred.", by: "Feedback on the draft map", n: ["v_walkin", "p_d2"] }
     ],
     plan: [
       { t: "An automatic alert to the caseworker when an ABAWD logs under 80 hours starts this fiscal year.", by: R.mgr, n: ["e_abawd"] },
@@ -789,19 +794,18 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   var TITLE = {
     p_d1: "Applies for SNAP", p_d2: "Walks into a provider", p_d3: "Asks about E&T on their own", p_interview: "Has the eligibility interview", p_pick: "Picks training options", p_wait: "Waits to hear from a provider",
      p_orient: "Attends orientation", p_needs: "Has a needs assessment", p_findjob: "Finds a job", p_retain: "Offered job retention support", p_close: "Finishes retention",
-    p_begin: "Starts the training", p_support: "Uses supportive services", p_attend: "Attends the training", p_end: "Completes the training",
-    e_online: "Application reaches a worker", x_noref: "Leaves: no referral", x_stop: "Leaves: stops attending", v_retry: "Attrition/retention outreach for absent participants", x_orient: "Leaves: doesn’t start", e_change: "Adds E&T screening", e_rights: "Rights and responsibilities", e_script: "E&T script and module",
-    e_auth: "Authorizes the case", e_unit: "SNAP E&T unit follows up", e_abawd: "Under-80-hours alert", e_update: "Updates the case",
+    p_begin: "Starts the training", p_support: "Offered supportive services", p_attend: "Attends the training", p_end: "Completes the training", p_cred: "Earns a certification or credential",
+    e_online: "Application reaches a worker", x_noref: "Leaves: no referral", x_noreach: "Leaves: not reached", x_stop: "Leaves: stops attending", v_retry: "Attrition/retention outreach for absent participants", x_orient: "Leaves: doesn’t start", e_change: "Adds E&T screening", e_rights: "Rights and responsibilities", e_script: "E&T script and module",
+    e_rrscreen: "Reverse-referral screening", e_auth: "Authorizes the case", e_unit: "SNAP E&T unit follows up", e_abawd: "Under-80-hours alert", e_update: "Updates the case",
     l_email: "Answers E&T emails", l_watch: "Watches the application", l_cap: "Sets provider capacity",
     l_consult: "Provider check-ins", l_review: "Monthly component review",
     a_walk: "AJC walk-in", a_wioa: "WIOA co-enrollment", a_wrap: "AJC role in wraparound",
     v_walkin: "Provider walk-in", v_rryes: "Reverse referral", v_rrno: "Points to the application", v_task: "Sees the referral task",
-    v_call: "First contact", v_delink: "Delinks the referral", v_orient: "Holds orientation", v_assess: "Needs assessment in SNAP Works", v_determ: "Provider determination",
+    v_call: "First contact", v_delink: "Delinks the referral", v_orient: "Holds orientation", v_assess: "Needs assessment in SNAP Works", v_determ: "Provider determination", v_fitinfo: "Explains the program to check fit",
     v_enroll: "Employment plan and enrollment", v_support: "Supportive services", v_hours: "Logs monthly hours", v_retain: "Provides job retention"
   };
   // short on-map versions of each finding, same order as the full items (full text stays in the detail panel)
   var SHORT = {
-    p_d1: { pain: ["Many wait until their case is about to close (month 2 or 3) to engage"], ask: ["Clarify: do community partners screen for E&T when they help someone apply? Sources disagree"] },
     p_d3: { works: ["Self-referrers with a warm handoff enroll more"], ask: ["No counts by door yet"] },
     p_interview: { pain: ["E&T gets lost among everything else in the interview, so people don’t remember it later"], works: ["No extra paperwork: E&T is part of the same interview"] },
     p_pick: { pain: ["No one asks about barriers, supports, or prerequisites, so people can pick programs they can’t do", "Notices show mixed agency names, so people don’t know whom to contact"], ask: ["Are people told a provider will call? Does a notice name E&T?"] },
@@ -823,16 +827,15 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     a_walk: { plan: ["Integrated case management envisioned, not yet in place", "AJC vision: fewer handoffs, one contact across funding streams"] },
     a_wioa: { ask: ["Is anyone co-enrolled in WIOA or other programs?"] },
     a_wrap: { ask: ["Do AJCs or other programs play a role?"] },
-    v_rryes: { ask: ["How does it become official, and who authorizes it?"] },
     v_rrno: { ask: ["Any pathway beyond the application and a heads-up?"] },
     v_call: { pain: ["The provider’s 10 days come on top of up to a week for authorization"] },
     v_assess: { pain: ["A 2nd provider can’t see the 1st provider’s assessment, so it gets redone"] },
     v_enroll: { plan: ["New: every provider must offer job retention"] },
     v_retain: { pain: ["Retention quality varies: some providers are thorough, others check in monthly"], plan: ["Expansion under discussion; needs FNS approval"] }
   };
-  SHORT.d_yes = { pain: ["Focused on getting food benefits, so E&T doesn’t register", "Too overwhelmed or distracted in a 45-minute interview to take it in"], ask: ["How many say no here?"] };
-  SHORT.x_noref = { ask: ["Does anyone follow up with people who said no?"] };
-  SHORT.d_still = { pain: ["Doesn’t link the call to the interview, so doesn’t know why the provider is calling", "Fears losing SNAP if they say no", "Only said yes to get through the interview", "Has already found a job", "2+ weeks have passed since the interview", "Lost interest after being screened"], ask: ["How many can’t be reached at all?"] };
+  SHORT.d_yes = { pain: ["Focused on getting food benefits, so E&T doesn’t register", "Too overwhelmed or distracted in a 45-minute interview to take it in", "Doesn’t show interest until the case is about to close"], ask: ["How many say no here?"] };
+  SHORT.x_noref = { pain: ["Some don’t show interest until they’re about to lose benefits"], ask: ["Does anyone follow up with people who said no?"] };
+  SHORT.d_still = { pain: ["Doesn’t link the call to the interview, so doesn’t know why the provider is calling", "Fears losing SNAP if they say no", "Only said yes to get through the interview", "Has already found a job", "2+ weeks have passed since the interview", "Lost interest after being screened"] };
   SHORT.d_fit = { pain: ["Missing a prerequisite, like a clear license for CDL", "Can’t get to the training site: few sites and little rideshare in rural areas", "Needs help E&T can’t pay for, like license fines"], ask: ["How many leave here, and why?"] };
   SHORT.d_attend = { pain: ["Got a job and stopped coming, often without telling the provider", "Lost interest, or the training wasn’t what they wanted", "Lost SNAP, or is no longer an ABAWD and not required to take part"], ask: ["How often? Staff accounts differ"] };
   SHORT.d_commit = { pain: ["Expectations weren’t clear, so the requirements come as a surprise", "The training doesn’t match what they’re interested in", "No remote option, and they can’t get to an in-person site"], ask: ["How many leave here, and why? To confirm"] };
@@ -927,7 +930,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   function stageX1(i) { return i === STAGES.length - 1 ? W : PAD_L + (STAGES[i].to + 1) * COL_W; }
 
   var W, H, laneGeo = [], TBOX = [];
-  var NCOL = 23, TL = LANES.length - 1;
+  var NCOL = 24, TL = LANES.length - 1;
 
   function tagsOf(n) {
     var t = [];
@@ -1006,6 +1009,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     var ex = o.exit || "r", en = o.enter || "l";
     var p0 = anchor(a, ex), p1 = anchor(b, en);
     if (o.dx0) p0.x += o.dx0;
+    if (o.dy0) p0.y += o.dy0;
     if (o.dx1) p1.x += o.dx1;
     var hx = !vert(ex), hn = !vert(en);
     var pts;
@@ -1017,7 +1021,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       }
     } else if (!hx && !hn) {
       if (Math.abs(p0.x - p1.x) < 0.5) pts = [p0, p1];
-      else { var my = o.lift != null ? Math.min(p0.y, p1.y) - o.lift : (p0.y + p1.y) / 2; pts = [p0, { x: p0.x, y: my }, { x: p1.x, y: my }, p1]; }
+      else { var my = o.lift != null ? Math.min(p0.y, p1.y) - o.lift : (o.botY != null ? laneGeo[a.lane].top + laneGeo[a.lane].h - o.botY : (p0.y + p1.y) / 2); pts = [p0, { x: p0.x, y: my }, { x: p1.x, y: my }, p1]; }
     } else if (hx && !hn) pts = [p0, { x: p1.x, y: p0.y }, p1];
     else pts = [p0, { x: p0.x, y: p1.y }, p1];
     return pts.filter(function (p, i) { return i === 0 || Math.abs(p.x - pts[i - 1].x) + Math.abs(p.y - pts[i - 1].y) > 0.5; });
@@ -1060,7 +1064,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
   // one icon per kind of finding on the step's top edge (on a decision, along its upper-right edge); hover names it
   var TIP = { pain: "Pain points", works: "Working well", plan: "Planned changes", ask: "To confirm" };
-  function askCount(n) { return (n.ask ? n.ask.length : 0) + (n.askmap ? n.askmap.length : 0) + (n.type === "unknown" ? 1 : 0); }
+  function askCount(n) { return (n.ask ? n.ask.length : 0) + (n.askmap ? n.askmap.length : 0) + (n.explore ? n.explore.length : 0) + (n.type === "unknown" ? 1 : 0); }
   function findingBadges(n, g, x0, y0) {
     var present = ["pain", "works", "plan", "ask"].filter(function (k) { return k === "ask" ? askCount(n) > 0 : !!(n[k] && n[k].length); });
     present.forEach(function (k, i) {
@@ -1219,7 +1223,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     var gN = el("g", null, mapSvg);
     NODES.forEach(function (n) {
       var P = n.P, num = PNUM[n.id];
-      var g = el("g", { "class": "node " + (P ? "pn" : "other") + (n.id === selected ? " sel" : ""), id: "step-" + n.id, "data-comment-target": "", tabindex: 0, role: "button", "data-id": n.id, "data-doors": (n.doors || []).join(","), "aria-label": (P ? "Step " + num + ": " : "") + (n.title ? n.title + ". " : "") + n.label + " (" + LANES[n.lane].title + ")" }, gN);
+      var g = el("g", { "class": "node " + (P ? "pn" : "other") + (n.id === selected ? " sel" : ""), id: "step-" + n.id, "data-comment-target": "", tabindex: 0, role: "button", "data-id": n.id, "data-doors": (n.doors || []).join(","), "aria-label": (num ? "Step " + num + ": " : "") + (n.title ? n.title + ". " : "") + n.label + " (" + LANES[n.lane].title + ")" }, gN);
       var x0 = n.x - n.w / 2, y0 = n.y - n.h / 2;
       if (n.type === "decision") {
         el("path", { "class": "shape", d: "M" + n.x + "," + y0 + " L" + (n.x + n.w / 2) + "," + n.y + " L" + n.x + "," + (y0 + n.h) + " L" + x0 + "," + n.y + " Z", fill: P ? C.paper : C.other, stroke: P ? C.blue2 : C.grey, "stroke-width": P ? 4 : 1.25 }, g);
@@ -1493,15 +1497,37 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     plan: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#006E8F"/></svg>',
     ask: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/></svg>'
   };
+  var commentsNs = null, commentsOff = false;
   var DOORNAME = { 1: "SNAP application", 2: "Provider reverse referral", 3: "Asks on their own" };
 
-  function fbLabel(id) {
-    var e = byLink[id];
-    if (e) { var a = byId[e[0]], b = byId[e[1]]; return "Stage " + stageOf(a).k + " \u00b7 Connection: " + (a.title || a.label) + " \u2192 " + (b.title || b.label); }
-    var n = byId[id];
-    return "Stage " + stageOf(n).k + " \u00b7 " + stepName(n) + " (" + LANES[n.lane].title + ")";
+  // the feedback box: opens the claude.ai comment box pinned to this step or connector on the map
+  function commentBoxHtml(what) {
+    if (commentsNs) {
+      return '<div class="flagbox" id="cbox"><h4>Give feedback on this ' + what + '</h4>' +
+        '<p class="note">Your comment is pinned to this ' + what + ' on the map, where the working group can read it and reply. It helps to start with what kind it is: a correction, a pain point, something that works, or a question.</p>' +
+        '<div class="row"><button class="btn primary" type="button" id="openComp">Comment on this ' + what + '</button><span class="flagmsg" id="cMsg" role="status"></span></div></div>';
+    }
+    if (commentsOff) return '<p class="mini">Commenting works when the map is opened in claude.ai by someone with comment access to it.</p>';
+    return "";
   }
-  function openComposerFor(id) { fbOpen(fbLabel(id), document.getElementById("fbMsg")); }
+  function elFor(id) {
+    return byLink[id] ? document.getElementById(id.replace(":", "-")) : document.getElementById("step-" + id);
+  }
+  function openComposerFor(id) {
+    var target = elFor(id), msg = document.getElementById("cMsg");
+    if (!commentsNs || !target) return;
+    commentsNs.openComposer({ element: target }).then(function (r) {
+      if (msg) msg.textContent = r && r.opened ? "Type your comment in the box that opened on the map." : "Finish or close the comment you already have open, then try again.";
+    }).catch(function (err) {
+      var code = err && err.code;
+      if (code === "rate_limited") { if (msg) msg.textContent = "Wait a moment, then try again."; return; }
+      if (code === "invalid" || code === "upstream_error") { if (msg) msg.textContent = "Couldn’t open the comment box. Try again."; return; }
+      // unavailable, not granted, or switched off for this view: hide the buttons from now on
+      commentsNs = null; commentsOff = true;
+      document.getElementById("mapBox").classList.remove("canflag");
+      renderDetail();
+    });
+  }
   function linkKind(e) {
     var a = byId[e[0]], b = byId[e[1]], k = (e[2] && e[2].kind) || "flow";
     if (k === "loop") return (a.P || b.P) ? "Participant declines or isn’t a fit" : "Re-referral loop";
@@ -1509,7 +1535,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     if (a.P && b.P) return "Participant’s path";
     return "Handoff";
   }
-  function stepName(n) { return (n.P ? "Step " + PNUM[n.id] + " · " : "") + (n.title || n.label); }
+  function stepName(n) { return (PNUM[n.id] ? "Step " + PNUM[n.id] + " · " : "") + (n.title || n.label); }
   function renderLinkDetail(e) {
     var a = byId[e[0]], b = byId[e[1]], o = e[2] || {}, s = stageOf(a);
     var facts = '<div><dt>From</dt><dd>' + esc(stepName(a)) + ' <span class="muted">(' + esc(LANES[a.lane].title) + ")</span></dd></div>" +
@@ -1520,9 +1546,9 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       '<div class="dhead"><div><div class="dkicker">Connection · Stage ' + s.k + " · " + esc(s.name) + '</div><h3>' + esc(a.title || a.label) + " → " + esc(b.title || b.label) + "</h3></div></div>" +
       '<dl class="facts">' + facts + "</dl>" +
       '<div class="ends"><button class="btn" type="button" data-sel="' + a.id + '">Open “' + esc(a.title || a.label) + '”</button><button class="btn" type="button" data-sel="' + b.id + '">Open “' + esc(b.title || b.label) + '”</button></div>' +
-      fbBoxHtml("connection");
+      commentBoxHtml("connection");
     detail.querySelectorAll("[data-sel]").forEach(function (btn) { btn.onclick = function () { select(btn.getAttribute("data-sel"), true); }; });
-    var oc = document.getElementById("fbStep");
+    var oc = document.getElementById("openComp");
     if (oc) oc.onclick = function () { openComposerFor(selected); };
   }
   function renderDetail() {
@@ -1539,7 +1565,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       (n.openEnd ? '<div><dt>Next handoff</dt><dd>Not yet known. See the map clarity question below.</dd></div>' : "") +
       (n.stubNo ? '<div><dt>If not reached</dt><dd>Next step not yet known. See the map clarity questions below.</dd></div>' : "");
     detail.innerHTML =
-      '<div class="dhead"><div><div class="dkicker">' + (n.P ? "Step " + PNUM[n.id] + " · " : "") + (n.P ? '<span class="pp">Participant</span> · ' : "") + "Stage " + s.k + " · " + esc(s.name) + " · " + kind + '</div><h3>' + esc(n.title || n.label) + '</h3>' + (n.title ? '<p style="margin-top:4px">' + esc(n.label) + "</p>" : "") +
+      '<div class="dhead"><div><div class="dkicker">' + (PNUM[n.id] ? "Step " + PNUM[n.id] + " · " : "") + (n.P ? '<span class="pp">Participant</span> · ' : "") + "Stage " + s.k + " · " + esc(s.name) + " · " + kind + '</div><h3>' + esc(n.title || n.label) + '</h3>' + (n.title ? '<p style="margin-top:4px">' + esc(n.label) + "</p>" : "") +
       (n.feel ? '<p style="margin-top:6px">' + n.feel.map(esc).join("<br>") + "</p>" : "") + '</div>' +
       '<div class="dnav"><button class="btn" type="button" id="prevStep"' + (idx === 0 ? " disabled" : "") + '>Previous step</button><button class="btn" type="button" id="nextStep"' + (idx === ORDER.length - 1 ? " disabled" : "") + ">Next step</button></div></div>" +
       '<dl class="facts">' + facts + "</dl>" +
@@ -1548,11 +1574,11 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       list("Working well", "t-works", ICON.works, n.works) +
       list("Pain points", "t-pain", ICON.pain, n.pain) +
       list("Planned changes", "t-plan", ICON.plan, n.plan) +
-      list("Data needed", "t-ask", ICON.ask, n.ask) + list("Map clarity", "t-ask", ICON.ask, n.askmap) +
-      "</div>" + fbBoxHtml("step");
+      list("Data needed", "t-ask", ICON.ask, n.ask) + list("Map clarity", "t-ask", ICON.ask, n.askmap) + list("Exploring possibilities", "t-ask", ICON.ask, n.explore) +
+      "</div>" + commentBoxHtml("step");
     document.getElementById("prevStep").onclick = function () { select(ORDER[idx - 1].id, true); };
     document.getElementById("nextStep").onclick = function () { select(ORDER[idx + 1].id, true); };
-    var oc = document.getElementById("fbStep");
+    var oc = document.getElementById("openComp");
     if (oc) oc.onclick = function () { openComposerFor(selected); };
   }
   function select(id, scrollMap) {
@@ -1589,7 +1615,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
   /* ---------- lower sections ---------- */
   function chipsFor(ids) {
-    return '<div class="chips">' + ids.map(function (id) { return '<button class="chip" type="button" data-go="' + id + '">' + esc((byId[id].P ? "Step " + PNUM[id] : "Stage " + stageOf(byId[id]).k) + " · " + (byId[id].title || byId[id].label)) + "</button>"; }).join("") + "</div>";
+    return '<div class="chips">' + ids.map(function (id) { return '<button class="chip" type="button" data-go="' + id + '">' + esc((PNUM[id] ? "Step " + PNUM[id] : "Stage " + stageOf(byId[id]).k) + " · " + (byId[id].title || byId[id].label)) + "</button>"; }).join("") + "</div>";
   }
   function fillAcross(key, elId) {
     document.getElementById(elId).innerHTML = ACROSS[key].map(function (x) {
@@ -1608,36 +1634,26 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     return qs.map(function (q) { return "<li><span>" + esc(q.t) + "</span>" + chipsFor([q.id]) + "</li>"; }).join("");
   }
   document.getElementById("qData").innerHTML = qItems("ask");
-  document.getElementById("qMap").innerHTML = qItems("askmap");
-  document.getElementById("qGen").innerHTML = QGEN.map(function (q) { return "<li><span>" + esc(q) + "</span></li>"; }).join("");
+  document.getElementById("qExplore").innerHTML = qItems("explore");
 
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-go]");
     if (b) goTo(b.getAttribute("data-go"));
   });
 
-
-  /* ---------- feedback: opens the Microsoft Form with the map and step filled in ---------- */
-  function fbReady() { return /^https:\/\/forms\.(office|microsoft|cloud\.microsoft)\b/i.test(window.FEEDBACK_FORM_URL || ""); }
-  function fbOpen(step, msgEl) {
-    if (!fbReady()) { if (msgEl) msgEl.textContent = "The feedback form isn’t connected yet."; return; }
-    if (step.length > 240) step = step.slice(0, 237) + "...";
-    var u = window.FEEDBACK_FORM_URL.replace("MAPNAME", encodeURIComponent(MAP_NAME)).replace("STEPNAME", encodeURIComponent(step));
-    var w = window.open(u, "_blank", "noopener");
-    if (msgEl) msgEl.textContent = "The form opened in a new tab. If it didn’t, allow pop-ups for this page and try again.";
+  /* ---------- comments: the page opens claude.ai's own comment box on a step or connector; it lights up only where commenting is available ---------- */
+  function enableComments() {
+    if (!(window.claude && typeof window.claude.use === "function")) { commentsOff = true; renderDetail(); return; }
+    window.claude.use("comments").then(function (c) {
+      if (!c || typeof c.openComposer !== "function") { commentsOff = true; renderDetail(); return; }
+      commentsNs = c;
+      document.getElementById("mapBox").classList.add("canflag");
+      renderDetail();
+    }).catch(function () { commentsOff = true; renderDetail(); });
   }
-  function fbBoxHtml(what) {
-    return '<div class="flagbox"><h4>Comment on this ' + what + '</h4>' +
-      '<p class="note">Opens a short form in a new tab with this ' + what + ' already filled in. Corrections, missing details, and answers to the questions are all welcome. No sign-in needed.</p>' +
-      '<div class="row"><button class="btn primary" type="button" id="fbStep">Comment on this ' + what + '</button><span class="flagmsg" id="fbMsg" role="status"></span></div></div>';
-  }
-  (function () {
-    var g = document.getElementById("fbGeneral");
-    if (g) g.onclick = function () { fbOpen("General comment (whole map)", document.getElementById("fbGenMsg")); };
-  })();
 
   /* ---------- boot ---------- */
-  draw(); renderDetail(); document.getElementById("mapBox").classList.add("canflag");
+  draw(); renderDetail(); enableComments();
   var fontsReady = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("400 15px Barlow"), document.fonts.load("500 14px Barlow"), document.fonts.load("600 14px Barlow"), document.fonts.load("700 17px Barlow")]) : Promise.resolve();
   Promise.race([fontsReady, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () { draw(); });
 })();
