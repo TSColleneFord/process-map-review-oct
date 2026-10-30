@@ -176,9 +176,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   <h1>Provider Invoicing Process Map</h1>
   <p class="lede">How a SNAP E&amp;T provider goes from delivering a service to getting paid, and how Louisiana Works is then reimbursed by LDH. This reflects the process as staff described it in the October 2 working session, including steps that are already changing or planned to change.</p>
   <div class="meta">
-    <span class="status">Draft for validation</span>
     <span>Working session: Friday, October 2, 2026</span>
-    <span>Draft validated: Thursday, October 22, 2026</span>
+    <span>Draft validated: Friday, October 30, 2026</span>
     <span>Prepared by Third Sector Capital Partners</span>
   </div>
   <div class="scope">
@@ -251,7 +250,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
         <thead><tr><th scope="col">Step</th><th scope="col">Smaller provider</th><th scope="col">Larger provider</th><th scope="col">Estimated by</th></tr></thead>
         <tbody id="timeBody"></tbody>
       </table>
-      <p class="muted" style="margin-top:12px">No estimate yet for provider correction turnaround (providers are given 3 business days after final review) or total time from first submission to provider payment. These are in Questions to confirm.</p>
+      <p class="muted" style="margin-top:12px">No estimate yet for provider correction turnaround (providers are given 3 business days after final review) or total time from first submission to provider payment.</p>
     </div>
     <div class="figs">
       <h3 class="figs-h">Other estimates we heard</h3>
@@ -264,28 +263,14 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 </section>
 
 <section class="wrap block" aria-labelledby="h-q">
-  <h2 id="h-q">Questions to confirm</h2>
-  <p class="sub">Points we could not settle in the session. We will follow up one-on-one, and corrections to anything else on this map are welcome.</p>
-  <h3 class="qgroup">Clarifying the map</h3>
-  <p class="muted qgroup-sub">How the process works today.</p>
-  <ol class="qlist" id="qList"></ol>
-  <h3 class="qgroup">Exploring potential opportunities</h3>
-  <p class="muted qgroup-sub">Ideas to test with the working group.</p>
-  <ol class="qlist qcont" id="qListImprove"></ol>
+  <h2 id="h-q">Exploring potential opportunities</h2>
+  <p class="sub">Ideas to test with the working group.</p>
+  <ol class="qlist" id="qListImprove"></ol>
 </section>
 
-<section class="wrap block two" aria-labelledby="h-next">
+<section class="wrap block two" aria-labelledby="h-out">
   <div>
-    <h2 id="h-next">Next steps</h2>
-    <ul class="dates">
-      <li><b>Ongoing</b><span>Third Sector follows up one-on-one, with extra time on the LDH steps, which the session ran short on.</span></li>
-      <li><b>Oct 15</b><span>Draft map shared with the working group for validation.</span></li>
-      <li><b>Oct 30</b><span>Completed process map delivered.</span></li>
-    </ul>
-    <p class="muted" style="margin-top:10px">The provider lane will also be checked against one-on-one provider interviews.</p>
-  </div>
-  <div>
-    <h2>Outside this map</h2>
+    <h2 id="h-out">Outside this map</h2>
     <ul>
       <li>Provider procurement, contracting and onboarding</li>
       <li>Participant eligibility determination</li>
@@ -339,7 +324,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       who: "Provider invoicing staff",
       notes: [it("Packet: cost reimbursement form, budget tracker, bills, timesheets for any salary claimed, proof of payment, and the participant reimbursement report run from SNAP Works."),
               it("With a two-week pay period, the same timesheet may need to be submitted two months in a row.", R.fin)],
-      pain: [it("Most providers don't run the participant reimbursement report before submitting.", R.first),
+      pain: [it("By the time participants are verified for E&T, they are often almost done with training, so providers can't build invoices for them as qualified participants.", "Verified by provider interviews"),
+             it("Most providers don't run the participant reimbursement report before submitting.", R.first),
              it("Common errors: wrong dates on check stubs, bills from outside the service month, missing timesheets or proof of payment, miscalculated cost reimbursement form or budget tracker, and unallowable items.", R.con + "; " + R.fin),
              it("Large packets. One multi-site provider's packet may run to about 20 documents, including several utility and phone bills per location.", R.con)],
       plan: [it("A guide defining allowable expenses for this federal fiscal year, and fewer reimbursable line items in budgets, so packets should be smaller (for example, no 150-page phone bills).", R.dir)] },
@@ -360,10 +346,11 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       time: "About 1 day for a smaller provider, 1 to 2 days for a larger one, if uninterrupted. Matching the reimbursement report alone can take a full day.",
       notes: [it("Checks that every claimed item has support, falls in the service month, is allowable, and is a line item in the approved budget. Consultants do not check calculations; that happens at the next level.", R.dir),
               it("Matches the participant reimbursement report against SNAP Works entries and the budget.", R.con)],
-      pain: [it("Allowable expenses aren't always clearly defined. Consultants check with the invoice reviewers and wait for an answer before responding to the provider.", R.con),
+      pain: [it("Monthly invoices are often more than 100 pages long.", "Verified by provider interviews"),
+             it("The entire process is manual, and consultants catch many errors in the invoices they review.", "Heard in follow-up interviews with staff"),
+             it("Allowable expenses aren't always clearly defined. Consultants check with the invoice reviewers and wait for an answer before responding to the provider.", R.con),
              it("No template or quick reference for common questions and errors.", R.con),
-             it("Review competes with other duties across several invoices at once.", R.con)],
-      ask: [it("Where does the SNAP E&T manager's front-end review fit: before, alongside, or after the consultant's review?")] },
+             it("Review competes with other duties across several invoices at once.", R.con)] },
     { id: "d_docs", lane: 1, col: 7, type: "decision", label: "Documents complete?",
       who: "Assigned LA Works SNAP E&T consultant",
       notes: [it("Consultants review and request corrections. They don't approve or deny invoices.", R.con),
@@ -376,30 +363,33 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
              it("Some providers repeat the same errors month after month despite training. Consultants see this more with newer providers than long-standing ones.", R.dir + "; " + R.con)],
       works: [it("Providers get regular technical assistance from their consultant (often daily contact), quarterly provider meetings that walk through recent issues, an annual in-person training, and a best-practice guide.", R.dir)] },
 
-    { id: "n_first", lane: 2, col: 8, type: "step", label: "First-level review: recalculates each budget category and checks the SNAP Works report against supporting documents",
+    { id: "n_first", lane: 2, col: 8, type: "step", label: "First-level review of the full packet: calculations, SNAP Works report, and supporting documents; emails comments to the final review team",
       who: "LA Works first-level reviewer",
       time: "3 to 4 hours for a smaller provider; a full uninterrupted day for a larger one.",
       notes: [it("Recalculates salaries, fringe, operating expenses and other charges (participant reimbursements) against the approved budget, and verifies dates on operating expenses.", R.first),
-              it("Reviews the SNAP Works report and the supporting documentation to confirm they align.", R.fbl)],
+              it("Reviews the entire invoice packet: the calculations, the SNAP Works report, and the supporting documents, to confirm they align.", R.fbl),
+              it("After the review, the first-level reviewer emails the list of edits, comments, or questions to the final review team: Rhonda, Dora, and one more final reviewer.", R.fbl)],
       pain: [it("Other charges is the slowest part. SNAP E&T can't pay for a participant who wasn't receiving SNAP that month, but SNAP Works doesn't stop those entries. So each reimbursement (an estimated 40 to 50 on one provider's invoice) is matched by hand against the SNAP Works report and receipts, and system delays slow this down.", R.first + "; corrected in feedback on the draft map"),
              it("Fringe benefit calculations take the most time for the smallest amounts. One example given: three hours of calculation to confirm $1.25.", R.fin)],
       works: [it("A salary and fringe calculation spreadsheet built this fiscal year saves an estimated hour of calculation per invoice.", R.first)] },
     { id: "n_final", lane: 2, col: 9, type: "step", label: "Final review of the full invoice and every supporting document",
-      who: "LA Works final reviewers, including the Workforce Development Contracts Unit program manager",
+      who: "LA Works final review team: Rhonda, Dora, and one more final reviewer (the team includes the Workforce Development Contracts Unit program manager)",
       time: "3 to 4 hours for a smaller provider; about a day for a large one (a couple hundred pages), which can stay on a reviewer's desk for 2 days.",
-      notes: [it("A complete review of everything submitted, including the calculations. Last check before the invoice goes to fiscal for payment.", R.fin)],
+      notes: [it("A complete review of everything submitted, including the calculations. Last check before the invoice goes to fiscal for payment.", R.fin),
+              it("Reviews all calculations, the supporting documents, and the SNAP Works report.", R.fbl),
+              it("Emails one complete list of edits, comments, and questions to the consultant to share with the provider. The list combines the first-level reviewer’s comments with the final reviewer’s.", R.fbl)],
       works: [it("First-level and final reviewers talk invoices through on Teams so their comments to the provider are as specific as possible.", R.fin),
               it("Reviewing invoices month to month shows how a provider is serving participants, and can prompt a closer look at case notes in SNAP Works.", R.fin)] },
     { id: "d_errors", lane: 2, col: 10, type: "decision", label: "Corrections needed?",
       who: "First-level and final reviewers",
       notes: [it("First-level comments travel with the invoice to final review, and anything final review finds is added, so the provider gets one combined list instead of several rounds.", R.first),
-              it("After final review, the list of errors, corrections or missing information goes to the consultant, who sends it to the provider.", R.fbl)],
+              it("After final review, the final reviewer emails the complete list of edits, comments, and questions (first-level and final review combined) to the consultant, who shares it with the provider.", R.fbl)],
       pain: [it("An estimated 90%+ of invoices reaching final review are returned to the provider for corrections.", R.fin)],
       works: [it("Returns are organized by cost reimbursement form category, with the exact correction needed, so the provider only has to update the tracker and the form.", R.fin)],
-      ask: [it("When reviewers question some items on an invoice, can the provider be paid for the rest while those items are resolved, or is the whole invoice held?")] },
+      ask: [{ kind: "improve", t: "When reviewers question some items on an invoice, could the provider be paid for the rest while those items are resolved, instead of holding the whole invoice?" }] },
     { id: "n_sendfix", lane: 1, col: 10, type: "step", sys: "Email", label: "Consultant sends the correction list to the provider (due in 3 business days)",
       who: "Assigned LA Works SNAP E&T consultant",
-      notes: [it("The final reviewer sends the list of errors to the consultants, who then send it to the provider.", R.fbl),
+      notes: [it("The final reviewer emails the complete, combined list of edits, comments, and questions to the consultant, who shares it with the provider.", R.fbl),
               it("Invoice edits are due within 3 business days.", R.fbl)] },
     { id: "n_saveedits", lane: 1, col: 9, type: "system", sys: "Shared drive · Email", label: "Consultant saves the edits to the shared drive and emails the final reviewer",
       who: "Assigned LA Works SNAP E&T consultant",
@@ -411,9 +401,10 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       pain: [it("An estimated 9 times out of 10 the provider sends a whole new packet rather than only what was asked for. Numbers shift (an added utility bill, a new reimbursement), so the invoice is re-reviewed in full and may be returned a second time.", R.first + "; " + R.fin)],
       works: [it("One-on-one Teams walk-throughs with providers, usually with their consultant included.", R.fin)] },
 
-    { id: "n_tofiscal", lane: 2, col: 11, type: "step", sys: "Email", label: "Final reviewer emails the approved invoice and all supporting documents to Fiscal",
+    { id: "n_tofiscal", lane: 2, col: 11, type: "step", sys: "Email", label: "Final reviewer emails the approved invoice and all supporting documents to Fiscal, and saves a copy for fiscal staff",
       who: "LA Works final reviewer",
-      notes: [it("Once the final reviewer approves the invoice, they email the invoice and all supporting documents to Fiscal: the fiscal payables mailbox, with the fiscal director copied.", R.fin)] },
+      notes: [it("Once the final reviewer approves the invoice, they email the invoice and all supporting documents to Fiscal: the fiscal payables mailbox, with the fiscal director copied.", R.fin),
+              it("After sending it to LA Works fiscal, the final reviewer also saves a copy of the approved invoice and supporting documents for the fiscal staff.", R.fbl)] },
     { id: "n_fiscalin", lane: 3, col: 11, type: "step", sys: "Spreadsheets", label: "Fiscal director logs the approved total in tracking spreadsheets",
       who: "LA Works fiscal director",
       notes: [it("This funding doesn't follow LA Works' usual payment process, so in this first year the fiscal director tracks running monthly totals herself.", R.fd)],
@@ -431,7 +422,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "n_paid", lane: 0, col: 14, type: "milestone", label: "Provider receives payment",
       who: "Provider",
       notes: [it("Milestone for the provider. The process continues until LA Works is reimbursed by LDH.")],
-      ask: [it("From a provider’s first submission to payment, how long does an invoice usually take in total, counting waiting time and correction rounds? What are the shortest and longest times in recent months?")] },
+      pain: [it("Providers say payment often arrives more than four months after the invoice was submitted, even when no errors were reported.", "Verified by provider interviews")] },
     { id: "n_confirm", lane: 2, col: 14, type: "system", sys: "LaGov · Monday", label: "Confirms payment in LaGov; marks Paid on the Monday board",
       who: "LA Works Workforce Development Contracts Unit program manager (final reviewer)",
       notes: [it("Each month, looks up providers by contract number in LaGov to confirm payment, marks Paid on the Monday board, and contacts the fiscal director if a payment hasn't gone through. Issues are rare.", R.fin)] },
@@ -491,8 +482,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     { id: "n_end", lane: 3, col: 24, type: "end", label: "LA Works reimbursed; expenditure reconciled",
       who: "LA Works fiscal",
       notes: [it("End of this map: the provider has been paid and LA Works has been reimbursed."),
-              it("After LDH emails that the reimbursement has been paid, LA Works fiscal checks that it arrived.", "Heard in follow-up")],
-      ask: [it("Who closes out the month once the reimbursement is confirmed?")] }
+              it("After LDH emails that the reimbursement has been paid, LA Works fiscal checks that it arrived.", "Heard in follow-up")] }
   ];
 
   // Every LA Works step updates the Monday board before handing off; steps that already describe it are skipped.
@@ -550,7 +540,8 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       { t: "One combined correction list per round, organized by form category.", by: R.first + "; " + R.fin, n: ["d_errors"] }
     ],
     pain: [
-      { lead: true, t: "Biggest pain point: provider errors are frequent because the process is tedious on both sides. Providers enter costs by hand with nothing restricting what goes in, and reviewers verify every item by hand. The result is repeated back-and-forth to complete and correct packets, including repeat errors.", by: R.con + "; " + R.first + "; " + R.fin, n: ["n_snap", "n_fix1", "n_first", "d_errors"] },
+      { lead: true, t: "Monthly invoices are often more than 100 pages long, and every page is reviewed by hand.", by: "Verified by provider interviews", n: ["n_packet", "n_docreview", "n_final"] },
+      { lead: true, t: "The entire process is manual, so provider errors are frequent. Providers enter costs by hand with nothing restricting what goes in, and reviewers verify every item by hand. Consultants catch many errors, and the result is repeated back-and-forth to complete and correct packets, including repeat errors.", by: "Heard in follow-up interviews with staff; " + R.con + "; " + R.first + "; " + R.fin, n: ["n_snap", "n_fix1", "n_first", "d_errors"] },
       { t: "Hand matching and recalculation: the reimbursement report against SNAP Works and receipts, fringe.", by: R.con + "; " + R.first, n: ["n_docreview", "n_first"] },
       { t: "Whole-packet resubmissions that restart review.", by: R.first, n: ["n_fix2"] },
       { t: "Paper-heavy, emailed packets with no portal or financial suite in use.", by: R.con, n: ["n_email", "n_report"] },
@@ -941,15 +932,12 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     return "<tr><td>" + esc(r[0]) + chipsFor([r[4]]).replace('class="chips"', 'class="chips" style="font-weight:400"') + "</td>" + est + '<td class="by-cell">' + esc(r[3]) + "</td></tr>";
   }).join("");
 
-  var qs = [
-    { t: "When a review or a provider’s corrections run late, how is it escalated, and to whom? For example, a provider who misses the 3-day correction window, or an invoice that sits in review longer than usual.", all: true }
-  ];
+  var qs = [];
   ORDER.forEach(function (n) { (n.ask || []).forEach(function (a) { qs.push({ t: a.t, id: n.id, kind: a.kind }); }); });
   function qItem(q) {
     return "<li><span>" + esc(q.t) + "</span>" + (q.all ? '<div class="chips"><span class="scope-tag">Applies across the map</span></div>' : chipsFor([q.id])) + "</li>";
   }
-  document.getElementById("qList").innerHTML = qs.filter(function (q) { return q.kind !== "improve"; }).map(qItem).join("");
-  document.getElementById("qListImprove").innerHTML = qs.filter(function (q) { return q.kind === "improve"; }).map(qItem).join("");
+  document.getElementById("qListImprove").innerHTML = qs.map(qItem).join("");
 
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-go]");
