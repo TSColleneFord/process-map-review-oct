@@ -1,15 +1,13 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
 <title>SNAP E&amp;T Client Journey Map (Final)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap">
-<style>
-:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;padding:0}
-img{max-width:100%}
-[hidden]:not([hidden=until-found i]){display:none!important}
-</style>
 <style>
 
 /* Layout: wide swimlane map with fixed lane labels and horizontal scroll, then a step detail panel and stacked findings sections. Third Sector palette, single light theme by design. */
@@ -113,7 +111,7 @@ button { font-family: inherit; }
 .node:focus-visible .shape { stroke: var(--ink); stroke-width: 3; }
 .node.sel .shape { stroke: var(--ink); stroke-width: 4.5; }
 .node:hover .shape { stroke-width: 4; }
-.hide-pain .b-pain, .hide-works .b-works, .hide-plan .b-plan, .hide-ask .b-ask { display: none; }
+.hide-pain .b-pain, .hide-works .b-works, .hide-plan .b-plan { display: none; }
 
 /* detail */
 .detail { margin-top: 0; background: var(--paper); border: 1.5px solid var(--blue); border-top: 0; padding: 22px 24px 24px; }
@@ -134,7 +132,6 @@ button { font-family: inherit; }
 .t-pain li { border-left-color: var(--purple); }
 .t-works li { border-left-color: var(--green); }
 .t-plan li { border-left-color: var(--blue2); }
-.t-ask li { border-left-color: var(--yellow); }
 
 /* findings */
 .block { padding-block: 44px 0; }
@@ -167,10 +164,6 @@ td .tag { display: inline-block; font-size: .8rem; color: var(--grey); font-weig
 .fig .num { font-size: 2.6rem; font-weight: 700; line-height: 1; color: var(--blue2); font-variant-numeric: tabular-nums; }
 .fig p { margin-top: 6px; }
 
-.qlist { margin: 0; padding: 0; list-style: none; counter-reset: q; display: grid; gap: 0; border-top: 1px solid var(--blue20); }
-.qlist li { counter-increment: q; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 12px; padding: 12px 0; border-bottom: 1px solid var(--blue20); }
-.qlist li::before { content: "Q" counter(q); font-weight: 700; color: var(--blue2); font-variant-numeric: tabular-nums; }
-.qlist .chips { grid-column: 2; margin-top: 0; }
 
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 28px; }
 .two ul { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; }
@@ -187,10 +180,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 .scope > div.words { grid-column: span 1; }
 .words .w { display: inline-block; font-weight: 600; margin: 2px 8px 0 0; padding: 1px 10px; border: 2px solid var(--yellow); background: var(--paper); }
 .words .w.alt { border-color: var(--green); background: var(--green20); }
-/* comment chips: shown on hover, focus or selection once commenting is available in this view */
-.cchip { opacity: 0; transition: opacity .12s; display: none; cursor: pointer; }
-.canflag .cchip { display: block; }
-.canflag .node:hover .cchip, .canflag .node:focus-visible .cchip, .canflag .node.sel .cchip, .canflag .linkchip { opacity: 1; }
 .fp .node.other { opacity: .14; }
 .fp .link.other, .fp .dbullet.other { opacity: .07; }
 .dim .node.dimmed { opacity: .16; }
@@ -202,32 +191,30 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 .link .hit { stroke: transparent; }
 .link:hover .hit, .link:focus-visible .hit { stroke: rgba(0, 110, 143, .16); }
 .link.sel .hit { stroke: rgba(255, 197, 0, .5); }
-.flagbox { margin-top: 18px; padding: 16px 18px; border: 2px solid var(--yellow); border-left-width: 8px; background: var(--paper); }
-.flagbox h4 { margin: 0 0 4px; font-size: 1.05rem; }
-.flagbox p.note { color: var(--grey); font-size: .92rem; margin: 0 0 10px; max-width: 70ch; }
-.flagbox .row { display: flex; gap: 12px; align-items: center; margin-top: 10px; flex-wrap: wrap; }
 .ends { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 .btn.door .dsw { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 7px; vertical-align: -1px; border: 1.5px solid #FFFFFF; box-shadow: 0 0 0 1px rgba(28, 23, 23, .25); }
-.btn.primary { background: var(--blue2); color: #fff; }
-.btn.primary:hover { background: var(--blue); }
 .btn[disabled] { opacity: .45; cursor: default; }
-.flagmsg { font-size: .95rem; font-weight: 600; }
-.mini { margin-top: 10px; font-size: .9rem; color: var(--grey); }
 .check { display: inline-flex; align-items: center; gap: 8px; font-size: .92rem; cursor: pointer; border: 1.5px solid var(--blue20); background: var(--paper); padding: 5px 12px; }
 .check input { width: 16px; height: 16px; accent-color: var(--blue2); }
 .btn.door { border-color: var(--blue20); color: var(--ink); font-weight: 500; }
 .btn.door[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
 .dkicker .pp { color: var(--purple); }
-.qhead { font-size: 1.1rem; font-weight: 700; color: var(--blue2); margin: 22px 0 8px; }
 .banner { justify-self: start; max-width: 68ch; background: var(--purple); color: #FFFFFF; font-weight: 600; font-size: 1.05rem; line-height: 1.4; padding: 10px 18px; }
 .tbox { cursor: pointer; }
 .tbox:hover rect, .tbox:focus-visible rect { stroke: var(--blue2); }
 .tbox:focus { outline: none; }
 .fp .tbox { opacity: .35; }
 </style>
-
+<style>
+.back { justify-self: start; font-size: .92rem; font-weight: 600; color: var(--blue2); text-decoration: none; }
+.back:hover { text-decoration: underline; }
+.back:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+</style>
+</head>
+<body>
 <header class="wrap top">
   <div class="frame" aria-hidden="true"></div>
+  <a class="back" href="index.html">← All SNAP E&amp;T process maps</a>
   <div class="banner">Final version based on interviews, the October 6 working session, and team feedback.</div>
   <div class="eyebrow">LDH &amp; Louisiana Works · SNAP E&amp;T Operational Assessment</div>
   <h1>Client Journey Map</h1>
@@ -480,10 +467,10 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
               it("Orientation format depends on the provider.", R.mgr)] },
     { id: "d_commit", lane: 0, col: 12, type: "decision", label: "Commits after orientation?",
       who: "Participant",
-      notes: [it("Orientation is where the person learns the program’s requirements and what success looks like, so it is a point where some decide not to start.", "Third Sector hypothesis")],
-      pain: [it("Expectations weren’t made clear before orientation, so the program’s requirements come as a surprise.", "Third Sector hypothesis"),
-             it("The training doesn’t line up with what they’re interested in. Some realize it isn’t what they want to do.", "Third Sector hypothesis, with input from " + R.con),
-             it("No remote option is offered for what they need, and they can’t get to an in-person site. Virtual providers get the most enrollment because they are easy to reach.", "Third Sector hypothesis, with input from " + R.mgr)] },
+      notes: [it("Orientation is where the person learns the program’s requirements and what success looks like, so it is a point where some decide not to start.", "Hypothesis")],
+      pain: [it("Expectations weren’t made clear before orientation, so the program’s requirements come as a surprise.", "Hypothesis"),
+             it("The training doesn’t line up with what they’re interested in. Some realize it isn’t what they want to do.", "Hypothesis, with input from " + R.con),
+             it("No remote option is offered for what they need, and they can’t get to an in-person site. Virtual providers get the most enrollment because they are easy to reach.", "Hypothesis, with input from " + R.mgr)] },
     { id: "x_orient", lane: 0, col: 12, row: 1, type: "exit", label: "Doesn’t start the training after orientation",
       who: "Participant" },
     { id: "p_begin", time: "Next day with a virtual provider; the next cohort at most colleges.", lane: 0, col: 16, type: "step", label: "Begins classes or work experience in the program they chose",
@@ -597,7 +584,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
               it("AJC staff reach out to LDH to confirm the person is eligible.", "Working-session board"),
               it("Before the handoff, the AJC-based E&T consultant checks SNAP Works for a completed E&T referral. If there is one, the provider can start right away. If there isn’t, the consultant creates a screening request in SNAP Works and assigns it to the provider.", RQ),
               it("While the screening is pending, the provider usually contacts the person to get started. SNAP eligibility staff complete the screening, and SNAP Works then sends the referral straight to the provider as a “Referral Actionable task.” The provider then moves on to SNAP E&T enrollment.", RQ)],
-      plan: [it("Integrated case management is envisioned but not in place for SNAP E&T. The vision: one person who knows SNAP E&T and WIOA, asks first whether the person receives SNAP, and hands off warmly so people tell their story once. SNAP eligibility stays with eligibility workers. Where it lands on this map isn’t defined yet.", R.ldh + "; " + R.dir),
+      plan: [it("Integrated case management is envisioned but not in place for SNAP E&T. The vision: one person who knows SNAP E&T and WIOA, asks first whether the person receives SNAP, and hands off warmly so people tell their story once. SNAP eligibility stays with eligibility workers.", R.ldh + "; " + R.dir),
              it("The AJC vision: fewer handoffs, one point of contact across funding streams, back-end cross-agency referral through co-location, and less application material, so people don’t retell their story.", "Working-session board")] },
     { id: "v_walkin", lane: 4, col: 1, type: "step", sys: "SNAP Works", doors: [2], label: "Introduces E&T and checks SNAP status in SNAP Works",
       who: "Provider staff",
@@ -713,8 +700,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     ["l_watch", "v_task", { kind: "alt", exit: "r", enter: "t", dx1: -22, label: "Assigned to that provider", seg: 0, at: 0.75 }]
   ];
 
-  // questions that apply across the whole journey rather than to one step
-  var QGEN = [];
   // staff estimates that cover a stretch of the journey, not a single step: drawn as a bracket across that stretch
   var SPANS = [{ id: "span-referral-assessment", from: "p_wait", to: "p_needs",
     title: "STAFF ESTIMATE",
@@ -769,47 +754,41 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     e_rrscreen: "Reverse-referral screening", e_auth: "Authorizes the case", e_unit: "SNAP E&T unit follows up", e_abawd: "Under-80-hours alert", e_update: "Updates the case",
     l_email: "Answers E&T emails", l_watch: "Watches the application", l_cap: "Sets provider capacity",
     l_consult: "Provider check-ins", l_review: "Monthly component review",
-    a_walk: "AJC walk-in", a_wioa: "WIOA co-enrollment", a_wrap: "AJC role in wraparound",
+    a_walk: "AJC walk-in",
     v_walkin: "Provider walk-in", v_rryes: "Reverse referral", v_rrno: "Points to the application", v_task: "Sees the referral task",
     v_call: "First contact", v_delink: "Delinks the referral", v_orient: "Holds orientation", v_assess: "Needs assessment in SNAP Works", v_determ: "Provider determination", v_fitinfo: "Explains the program to check fit",
     v_enroll: "Employment plan and enrollment", v_support: "Supportive services", v_hours: "Logs monthly hours", v_retain: "Provides job retention"
   };
   // short on-map versions of each finding, same order as the full items (full text stays in the detail panel)
   var SHORT = {
-    p_d3: { works: ["Self-referrers with a warm handoff enroll more"], ask: ["No counts by door yet"] },
+    p_d3: { works: ["Self-referrers with a warm handoff enroll more"] },
     p_interview: { pain: ["E&T gets lost among everything else in the interview, so people don’t remember it later"], works: ["No extra paperwork: E&T is part of the same interview"] },
-    p_pick: { pain: ["No one asks about barriers, supports, or prerequisites, so people can pick programs they can’t do", "Notices show mixed agency names, so people don’t know whom to contact"], ask: ["Are people told a provider will call? Does a notice name E&T?"] },
+    p_pick: { pain: ["No one asks about barriers, supports, or prerequisites, so people can pick programs they can’t do", "Notices show mixed agency names, so people don’t know whom to contact"] },
     p_needs: { pain: ["If sent to a 2nd provider, the person has to repeat the assessment"] },
     p_findjob: { pain: ["Often stop responding once they have a job, so the provider may not know"] },
-    p_retain: { ask: ["How many people get retention support?"] },
     
     p_support: { pain: ["Rural parishes have few sites and little rideshare, so getting to training is hard"] },
-    p_end: { ask: ["What share complete, and why do people leave?"] },
     p_wait: { pain: ["Up to 2+ weeks with no contact after the interview, so interest fades"] },
     e_rights: { works: ["ABAWD rules repeated at every touchpoint"] },
-    e_script: { works: ["Script and module built into the interview"], pain: ["The script doesn’t check prerequisites, like a license for CDL", "System fixes are slow: a change requested in 2024 is still pending"], plan: ["Prerequisites on the provider list and worker training; later in the system (~$250K)"], ask: ["Who keeps the provider and service list current?"] },
-    e_unit: { works: ["State-built unit catches people who fall through"], ask: ["Does it also call people who said no? Accounts differ"] },
+    e_script: { works: ["Script and module built into the interview"], pain: ["The script doesn’t check prerequisites, like a license for CDL", "System fixes are slow: a change requested in 2024 is still pending"], plan: ["Prerequisites on the provider list and worker training; later in the system (~$250K)"] },
+    e_unit: { works: ["State-built unit catches people who fall through"] },
     e_abawd: { plan: ["New this fiscal year: automatic caseworker task"] },
     e_update: { pain: ["LA Works can’t see whether someone lost SNAP, so it can’t tell why they stopped", "No count of ABAWDs who lose SNAP for missing hours"] },
     l_email: { works: ["People who reach out this way enroll more often"] },
     l_cap: { works: ["Can pause referrals to a backlogged provider"] },
     l_review: { works: ["Monthly report flags people with no hours"] },
     a_walk: { plan: ["Integrated case management envisioned, not yet in place", "AJC vision: fewer handoffs, one contact across funding streams"] },
-    a_wioa: { ask: ["Is anyone co-enrolled in WIOA or other programs?"] },
-    a_wrap: { ask: ["Do AJCs or other programs play a role?"] },
-    v_rrno: { ask: ["Any pathway beyond the application and a heads-up?"] },
     v_call: { pain: ["The provider’s 10 days come on top of up to a week for authorization"] },
     v_assess: { pain: ["A 2nd provider can’t see the 1st provider’s assessment, so it gets redone"] },
     v_enroll: { plan: ["New: every provider must offer job retention"] },
     v_retain: { pain: ["Retention quality varies: some providers are thorough, others check in monthly"], plan: ["Expansion under discussion; needs FNS approval"] }
   };
-  SHORT.d_yes = { pain: ["Focused on getting food benefits, so E&T doesn’t register", "Too overwhelmed or distracted in a 45-minute interview to take it in", "Doesn’t show interest until the case is about to close"], ask: ["How many say no here?"] };
-  SHORT.x_noref = { pain: ["Some don’t show interest until they’re about to lose benefits"], ask: ["Does anyone follow up with people who said no?"] };
+  SHORT.d_yes = { pain: ["Focused on getting food benefits, so E&T doesn’t register", "Too overwhelmed or distracted in a 45-minute interview to take it in", "Doesn’t show interest until the case is about to close"] };
+  SHORT.x_noref = { pain: ["Some don’t show interest until they’re about to lose benefits"] };
   SHORT.d_still = { pain: ["Doesn’t link the call to the interview, so doesn’t know why the provider is calling", "Fears losing SNAP if they say no", "Only said yes to get through the interview", "Has already found a job", "2+ weeks have passed since the interview", "Lost interest after being screened"] };
-  SHORT.d_fit = { pain: ["Missing a prerequisite, like a clear license for CDL", "Can’t get to the training site: few sites and little rideshare in rural areas", "Needs help E&T can’t pay for, like license fines"], ask: ["How many leave here, and why?"] };
-  SHORT.d_attend = { pain: ["Got a job and stopped coming, often without telling the provider", "Lost interest, or the training wasn’t what they wanted", "Lost SNAP, or is no longer an ABAWD and not required to take part"], ask: ["How often? Staff accounts differ"] };
-  SHORT.d_commit = { pain: ["Expectations weren’t clear, so the requirements come as a surprise", "The training doesn’t match what they’re interested in", "No remote option, and they can’t get to an in-person site"], ask: ["How many leave here, and why? To confirm"] };
-  SHORT.x_orient = { ask: ["Delinked to 2nd choice, or closed?"] };
+  SHORT.d_fit = { pain: ["Missing a prerequisite, like a clear license for CDL", "Can’t get to the training site: few sites and little rideshare in rural areas", "Needs help E&T can’t pay for, like license fines"] };
+  SHORT.d_attend = { pain: ["Got a job and stopped coming, often without telling the provider", "Lost interest, or the training wasn’t what they wanted", "Lost SNAP, or is no longer an ABAWD and not required to take part"] };
+  SHORT.d_commit = { pain: ["Expectations weren’t clear, so the requirements come as a surprise", "The training doesn’t match what they’re interested in", "No remote option, and they can’t get to an in-person site"] };
   SHORT.v_retry = { works: ["Keeps trying for a month instead of closing someone out"] };
   // the biggest drop-offs, as staff described them on Oct 6
   var FLAG = {
@@ -820,7 +799,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     n.title = TITLE[n.id] || "";
     n.loop = !!LOOPS[n.id];
     var s = SHORT[n.id] || {};
-    ["pain", "works", "plan", "ask"].forEach(function (k) { (n[k] || []).forEach(function (x, i) { x.s = (s[k] && s[k][i]) || x.t; }); });
+    ["pain", "works", "plan"].forEach(function (k) { (n[k] || []).forEach(function (x, i) { x.s = (s[k] && s[k][i]) || x.t; }); });
   });
 
   /* ---------- geometry ---------- */
@@ -845,11 +824,10 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   var byId = {};
   NODES.forEach(function (n) { byId[n.id] = n; n.row = n.row || 0; n.P = n.lane === 0; n.nIn = 0; n.nOut = 0; });
   // how each step connects, read straight from the edges (nothing is added or inferred):
-  // no edges at all = ongoing work that runs alongside its stage; an open map-clarity question with no way out = next handoff not yet known
+  // no edges at all = ongoing work that runs alongside its stage
   EDGES.forEach(function (e) { byId[e[0]].nOut++; byId[e[1]].nIn++; });
   NODES.forEach(function (n) {
     n.alongside = !n.P && n.type !== "unknown" && n.nIn === 0 && n.nOut === 0;
-    n.openEnd = !n.P && n.nOut === 0 && !!(n.askmap && n.askmap.length);
   });
   // door colors (brand blue, green, yellow) and the connectors that belong to each door's route before it joins the main path.
   // A connector is on a door's route when it starts at a step that only that door uses and stays among that door's steps.
@@ -907,7 +885,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     if (n.doors) t.push((n.doors.length > 1 ? "DOORS " : "DOOR ") + n.doors.join(" · "));
     if (n.sys) t.push(n.sys.toUpperCase());
     if (n.alongside) t.push("RUNS ALONGSIDE");
-    if (n.type === "unknown") t.push("OPEN QUESTION");
     return t;
   }
 
@@ -1019,10 +996,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
   function badge(k, cx, cy, r, parent) {
     var bg = el("g", null, parent);
-    if (k === "ask") {
-      el("circle", { cx: cx, cy: cy, r: r - 1, fill: C.paper, stroke: C.yellow, "stroke-width": 2.5 }, bg);
-      txt(bg, cx, cy + 4.6, "?", null, 13, 700, C.ink, { "text-anchor": "middle" });
-    } else if (k === "plan") {
+    if (k === "plan") {
       el("circle", { cx: cx, cy: cy, r: r, fill: C.blue2 }, bg);
       el("path", { d: "M" + (cx - 4.5) + "," + cy + " H" + (cx + 3.5) + " M" + (cx + 0.5) + "," + (cy - 3.5) + " L" + (cx + 4) + "," + cy + " L" + (cx + 0.5) + "," + (cy + 3.5), stroke: "#FFFFFF", "stroke-width": 1.8, fill: "none" }, bg);
     } else {
@@ -1033,41 +1007,19 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
   }
 
   // one icon per kind of finding on the step's top edge (on a decision, along its upper-right edge); hover names it
-  var TIP = { pain: "Pain points", works: "Working well", plan: "Planned changes", ask: "To confirm" };
-  function askCount(n) { return (n.ask ? n.ask.length : 0) + (n.askmap ? n.askmap.length : 0) + (n.explore ? n.explore.length : 0) + (n.type === "unknown" ? 1 : 0); }
+  var TIP = { pain: "Pain points", works: "Working well", plan: "Planned changes" };
   function findingBadges(n, g, x0, y0) {
-    var present = ["pain", "works", "plan", "ask"].filter(function (k) { return k === "ask" ? askCount(n) > 0 : !!(n[k] && n[k].length); });
+    var present = ["pain", "works", "plan"].filter(function (k) { return !!(n[k] && n[k].length); });
     present.forEach(function (k, i) {
       var bx, by;
       if (n.type === "decision") { var t = 0.3 + i * 0.2; bx = n.x + t * n.w / 2; by = y0 + t * n.h / 2; }
       else { bx = x0 + n.w - 16 - (present.length - 1 - i) * 26; by = y0; }
       var bg = el("g", { "class": "badge b-" + k }, g);
-      var c = k === "ask" ? askCount(n) : n[k].length;
+      var c = n[k].length;
       el("title", null, bg).textContent = TIP[k] + " (" + c + "). Select the step to read them.";
       el("circle", { cx: bx, cy: by, r: 13, fill: C.paper }, bg);
       badge(k, bx, by, 11, bg);
     });
-  }
-
-  // a "Comment" chip on the selected connector, at the middle of its longest straight run
-  var gSel = null;
-  function linkMid(e) {
-    var best = null, bl = -1;
-    for (var i = 0; i < e.pts.length - 1; i++) {
-      var p = e.pts[i], q = e.pts[i + 1], l = Math.abs(q.x - p.x) + Math.abs(q.y - p.y);
-      if (l > bl) { bl = l; best = { x: (p.x + q.x) / 2, y: (p.y + q.y) / 2, h: Math.abs(q.y - p.y) < 1 }; }
-    }
-    return best;
-  }
-  function drawLinkChip() {
-    if (!gSel) return;
-    gSel.innerHTML = "";
-    var e = byLink[selected];
-    if (!e || !e.pts) return;
-    var m = linkMid(e), x = m.h ? m.x + 20 : m.x + 18, y = m.h ? m.y - 44 : m.y - 13;
-    var cc = el("g", { "class": "cchip linkchip", role: "button", tabindex: 0, "aria-label": "Comment on this connection" }, gSel);
-    el("rect", { x: x, y: y, width: 104, height: 26, rx: 13, fill: C.ink }, cc);
-    txt(cc, x + 52, y + 18, "Comment", null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
   }
 
   function draw() {
@@ -1099,7 +1051,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       if (i) el("rect", { x: stageX0(i) - 1.5, y: 0, width: 3, height: H, fill: C.blue40 }, gL);
     });
 
-    // edges: each connector is its own selectable group (a wide invisible hit line plus the drawn line), so people can comment on it
+    // edges: each connector is its own selectable group (a wide invisible hit line plus the drawn line), so people can open its detail
     var gE = el("g", { fill: "none" }, mapSvg), gB = el("g", null, mapSvg), gEL = el("g", null, mapSvg);
     var labelQueue = [], bullets = [];
     EDGES.forEach(function (e) {
@@ -1111,7 +1063,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       var pLoop = kind === "loop" && (a.P || b.P);
       var dc = e.door ? DOOR[e.door] : null, d = pathD(pts, 10);
       var lg = el("g", { "class": "link" + ((!a.P && !b.P) ? " other" : "") + (e.key === selected ? " sel" : ""), id: e.key.replace(":", "-"),
-        "data-link": e.key, "data-a": a.id, "data-b": b.id, "data-comment-target": "", tabindex: 0, role: "button",
+        "data-link": e.key, "data-a": a.id, "data-b": b.id, tabindex: 0, role: "button",
         "aria-label": "Connection from " + (a.title || a.label) + " to " + (b.title || b.label) }, gE);
       el("path", { "class": "hit", d: d, fill: "none", "stroke-width": 18, "stroke-linecap": "round", "stroke-linejoin": "round" }, lg);
       var pAlt = kind === "alt" && a.P && b.P;
@@ -1193,7 +1145,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     var gN = el("g", null, mapSvg);
     NODES.forEach(function (n) {
       var P = n.P, num = PNUM[n.id];
-      var g = el("g", { "class": "node " + (P ? "pn" : "other") + (n.id === selected ? " sel" : ""), id: "step-" + n.id, "data-comment-target": "", tabindex: 0, role: "button", "data-id": n.id, "data-doors": (n.doors || []).join(","), "aria-label": (num ? "Step " + num + ": " : "") + (n.title ? n.title + ". " : "") + n.label + " (" + LANES[n.lane].title + ")" }, gN);
+      var g = el("g", { "class": "node " + (P ? "pn" : "other") + (n.id === selected ? " sel" : ""), id: "step-" + n.id, tabindex: 0, role: "button", "data-id": n.id, "data-doors": (n.doors || []).join(","), "aria-label": (num ? "Step " + num + ": " : "") + (n.title ? n.title + ". " : "") + n.label + " (" + LANES[n.lane].title + ")" }, gN);
       var x0 = n.x - n.w / 2, y0 = n.y - n.h / 2;
       if (n.type === "decision") {
         el("path", { "class": "shape", d: "M" + n.x + "," + y0 + " L" + (n.x + n.w / 2) + "," + n.y + " L" + n.x + "," + (y0 + n.h) + " L" + x0 + "," + n.y + " Z", fill: P ? C.paper : C.other, stroke: P ? C.blue2 : C.grey, "stroke-width": P ? 4 : 1.25 }, g);
@@ -1206,14 +1158,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
           el("path", { d: "M" + n.x + "," + ft + " H" + (n.x + fw) + " L" + (n.x + fw - 14) + "," + (ft + 23) + " L" + (n.x + fw) + "," + (ft + 46) + " H" + n.x + " Z", fill: C.purple }, fg);
           txt(fg, n.x + 10, ft + 19, fl[0], null, 14, 700, "#FFFFFF", { "letter-spacing": "0.08em" });
           txt(fg, n.x + 10, ft + 37, fl[1], null, 14, 500, "#FFFFFF");
-        }
-        if (n.stubNo) {
-          // the "No" outcome leads somewhere the session didn't describe: an open stub instead of an invented step
-          var sg2 = el("g", { "class": "stub" }, g), sx2 = n.x + n.w / 2;
-          el("line", { x1: sx2, x2: sx2 + 34, y1: n.y, y2: n.y, stroke: C.grey, "stroke-width": 1.5, "stroke-dasharray": "3 3" }, sg2);
-          badge("ask", sx2 + 45, n.y, 11, sg2);
-          el("rect", { x: sx2 + 2, y: n.y - 30, width: 32, height: 22, rx: 3, fill: C.gray, stroke: C.grey, "stroke-width": 1 }, sg2);
-          txt(sg2, sx2 + 18, n.y - 14, "No", null, 13, 600, C.grey, { "text-anchor": "middle" });
         }
         var dn = el("g", num ? null : { display: "none" }, g);
         el("circle", { cx: n.x - 38, cy: y0 + 30, r: 14, fill: C.grey, stroke: C.paper, "stroke-width": 2 }, dn);
@@ -1247,12 +1191,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
         var ng = el("g", num ? null : { display: "none" }, g);
         el("circle", { cx: x0 + 2, cy: y0 + 2, r: 14, fill: C.grey, stroke: C.paper, "stroke-width": 2 }, ng);
         txt(ng, x0 + 2, y0 + 7, String(num), null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
-        // the map doesn't yet show where this goes next: a short open stub instead of a dead end
-        if (n.openEnd) {
-          var sg = el("g", { "class": "stub" }, g), sx = x0 + n.w;
-          el("line", { x1: sx, x2: sx + 30, y1: n.y, y2: n.y, stroke: C.grey, "stroke-width": 1.5, "stroke-dasharray": "3 3" }, sg);
-          badge("ask", sx + 40, n.y, 11, sg);
-        }
       }
       // findings written on the map under each step (the invoicing board's flag / check notes)
       var cxl = n.x - CW / 2;
@@ -1264,18 +1202,13 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       }
       // what we heard, as icons on the step (full text in the detail panel), like the invoicing map
       findingBadges(n, g, x0, y0);
-      // "Comment" chip on every step (shown on hover, focus or selection when commenting is available)
-      var chx = n.type === "decision" ? n.x + 18 : x0 + n.w - 112, chy = n.type === "decision" ? y0 + n.h - 36 : y0 + n.h - 13;
-      var cc = el("g", { "class": "cchip", "data-comment": n.id }, g);
-      el("rect", { x: chx, y: chy, width: 104, height: 26, rx: 13, fill: C.ink }, cc);
-      txt(cc, chx + 52, chy + 18, "Comment", null, 14, 700, "#FFFFFF", { "text-anchor": "middle" });
     });
     // estimate brackets across the top of the participant lane
     var gSp = el("g", null, mapSvg);
     SPANS.forEach(function (sp) {
       var a = byId[sp.from], b = byId[sp.to], top = laneGeo[0].top + 10;
       var x0 = a.x - a.w / 2, x1 = b.x, by = top + 54;
-      var g = el("g", { "class": "span", id: sp.id, "data-comment-target": "", role: "img", "aria-label": sp.title + ". " + sp.text }, gSp);
+      var g = el("g", { "class": "span", id: sp.id, role: "img", "aria-label": sp.title + ". " + sp.text }, gSp);
       var tw = Math.min(x1 - x0 - 20, Math.max(measure(sp.title, "700 14px " + FONT) * 1.12, measure(sp.text, "500 14px " + FONT)) + 28);
       var lines = wrap(sp.text, "500 14px " + FONT, tw - 28);
       var bh = 22 + lines.length * 18 + 6;
@@ -1285,8 +1218,6 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       var ly = top + bh + 8;
       el("path", { d: "M" + x0 + "," + (ly + 12) + " V" + ly + " H" + x1 + " V" + (ly + 12), fill: "none", stroke: C.purple, "stroke-width": 2.5 }, g);
     });
-    gSel = el("g", null, mapSvg);
-    drawLinkChip();
 
     // estimated timing lane
     var gT = el("g", null, mapSvg);
@@ -1413,7 +1344,7 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
 
   var drag = null;
   scroller.addEventListener("pointerdown", function (e) {
-    if (e.pointerType !== "mouse" || e.target.closest(".node, .link, .cchip")) return;
+    if (e.pointerType !== "mouse" || e.target.closest(".node, .link")) return;
     drag = { x: e.clientX, y: e.clientY, l: scroller.scrollLeft, t: scroller.scrollTop };
     scroller.classList.add("drag");
   });
@@ -1464,40 +1395,10 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     notes: '<svg width="16" height="16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" fill="none" stroke="#006E8F" stroke-width="1.5"/></svg>',
     works: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#00A76F"/></svg>',
     pain: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#862E88"/></svg>',
-    plan: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#006E8F"/></svg>',
-    ask: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="6" fill="#FFFFFF" stroke="#FFC500" stroke-width="2.5"/></svg>'
+    plan: '<svg width="16" height="16" aria-hidden="true"><circle cx="8" cy="8" r="7" fill="#006E8F"/></svg>'
   };
-  var commentsNs = null, commentsOff = false;
   var DOORNAME = { 1: "SNAP application", 2: "Provider reverse referral", 3: "Asks on their own" };
 
-  // the feedback box: opens the claude.ai comment box pinned to this step or connector on the map
-  function commentBoxHtml(what) {
-    if (commentsNs) {
-      return '<div class="flagbox" id="cbox"><h4>Give feedback on this ' + what + '</h4>' +
-        '<p class="note">Your comment is pinned to this ' + what + ' on the map, where the working group can read it and reply. It helps to start with what kind it is: a correction, a pain point, something that works, or a question.</p>' +
-        '<div class="row"><button class="btn primary" type="button" id="openComp">Comment on this ' + what + '</button><span class="flagmsg" id="cMsg" role="status"></span></div></div>';
-    }
-    if (commentsOff) return '<p class="mini">Commenting works when the map is opened in claude.ai by someone with comment access to it.</p>';
-    return "";
-  }
-  function elFor(id) {
-    return byLink[id] ? document.getElementById(id.replace(":", "-")) : document.getElementById("step-" + id);
-  }
-  function openComposerFor(id) {
-    var target = elFor(id), msg = document.getElementById("cMsg");
-    if (!commentsNs || !target) return;
-    commentsNs.openComposer({ element: target }).then(function (r) {
-      if (msg) msg.textContent = r && r.opened ? "Type your comment in the box that opened on the map." : "Finish or close the comment you already have open, then try again.";
-    }).catch(function (err) {
-      var code = err && err.code;
-      if (code === "rate_limited") { if (msg) msg.textContent = "Wait a moment, then try again."; return; }
-      if (code === "invalid" || code === "upstream_error") { if (msg) msg.textContent = "Couldn’t open the comment box. Try again."; return; }
-      // unavailable, not granted, or switched off for this view: hide the buttons from now on
-      commentsNs = null; commentsOff = true;
-      document.getElementById("mapBox").classList.remove("canflag");
-      renderDetail();
-    });
-  }
   function linkKind(e) {
     var a = byId[e[0]], b = byId[e[1]], k = (e[2] && e[2].kind) || "flow";
     if (k === "loop") return (a.P || b.P) ? "Participant declines or isn’t a fit" : "Re-referral loop";
@@ -1515,25 +1416,20 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     detail.innerHTML =
       '<div class="dhead"><div><div class="dkicker">Connection · Stage ' + s.k + " · " + esc(s.name) + '</div><h3>' + esc(a.title || a.label) + " → " + esc(b.title || b.label) + "</h3></div></div>" +
       '<dl class="facts">' + facts + "</dl>" +
-      '<div class="ends"><button class="btn" type="button" data-sel="' + a.id + '">Open “' + esc(a.title || a.label) + '”</button><button class="btn" type="button" data-sel="' + b.id + '">Open “' + esc(b.title || b.label) + '”</button></div>' +
-      commentBoxHtml("connection");
+      '<div class="ends"><button class="btn" type="button" data-sel="' + a.id + '">Open “' + esc(a.title || a.label) + '”</button><button class="btn" type="button" data-sel="' + b.id + '">Open “' + esc(b.title || b.label) + '”</button></div>';
     detail.querySelectorAll("[data-sel]").forEach(function (btn) { btn.onclick = function () { select(btn.getAttribute("data-sel"), true); }; });
-    var oc = document.getElementById("openComp");
-    if (oc) oc.onclick = function () { openComposerFor(selected); };
   }
   function renderDetail() {
     if (byLink[selected]) { renderLinkDetail(byLink[selected]); return; }
     var n = byId[selected], s = stageOf(n), idx = ORDER.indexOf(n);
-    var kind = { exit: "Leaves the journey", start: "Start", end: "End", decision: "Decision", system: "Step in a system", step: "Step", unknown: "Not yet known" }[n.type];
+    var kind = { exit: "Leaves the journey", start: "Start", end: "End", decision: "Decision", system: "Step in a system", step: "Step" }[n.type];
     var facts = '<div><dt>Who</dt><dd>' + esc(n.who || LANES[n.lane].title) + "</dd></div>" +
       '<div><dt>Lane</dt><dd>' + esc(LANES[n.lane].title) + "</dd></div>" +
       (n.doors ? '<div><dt>' + (n.doors.length > 1 ? "Ways in" : "Way in") + '</dt><dd>' + esc(n.doors.map(function (d) { return DOORNAME[d]; }).join("; ")) + "</dd></div>" : "") +
       (n.sys ? '<div><dt>System</dt><dd>' + esc(n.sys.replace(/ · /g, ", ")) + "</dd></div>" : "") +
       (FLAG[n.id] ? '<div><dt>Drop-off</dt><dd>' + esc(FLAG[n.id][0].charAt(0) + FLAG[n.id][0].slice(1).toLowerCase() + ": " + FLAG[n.id][1]) + "</dd></div>" : "") +
       (n.time ? '<div><dt>Time reported</dt><dd>' + esc(n.time) + "</dd></div>" : "") +
-      (n.alongside ? '<div><dt>Connection</dt><dd>Runs alongside Stage ' + esc(s.k) + ". It isn’t one of the step-by-step handoffs, so no arrows lead to or from it.</dd></div>" : "") +
-      (n.openEnd ? '<div><dt>Next handoff</dt><dd>Not yet known. See the map clarity question below.</dd></div>' : "") +
-      (n.stubNo ? '<div><dt>If not reached</dt><dd>Next step not yet known. See the map clarity questions below.</dd></div>' : "");
+      (n.alongside ? '<div><dt>Connection</dt><dd>Runs alongside Stage ' + esc(s.k) + ". It isn’t one of the step-by-step handoffs, so no arrows lead to or from it.</dd></div>" : "");
     detail.innerHTML =
       '<div class="dhead"><div><div class="dkicker">' + (PNUM[n.id] ? "Step " + PNUM[n.id] + " · " : "") + (n.P ? '<span class="pp">Participant</span> · ' : "") + "Stage " + s.k + " · " + esc(s.name) + " · " + kind + '</div><h3>' + esc(n.title || n.label) + '</h3>' + (n.title ? '<p style="margin-top:4px">' + esc(n.label) + "</p>" : "") +
       (n.feel ? '<p style="margin-top:6px">' + n.feel.map(esc).join("<br>") + "</p>" : "") + '</div>' +
@@ -1544,17 +1440,14 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
       list("Working well", "t-works", ICON.works, n.works) +
       list("Pain points", "t-pain", ICON.pain, n.pain) +
       list("Planned changes", "t-plan", ICON.plan, n.plan) +
-      "</div>" + commentBoxHtml("step");
+      "</div>";
     document.getElementById("prevStep").onclick = function () { select(ORDER[idx - 1].id, true); };
     document.getElementById("nextStep").onclick = function () { select(ORDER[idx + 1].id, true); };
-    var oc = document.getElementById("openComp");
-    if (oc) oc.onclick = function () { openComposerFor(selected); };
   }
   function select(id, scrollMap) {
     selected = id;
     mapSvg.querySelectorAll(".node").forEach(function (g) { g.classList.toggle("sel", g.getAttribute("data-id") === id); });
     mapSvg.querySelectorAll(".link").forEach(function (g) { g.classList.toggle("sel", g.getAttribute("data-link") === id); });
-    drawLinkChip();
     renderDetail();
     if (scrollMap && byId[id]) {
       var n = byId[id], left = (n.x - n.w) * z, right = (n.x + n.w) * z;
@@ -1562,17 +1455,14 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     }
   }
   mapSvg.addEventListener("click", function (e) {
-    var chip = e.target.closest(".cchip");
-    if (chip && chip.classList.contains("linkchip")) { openComposerFor(selected); return; }
     var g = e.target.closest(".node"), lk = e.target.closest(".link");
-    if (g) { select(g.getAttribute("data-id"), false); if (chip) openComposerFor(g.getAttribute("data-id")); return; }
+    if (g) { select(g.getAttribute("data-id"), false); return; }
     if (lk) select(lk.getAttribute("data-link"), false);
   });
   mapSvg.addEventListener("keydown", function (e) {
     if (!(e.key === "Enter" || e.key === " ") || !e.target.closest) return;
-    var lc = e.target.closest(".linkchip"), g = e.target.closest(".node"), lk = e.target.closest(".link"), tb = e.target.closest(".tbox");
-    if (lc) { e.preventDefault(); openComposerFor(selected); }
-    else if (g) { e.preventDefault(); select(g.getAttribute("data-id"), false); }
+    var g = e.target.closest(".node"), lk = e.target.closest(".link"), tb = e.target.closest(".tbox");
+    if (g) { e.preventDefault(); select(g.getAttribute("data-id"), false); }
     else if (lk) { e.preventDefault(); select(lk.getAttribute("data-link"), false); }
     else if (tb) { e.preventDefault(); select(tb.getAttribute("data-go"), true); }
   });
@@ -1597,34 +1487,16 @@ footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid var(--blue20
     return "<tr><td>" + esc(r[0]) + chipsFor([r[3]]).replace('class="chips"', 'class="chips" style="font-weight:400"') + "</td><td>" + esc(r[1]) + "</td><td>" + esc(r[2]) + "</td></tr>";
   }).join("");
 
-  function qItems(key) {
-    var qs = [];
-    ORDER.forEach(function (n) { (n[key] || []).forEach(function (a) { qs.push({ t: a.t, id: n.id }); }); });
-    return qs.map(function (q) { return "<li><span>" + esc(q.t) + "</span>" + chipsFor([q.id]) + "</li>"; }).join("");
-  }
-
   document.addEventListener("click", function (e) {
     var b = e.target.closest && e.target.closest("[data-go]");
     if (b) goTo(b.getAttribute("data-go"));
   });
 
-  /* ---------- comments: the page opens claude.ai's own comment box on a step or connector; it lights up only where commenting is available ---------- */
-  function enableComments() {
-    if (!(window.claude && typeof window.claude.use === "function")) { commentsOff = true; renderDetail(); return; }
-    window.claude.use("comments").then(function (c) {
-      if (!c || typeof c.openComposer !== "function") { commentsOff = true; renderDetail(); return; }
-      commentsNs = c;
-      document.getElementById("mapBox").classList.add("canflag");
-      renderDetail();
-    }).catch(function () { commentsOff = true; renderDetail(); });
-  }
-
   /* ---------- boot ---------- */
-  draw(); renderDetail(); enableComments();
+  draw(); renderDetail();
   var fontsReady = document.fonts && document.fonts.load ? Promise.all([document.fonts.load("400 15px Barlow"), document.fonts.load("500 14px Barlow"), document.fonts.load("600 14px Barlow"), document.fonts.load("700 17px Barlow")]) : Promise.resolve();
   Promise.race([fontsReady, new Promise(function (r) { setTimeout(r, 2500); })]).then(function () { draw(); });
 })();
 </script>
-
-
-</body></html>
+</body>
+</html>
